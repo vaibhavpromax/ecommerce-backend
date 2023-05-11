@@ -5,13 +5,15 @@
     "password": "pirocoder",
     "database": "ecommerce",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "port": "3306"
   },
   "test": {
     "username": "root",
     "password": "pirocoder",
     "database": "ecommerce",
     "host": "127.0.0.1",
+    "port": "3306",
     "dialect": "mysql"
   },
   "production": {
@@ -19,6 +21,7 @@
     "password": "pirocoder",
     "database": "ecommerce",
     "host": "127.0.0.1",
+    "port": "3306",
     "dialect": "mysql"
   }
 }
