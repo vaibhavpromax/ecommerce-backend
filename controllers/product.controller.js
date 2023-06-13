@@ -4,6 +4,8 @@ const logger = require("../utils/logger");
 const { serverErrorResponse, successResponse } = require("../utils/response");
 
 const Product = db.Product;
+
+
 const Review = db.Review;
 
 const getProducts = async (req, res) => {
