@@ -10,7 +10,7 @@ module.exports = {
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
 
-    await queryInterface.addColumn("users", "stripe_customer_id", {
+    await queryInterface.addColumn("Users", "stripe_customer_id", {
       type: Sequelize.STRING,
       allowNull: true,
     });
@@ -21,9 +21,9 @@ module.exports = {
      * Add reverting commands here.
      *
      * Example:
-     * await queryInterface.dropTable('users');
+     * await queryInterface.dropTable('Users');
      */
 
-    await queryInterface.removeColumn("users", "stripe_customer_id");
+    await queryInterface.removeColumn("Users", "stripe_customer_id");
   },
 };

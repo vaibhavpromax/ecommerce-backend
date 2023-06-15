@@ -10,7 +10,7 @@ const { isAuth } = require("../controllers/user/auth.controller");
 
 const router = express.Router();
 
-router.post("/create-stripe-customer", isAuth, createCustomer);
+router.post("/create-stripe-customer",  createCustomer);
 router.post("/attach", isAuth, attachPayment);
 router.post("/get-payment-methods", isAuth, getPaymentMethods);
 router.post("/create-intent", isAuth, makePaymentIntent);

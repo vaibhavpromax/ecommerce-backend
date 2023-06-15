@@ -225,7 +225,7 @@ const isAuth = (req, res, next) => {
     return serverErrorResponse(res, "could not decode the token");
   }
   if (!decodedToken) {
-    unauthorizedResponse(res, "unauthorized");
+    return unauthorizedResponse(res, "unauthorized");
   } else {
     // res.status(200).json({ message: "here is your resource" });
     next();

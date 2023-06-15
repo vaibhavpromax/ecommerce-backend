@@ -48,6 +48,10 @@ module.exports = (sequelize, Sequelize) => {
         allowNull: false,
         type: Sequelize.STRING,
       },
+      stripe_customer_id: {
+        allowNull: true,
+        type: Sequelize.STRING, 
+      },
     },
     {
       sequelize,

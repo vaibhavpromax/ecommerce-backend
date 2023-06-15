@@ -9,7 +9,7 @@ module.exports = {
      * Example:
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
-    await queryInterface.changeColumn("addresses", "address_id", {
+    await queryInterface.changeColumn("Addresses", "address_id", {
       allowNull: false,
       type: Sequelize.UUID,
       defaultValue: Sequelize.UUIDV4,
@@ -24,7 +24,7 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
-    queryInterface.changeColumn("addresses", "address_id", {
+    queryInterface.changeColumn("Addresses", "address_id", {
       allowNull: false,
       type: Sequelize.UUID,
       defaultValue: Sequelize.UUIDV4,

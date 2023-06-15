@@ -19,69 +19,54 @@ const createCustomer = async (req, res) => {
   const { user_id } = req.user;
   const [customer, error] = await createStripeCustomer(name, email, phone);
   if (error) {
-    serverErrorResponse(res, "an error occured");
+    return serverErrorResponse(res, "an error occured");
   }
 
-  // add the stripe customer id to user table
-  User.findOne({ where: { user_id: user_id } })
-    .then((user) => {
-      if (user) {
-        user.stripe_customer_id = customer.id;
-        return user.save();
-      } else {
-        logger.error("User not found");
+  try {
+    await User.update(
+      {
+        stripe_customer_id: customer.id,
+      },
+      { where: { user_id: user_id } }
+    );
+  } catch (err) {
+    logger.error(err);
+  }
 
-        return null;
-      }
-    })
-    .then((updatedUser) => {
-      if (updatedUser) {
-        console.log("User updated successfully:", updatedUser.toJSON());
-      }
-    })
-    .catch((error) => {
-      console.error("Error updating user:", error);
-    });
-
-  successResponse(res, "Customer created", customer);
+  return successResponse(res, "Customer created", customer);
 };
 
 const attachPayment = async (req, res) => {
   const { user_id } = req.user;
   const { paymentMethod } = req.body;
-  let customerId;
-  User.findOne({ where: { user_id: user_id } })
-    .then((user) => {
-      if (user) {
-        customerId = user.stripe_customer_id;
-      } else {
-        logger.error("User not found");
-        notFoundResponse("user not found");
-      }
-    })
-    .catch((error) => {
-      logger.error(error.message);
-    });
+  const dbUser = await User.findOne({ where: { user_id: user_id } });
+
+  if (dbUser === null) {
+    return notFoundResponse("user not found");
+  }
+  const customerId = dbUser.dataValues.stripe_customer_id;
 
   const [attach, error] = await attachPaymentMethod({
     paymentMethod,
     customerId,
   });
   if (error) {
-    serverErrorResponse(res, "an error occured");
+    return serverErrorResponse(res, "an error occured while attaching");
   }
-  successResponse(res, "payment mehtod attached", attach);
+  return successResponse(res, "payment mehtod attached", attach);
 };
 
 const getPaymentMethods = async (req, res) => {
   let customerId;
+  const { user_id } = req.user;
+
   User.findOne({ where: { user_id: user_id } })
     .then((user) => {
       if (user) {
         customerId = user.stripe_customer_id;
       } else {
         logger.error("User not found");
-        notFoundResponse("user not found");
+        return notFoundResponse("user not found");
       }
     })
     .catch((error) => {
@@ -90,8 +75,8 @@ const getPaymentMethods = async (req, res) => {
 
   const [paymentMethods, err] = await listCustomerPayMethods(customerId);
 
-  if (err) serverErrorResponse(res, "an error occured ");
-  successResponse(res, "Payment methods fetched", paymentMethods);
+  if (err) return serverErrorResponse(res, "an error occured ");
+  return successResponse(res, "Payment methods fetched", paymentMethods);
 };
 
 const makePaymentIntent = async (req, res) => {
@@ -103,7 +88,7 @@ const makePaymentIntent = async (req, res) => {
         userCustomerId = user.stripe_customer_id;
       } else {
         logger.error("User not found");
-        notFoundResponse("user not found");
+        return notFoundResponse("user not found");
       }
     })
     .catch((error) => {
@@ -117,8 +102,8 @@ const makePaymentIntent = async (req, res) => {
     paymentMethod,
   });
 
-  if (err) serverErrorResponse(res, "an error occured");
-  successResponse(res, "Payment intent created", paymentIntent);
+  if (err) return serverErrorResponse(res, "an error occured");
+  return successResponse(res, "Payment intent created", paymentIntent);
 };
 
 const confirmIntent = async (req, res) => {
@@ -127,8 +112,8 @@ const confirmIntent = async (req, res) => {
     paymentMethod,
     paymentIntent,
   });
-   if (err) serverErrorResponse(res, "error during confirmation");
-  successResponse(res, "Payment confirmed", confirmIntent);
+  if (err) return serverErrorResponse(res, "error during confirmation");
+  return successResponse(res, "Payment confirmed", confirmIntent);
 };
 
 module.exports = {

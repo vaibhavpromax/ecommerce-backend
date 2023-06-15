@@ -524,3 +524,327 @@
 {"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
 {"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
 {"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}

@@ -1,7 +1,7 @@
 require("dotenv").config();
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
-const attachPaymentMethod = async ({ paymentMethod, customerId }) => {
+const  attachPaymentMethod = async ({ paymentMethod, customerId }) => {
   try {
     const paymentMethodAttach = await stripe.paymentMethods.attach(
       paymentMethod.id,
