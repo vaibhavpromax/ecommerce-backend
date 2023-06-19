@@ -41,12 +41,12 @@ const register = async (req, res) => {
               gender: gender,
             })
               .then((us) => {
-                const token = jwt.sign({ user: us?.dataValues }, "secret", {
+                const token = jwt.sign({ user:us["dataValues"] }, "secret", {
                   expiresIn: "72h",
                 });
                 successResponse(res, "User created successfully", {
                   token: token,
-                  user: us?.dataValues,
+                  user: us.dataValues,
                 });
               })
               .catch((err) => {

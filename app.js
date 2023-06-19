@@ -28,7 +28,7 @@ app.use(
   })
 );
 // app.use("/webhook", bodyParser.raw({ type: "application/json" }));
-app.post("stripe/webhook", createStripeWebHook);
+app.post("/stripe/webhook", createStripeWebHook);
 
 // app.use(express.json());
 const routes = require("./routes");

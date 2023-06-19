@@ -14,8 +14,7 @@ const createStripeWebHook = async (req, res) => {
     object: "event",
   };
   const payloadString = JSON.stringify(payload);
-  const secret =
-    "whsec_873af8b47d740acfdd75d54cd904445e8d70bc63ed5662f05ace026df15696f";
+const secret =  "whsec_873af8b47d740acfdd75d54cd904445e8d70bc63ed5662f05ace026df15696f";
 
   const header = stripe.webhooks.generateTestHeaderString({
     payload: payloadString,
@@ -23,7 +22,7 @@ const createStripeWebHook = async (req, res) => {
   });
 
   try {
-    event = stripe.webhooks.constructEvent(req.rawBody, header, secret);
+    event = stripe.webhooks.constructEvent(req.rawBody, sig, process.env.STRIPE_WEBHOOK_SECRET);
     console.log(event);
   } catch (err) {
     console.log(err);
@@ -31,7 +30,7 @@ const createStripeWebHook = async (req, res) => {
   }
 
   // Return a 200 response to acknowledge receipt of the event
-  //   successResponse(res, "event received", event);
+     successResponse(res, "event received", event);
 };
 
 module.exports = { createStripeWebHook };
