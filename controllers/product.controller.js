@@ -1,10 +1,11 @@
+const { response } = require("express");
 const db = require("../db/models");
+const addImagetoProduct = require("../helpers/addImageToProduct");
 
 const logger = require("../utils/logger");
 const { serverErrorResponse, successResponse } = require("../utils/response");
 
 const Product = db.Product;
-
 
 const Review = db.Review;
 
@@ -52,8 +53,8 @@ const createProduct = async (req, res) => {
     price,
     category,
     inventory_quantity,
-    createdAt,
-    updatedAt,
+    // createdAt,
+    // updatedAt,
   } = req.body;
   try {
     const product = await Product.create({
@@ -62,9 +63,11 @@ const createProduct = async (req, res) => {
       price,
       category,
       inventory_quantity,
-      createdAt,
-      updatedAt,
+      image: "first",
+      // createdAt,
+      // updatedAt,
     });
+
     return successResponse(res, "product created successfully", product);
   } catch (err) {
     logger.error("Error while creating product", err);
@@ -111,10 +114,16 @@ const updateProduct = async (req, res) => {
   }
 };
 
+const addImage = async (req, res) => {
+  const { product_id } = req.params;
+  addImagetoProduct({ product_id: product_id, image: req }, res);
+};
+
 module.exports = {
   getProducts,
   getSingleProduct,
   createProduct,
   deleteProduct,
   updateProduct,
+  addImage,
 };

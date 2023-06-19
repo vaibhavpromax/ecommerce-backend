@@ -31,7 +31,7 @@ const createStripeWebHook = async (req, res) => {
   }
 
   // Return a 200 response to acknowledge receipt of the event
-  //   successResponse(res, "event received", event);
+  successResponse(res, "event received", event);
 };
 
 module.exports = { createStripeWebHook };
