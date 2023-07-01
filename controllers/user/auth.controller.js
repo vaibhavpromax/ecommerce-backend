@@ -8,10 +8,11 @@ const {
   notFoundResponse,
   unauthorizedResponse,
 } = require("../../utils/response");
-const amazonService = require("../../services/amazon");
+const sendgridService = require("../../services/amazon");
 const redisHelper = require("../../helpers/redis");
 const htmlTemplates = require("../../utils/htmlTemplates");
 const logger = require("../../utils/logger");
+const generateRedisKeyNames = require("../../utils/rediskeynames");
 const User = db.User;
 
 const register = async (req, res) => {
@@ -41,12 +42,12 @@ const register = async (req, res) => {
               gender: gender,
             })
               .then((us) => {
-                const token = jwt.sign({ user: us?.dataValues }, "secret", {
+                const token = jwt.sign({ user: us["dataValues"] }, "secret", {
                   expiresIn: "72h",
                 });
                 successResponse(res, "User created successfully", {
                   token: token,
-                  user: us?.dataValues,
+                  user: us.dataValues,
                 });
               })
               .catch((err) => {
@@ -124,11 +125,12 @@ const forgetPassword = async (req, res) => {
     const code = Math.floor(Math.random() * 900000) + 100000;
 
     //Sending email
-    const [mailSent, emailErr] = await amazonService.sendHtmlMails({
+    const [mail, emailErr] = await sendgridService.sendMails({
       emailsToSend: [email],
       subject: "Ungraindanslaboite - Forget Password",
       body: htmlTemplates.forgetPassword({ code }),
     });
+    console.log(mail);
     if (emailErr) {
       logger.error(`Error in sending forgot password reset email ${emailErr}`);
       return badRequestResponse(res, emailErr);
@@ -136,11 +138,11 @@ const forgetPassword = async (req, res) => {
 
     // Store the email and code in Redis with a 3-minute expiration
 
-    //set access_token in redis
+    //set access_token in redis with __ seconds of expiry time
     const [setAccessToken, setAccessTokenErr] = await redisHelper.setWithExpiry(
       generateRedisKeyNames.forgetPassOTP(email),
       code,
-      180
+      3600
     );
     if (setAccessTokenErr)
       return badRequestResponse(res, "Error in saving OTP to redis.");
@@ -164,41 +166,25 @@ const verifyOTP = async (req, res) => {
     const [redisValue, redisErr] = await redisHelper.getValue(
       generateRedisKeyNames.forgetPassOTP(email)
     );
-    console.log(redisValue);
-    // if (redisErr) return [null, redisErr];
     if (redisValue === null)
       return unauthorizedResponse(res, "OTP is not valid");
 
     if (parseInt(OTP) !== parseInt(redisValue))
       return unauthorizedResponse(res, `Invalid OTP`);
 
-    // const [user, userErr] = await Repository.fetchOne({
-    //   tableName: DB_TABLES.USER,
-    //   query: {
-    //     primary_email: email,
-    //   },
-    // });
     const user = await User.findOne({
       where: {
         email: email,
       },
     });
 
-    if (user === NULL)
-      return badRequestResponse(res, "User with primary email does not exist.");
+    if (user === null ) return notFoundResponse(res, "User not found");
 
-    // generate token
-    // const accessToken = jwtHelper.generate({
-    //   user_id: user.user_id,
-    //   first_name: user.first_name,
-    //   role: user.role,
-    //   primary_email: user.primary_email,
-    //   company_id: user.company_id,
-    // });
-
-    const accessToken = jwt.sign({ user: user }, "secret", {
+    const accessToken = jwt.sign({ user: user.dataValues }, "secret", {
       expiresIn: "72h",
     });
+    console.log(accessToken);
+    console.log("token", accessToken);
 
     delete user.password;
     delete user.created_at;

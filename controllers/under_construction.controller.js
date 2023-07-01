@@ -12,10 +12,12 @@ const add_email = async (req, res) => {
         email: mail,
       },
     });
+
     if (userPresent) return serverErrorResponse(res, "Email already exists");
     const createdObject = await Mail.create({
       email: mail,
     });
+
     successResponse(res, "Email added successfully", createdObject);
   } catch (err) {
     logger.error(`Error while creating email ${err.message}`);

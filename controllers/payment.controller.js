@@ -80,6 +80,7 @@ const getPaymentMethods = async (req, res) => {
 };
 
 const makePaymentIntent = async (req, res) => {
+const { user_id } = req.user;
   const { amount, currency, paymentMethod } = req.body;
   let userCustomerId;
   User.findOne({ where: { user_id: user_id } })
