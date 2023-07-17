@@ -8,16 +8,38 @@ const {
   notFoundResponse,
   unauthorizedResponse,
 } = require("../../utils/response");
-const sendgridService = require("../../services/amazon");
+const moment = require("moment");
 const redisHelper = require("../../helpers/redis");
 const htmlTemplates = require("../../utils/htmlTemplates");
 const logger = require("../../utils/logger");
 const generateRedisKeyNames = require("../../utils/rediskeynames");
+const amazonService = require("../../services/amazon");
+
+//modles
+const Referral = db.Referral;
 const User = db.User;
+const Discount = db.Discount;
 
 const register = async (req, res) => {
-  const { email, password, phone_no, first_name, last_name, username, gender } =
-    req.body;
+  const {
+    email,
+    password,
+    phone_no,
+    first_name,
+    last_name,
+    username,
+    gender,
+    referral_code,
+  } = req.body;
+
+  // check if the referral code exists or not
+  const [redisValue, redisErr] = await redisHelper.getValue(
+    generateRedisKeyNames.referralCode(referral_code)
+  );
+  if (redisValue === null)
+    return badRequestResponse(res, "Referral code is not valid is not valid");
+
+  // check if user already exists
   User.findOne({
     where: {
       email: email,
@@ -40,19 +62,63 @@ const register = async (req, res) => {
               username: username,
               password: passwordHash,
               gender: gender,
+              referral_id: redisValue,
             })
-              .then((us) => {
+              .then(async (us) => {
                 const token = jwt.sign({ user: us["dataValues"] }, "secret", {
                   expiresIn: "72h",
                 });
-                successResponse(res, "User created successfully", {
+
+                if (referral_code) {
+                  // update the referral table with the person who is referred
+                  try {
+                    const updated_rows = await Referral.update(
+                      {
+                        referred_to: us["dataValues"].user_id,
+                      },
+                      {
+                        where: {
+                          referral_id: redisValue,
+                        },
+                      }
+                    );
+                    logger.info("Referral updated in the table");
+                  } catch (err) {
+                    logger.error("Referrals not updated", err);
+                  }
+
+                  // create a discount row for new user
+                  const timeOneMonthAhead = moment().add(1, "month").unix();
+                  try {
+                    const reff_discount = await Discount.create({
+                      value: 20,
+                      is_percent: yes,
+                      expiryDate: timeOneMonthAhead,
+                      isActive: true,
+                      code: null,
+                    });
+                    logger.info(
+                      "Discount row created for referral",
+                      reff_discount
+                    );
+                  } catch (error) {
+                    logger.error(
+                      "Discount row not created for referral",
+                      error
+                    );
+                  }
+                }
+                return successResponse(res, "User created successfully", {
                   token: token,
                   user: us.dataValues,
                 });
               })
               .catch((err) => {
                 console.log(err);
-                serverErrorResponse(res, "error while creating the user");
+                return serverErrorResponse(
+                  res,
+                  "error while creating the user"
+                );
               });
           }
         });
@@ -77,25 +143,28 @@ const login = (req, res, next) => {
   })
     .then((dbUser) => {
       if (!dbUser) {
-        notFoundResponse(res, "user not found");
+        return notFoundResponse(res, "user not found");
       } else {
         // password hash
         bcrypt.compare(password, dbUser.password, (err, compareRes) => {
           if (err) {
             // error while comparing
-            serverErrorResponse(res, "error while comparing the password");
+            return serverErrorResponse(
+              res,
+              "error while comparing the password"
+            );
           } else if (compareRes) {
             // password match
             const token = jwt.sign({ user: dbUser }, "secret", {
               expiresIn: "72h",
             });
-            successResponse(res, "User logged in successfully", {
+            return successResponse(res, "User logged in successfully", {
               token: token,
               user: dbUser,
             });
           } else {
             // password doesnt match
-            unauthorizedResponse(res, "password doesnt match");
+            return unauthorizedResponse(res, "password doesnt match");
           }
         });
       }
@@ -125,7 +194,7 @@ const forgetPassword = async (req, res) => {
     const code = Math.floor(Math.random() * 900000) + 100000;
 
     //Sending email
-    const [mail, emailErr] = await sendgridService.sendMails({
+    const [mail, emailErr] = await amazonService.sendMails({
       emailsToSend: [email],
       subject: "Ungraindanslaboite - Forget Password",
       body: htmlTemplates.forgetPassword({ code }),
@@ -135,8 +204,6 @@ const forgetPassword = async (req, res) => {
       logger.error(`Error in sending forgot password reset email ${emailErr}`);
       return badRequestResponse(res, emailErr);
     }
-
-    // Store the email and code in Redis with a 3-minute expiration
 
     //set access_token in redis with __ seconds of expiry time
     const [setAccessToken, setAccessTokenErr] = await redisHelper.setWithExpiry(
@@ -155,7 +222,7 @@ const forgetPassword = async (req, res) => {
     );
   } catch (err) {
     logger.error(err.message);
-    serverErrorResponse(res, err.message);
+    return serverErrorResponse(res, err.message);
   }
 };
 
@@ -178,7 +245,7 @@ const verifyOTP = async (req, res) => {
       },
     });
 
-    if (user === null ) return notFoundResponse(res, "User not found");
+    if (user === null) return notFoundResponse(res, "User not found");
 
     const accessToken = jwt.sign({ user: user.dataValues }, "secret", {
       expiresIn: "72h",
@@ -193,7 +260,7 @@ const verifyOTP = async (req, res) => {
     return successResponse(res, "OTP is valid", { ...user, accessToken });
   } catch (err) {
     logger.error(err.message);
-    serverErrorResponse(res, err.message);
+    return serverErrorResponse(res, err.message);
   }
 };
 

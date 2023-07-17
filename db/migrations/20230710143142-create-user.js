@@ -15,9 +15,21 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      gender: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      stripe_cutomer_id: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      referral_id: {
+        type: Sequelize.UUID,
+        allowNull: true,
+      },
       password: {
         type: Sequelize.STRING,
-        allowNull:false
+        allowNull: false,
       },
       user_id: {
         type: Sequelize.UUID,
@@ -29,13 +41,13 @@ module.exports = {
         type: Sequelize.STRING,
       },
       username: {
-        allowNull:false,
+        allowNull: false,
         type: Sequelize.STRING,
       },
       phone_no: {
-        allowNull:false,
+        allowNull: false,
         type: Sequelize.STRING,
-      },  
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

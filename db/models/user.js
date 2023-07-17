@@ -23,12 +23,11 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.STRING,
         allowNull: true,
       },
- gender: {
+      gender: {
         type: Sequelize.STRING,
         allowNull: true,
-      }, 
-
-     email: {
+      },
+      email: {
         type: Sequelize.STRING,
         allowNull: false,
       },
@@ -55,7 +54,11 @@ module.exports = (sequelize, Sequelize) => {
       },
       stripe_customer_id: {
         allowNull: true,
-        type: Sequelize.STRING, 
+        type: Sequelize.STRING,
+      },
+      referral_id: {
+        type: Sequelize.UUID,
+        allowNull: true,
       },
     },
     {
@@ -65,3 +68,4 @@ module.exports = (sequelize, Sequelize) => {
   );
   return User;
 };
+

@@ -1,11 +1,9 @@
-const sendMails = require('./lib/sendMails');
-const sendHtmlMails = require('./lib/sendHtmlMails');
+const sendMails = require("./lib/sendMails");
+const sendHtmlMails = require("./lib/sendHtmlMails");
 
-const sendgridService = {
-  
+const amazonService = {
   sendMails,
   sendHtmlMails,
 };
 
-module.exports = sendgridService;
-  
+module.exports = amazonService;

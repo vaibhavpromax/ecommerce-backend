@@ -10,6 +10,7 @@ const Address = db.Address;
 const Review = db.Review;
 
 const get_orders = async (req, res) => {
+  const { user_id } = req.user;
   try {
     const orders = await Order.findAll();
     return successResponse(res, "all orders fetched successfully", orders);

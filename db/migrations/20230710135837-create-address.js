@@ -27,6 +27,14 @@ module.exports = {
         type: Sequelize.UUID,
         allowNull: false,
       },
+      is_primary: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+      },
+      name_on_address: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

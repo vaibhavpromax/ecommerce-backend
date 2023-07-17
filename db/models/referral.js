@@ -1,62 +1,59 @@
 "use strict";
 const { Model } = require("sequelize");
 module.exports = (sequelize, Sequelize) => {
-  class Address extends Model {
+  class Referral extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate({ User, Order }) {
-      this.belongsTo(User, { foreignKey: "user_id" });
-      this.hasMany(Order, { foreignKey: "address_id" });
+    static associate({User}) {
       // define association here
+        this.belongsTo(User,{foreignKey:"user_id"})
     }
   }
-  Address.init(
+  Referral.init(
     {
-      address_id: {
-        primaryKey: true,
+      referral_id: {
         type: Sequelize.UUID,
         defaultValue: Sequelize.UUIDV4,
+        primaryKey: true,
       },
-      street_no: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      street_name: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      postal_code: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      city: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      is_primary: {
-        type: Sequelize.BOOLEAN,
-        allowNull: false,
-      },
-      name_on_address: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      country: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
+      // person who is sending the referral code
       user_id: {
         type: Sequelize.UUID,
         allowNull: false,
       },
+      referr_code: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      isDiscount: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+      },
+      value: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+      },
+      // user who is getting the referral code
+      referred_to: {
+        type: Sequelize.UUID,
+        allowNull: true,
+      },
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
+      updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
     },
     {
       sequelize,
-      modelName: "Address",
+      modelName: "Referral",
     }
   );
-  return Address;
+  return Referral;
 };

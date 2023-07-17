@@ -6,6 +6,7 @@ const {
 } = require("../../utils/response");
 
 const Address = db.Address;
+
 const getAddressOfUser = async (req, res) => {
   const { user_id } = req.user;
   try {
@@ -24,7 +25,14 @@ const getAddressOfUser = async (req, res) => {
 const addAddress = async (req, res) => {
   const { user_id } = req.user;
   try {
-    const { street_no, street_name, postal_code, city, country } = req.body;
+    const {
+      street_no,
+      street_name,
+      postal_code,
+      city,
+      country,
+      name_on_address,
+    } = req.body;
     const createdObject = await Address.create({
       user_id: user_id,
       street_no: street_no,
@@ -32,6 +40,7 @@ const addAddress = async (req, res) => {
       postal_code: postal_code,
       city: city,
       country: country,
+      name_on_address,
     });
     successResponse(res, "Address added successfully", createdObject);
   } catch (err) {
@@ -39,12 +48,18 @@ const addAddress = async (req, res) => {
     serverErrorResponse(res, err.message);
   }
 };
-
 const updateAddress = async (req, res) => {
   const { user_id } = req.user;
   const { address_id } = req.params;
   try {
-    const { street_no, street_name, postal_code, city, country } = req.body;
+    const {
+      street_no,
+      street_name,
+      postal_code,
+      city,
+      country,
+      name_on_address,
+    } = req.body;
     const createdObject = await Address.update(
       {
         street_no: street_no,
@@ -52,6 +67,7 @@ const updateAddress = async (req, res) => {
         postal_code: postal_code,
         city: city,
         country: country,
+        name_on_address,
       },
       {
         where: {

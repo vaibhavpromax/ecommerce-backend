@@ -1,48 +1,56 @@
 "use strict";
 const { Model } = require("sequelize");
 module.exports = (sequelize, Sequelize) => {
-  class Discount extends Model {
+  class Notification extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate(models) {
-      // define association here
+    static associate({ User }) {
+      this.belongsTo(User, { foreignKey: "user_id" });
     }
   }
-  Discount.init(
+  Notification.init(
     {
-      discount_id: {
+      noti_id: {
         type: Sequelize.UUID,
-        primaryKey: true,
         defaultValue: Sequelize.UUIDV4,
+        primaryKey: true,
       },
-      code: {
-        type: Sequelize.STRING,
-        allowNull: true,
+      user_id: {
+        type: Sequelize.UUID,
+        allowNull: false,
       },
-      value: {
+      noti_type: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      is_percent: {
+      noti_detail: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      user_seen: {
         type: Sequelize.BOOLEAN,
         allowNull: false,
+        defaultValue: false,
       },
-      expiryDate: {
+      other_info: {
+        type: Sequelize.STRING,
+      },
+      createdAt: {
+        allowNull: false,
         type: Sequelize.DATE,
-        allowNull: false,
       },
-      isActive: {
-        type: Sequelize.BOOLEAN,
+      updatedAt: {
         allowNull: false,
+        type: Sequelize.DATE,
       },
     },
     {
       sequelize,
-      modelName: "Discount",
+      modelName: "Notification",
     }
   );
-  return Discount;
+  return Notification;
 };
