@@ -1,22 +1,16 @@
 "use strict";
-const { Model } = require("sequelize");
-module.exports = (sequelize, Sequelize) => {
-  class Order extends Model {
+
+/** @type {import('sequelize-cli').Migration} */
+module.exports = {
+  async up(queryInterface, Sequelize) {
     /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
+     * Add altering commands here.
+     *
+     * Example:
+     * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
-    // define association here
-    static associate({ User, Product, Address, Review }) {
-      this.belongsTo(User, { foreignKey: "user_id" });
-      this.belongsTo(Product, { foreignKey: "product_id" });
-      this.belongsTo(Address, { foreignKey: "address_id" });
-      this.hasOne(Review, { foreignKey: "order_id" });
-    }
-  }
-  Order.init(
-    {
+
+    await queryInterface.createTable("Orders", {
       order_id: {
         primaryKey: true,
         defaultValue: Sequelize.UUIDV4,
@@ -53,11 +47,16 @@ module.exports = (sequelize, Sequelize) => {
         allowNull: false,
         type: Sequelize.DATE,
       },
-    },
-    {
-      sequelize,
-      modelName: "Order",
-    }
-  );
-  return Order;
+    });
+  },
+
+  async down(queryInterface, Sequelize) {
+    /**
+     * Add reverting commands here.
+     *
+     * Example:
+     * await queryInterface.dropTable('users');
+     */
+    await queryInterface.dropTable("Orders");
+  },
 };

@@ -1,50 +1,42 @@
 "use strict";
 const { Model } = require("sequelize");
 module.exports = (sequelize, Sequelize) => {
-  class Order extends Model {
+  class CartItem extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    // define association here
-    static associate({ User, Product, Address, Review }) {
-      this.belongsTo(User, { foreignKey: "user_id" });
+    static associate({ User, Cart, Product }) {
+      // define association here
       this.belongsTo(Product, { foreignKey: "product_id" });
-      this.belongsTo(Address, { foreignKey: "address_id" });
-      this.hasOne(Review, { foreignKey: "order_id" });
+      this.belongsTo(User, { foreignKey: "user_id" });
+      this.belongsTo(Cart, { foreignKey: "cart_id" });
     }
   }
-  Order.init(
+  CartItem.init(
     {
-      order_id: {
+      cart_item_id: {
+        type: Sequelize.UUID,
         primaryKey: true,
         defaultValue: Sequelize.UUIDV4,
+      },
+      product_id: {
         type: Sequelize.UUID,
+        allowNull: false,
+      },
+      cart_quantity: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
       },
       user_id: {
         type: Sequelize.UUID,
+        allowNull: false,
       },
-      stripe_payment_id: {
+      cart_id: {
         type: Sequelize.UUID,
+        allowNull: false,
       },
-      address_id: {
-        type: Sequelize.UUID,
-      },
-      total_price: {
-        type: Sequelize.STRING,
-      },
-      discount_id: {
-        type: Sequelize.UUID,
-        allowNull: true,
-      },
-      final_amount: {
-        type: Sequelize.STRING,
-      },
-      order_status: {
-        type: Sequelize.STRING,
-      },
-      cart_id: { type: Sequelize.UUID },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
@@ -56,8 +48,8 @@ module.exports = (sequelize, Sequelize) => {
     },
     {
       sequelize,
-      modelName: "Order",
+      modelName: "CartItem",
     }
   );
-  return Order;
+  return CartItem;
 };

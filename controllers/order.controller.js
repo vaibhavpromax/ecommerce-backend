@@ -8,6 +8,7 @@ const Product = db.Product;
 const User = db.User;
 const Address = db.Address;
 const Review = db.Review;
+const Discount = db.Discount;
 
 const get_orders = async (req, res) => {
   const { user_id } = req.user;
@@ -24,40 +25,22 @@ const get_single_order = async (req, res) => {
   const { order_id } = req.params;
   let user, product, order, address, review;
   try {
-    await Order.findOne({
+    const order = await Order.findOne({
       where: {
         order_id: order_id,
       },
-    }).then(async (dbValue) => {
-      order = dbValue.dataValues;
-      user = await User.findOne({
-        where: {
-          user_id: order.user_id,
-        },
-      });
-      product = await Product.findOne({
-        where: {
-          product_id: order.product_id,
-        },
-      });
-      address = await Address.findOne({
-        where: {
-          address_id: order.address_id,
-        },
-      });
-      review = await Review.findOne({
-        where: {
-          order_id: order.order_id,
-        },
-      });
+      include: {
+        User,
+        Product,
+        Review,
+        Discount,
+        Address,
+      },
     });
-    return successResponse(res, "order fetched successfully", {
-      order,
-      user,
-      product,
-      address,
-      review,
-    });
+    logger.info("Order fetched successfully", order)
+    return successResponse("Order fetched" , order)
+
+
   } catch (err) {
     logger.error("Error while fetching order", err);
     return serverErrorResponse(res, "Error while fetching order");
@@ -66,7 +49,20 @@ const get_single_order = async (req, res) => {
 
 const make_order = async (req, res) => {
   const { user_id } = req.user;
-  const { product_id, quantity, address_id, total_price } = req.body;
+  const { cart_id, discount_id, address_id } = req.body;
+  
+  const cartItems = await Cart.findAll({
+    where: {
+    user_id:user_id
+    }
+  })
+  
+  const total_price = cartItems?.map((item) => {
+    return 
+  })
+
+
+
   try {
     const order = await Order.create({
       product_id,
