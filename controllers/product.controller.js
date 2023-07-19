@@ -4,6 +4,9 @@ const addImagetoProduct = require("../helpers/addImageToProduct");
 
 const logger = require("../utils/logger");
 const { serverErrorResponse, successResponse } = require("../utils/response");
+const addProductToStripe = require("../services/stripe/addProductToStripe");
+const addPriceToStripe = require("../services/stripe/addPriceToStripe");
+const updateStripePrice = require("../services/stripe/updateStripePrice");
 
 const Product = db.Product;
 
@@ -47,15 +50,7 @@ const getSingleProduct = async (req, res) => {
 };
 
 const createProduct = async (req, res) => {
-  const {
-    name,
-    description,
-    price,
-    category,
-    inventory_quantity,
-    // createdAt,
-    // updatedAt,
-  } = req.body;
+  const { name, description, price, category, inventory_quantity } = req.body;
   try {
     const product = await Product.create({
       name,
@@ -64,9 +59,38 @@ const createProduct = async (req, res) => {
       category,
       inventory_quantity,
       image: "first",
-      // createdAt,
-      // updatedAt,
     });
+
+    //create product in stripe
+
+    const [stripeProduct, stripeProductError] = await addProductToStripe(
+      name,
+      product.product_id
+    );
+    if (stripeProductError) {
+      return serverErrorResponse(
+        "Error while creating product in stripe",
+        stripeProductError
+      );
+    }
+
+    const [stripePrice, stripePriceError] = await addPriceToStripe(
+      "usd",
+      price,
+      product.product_id
+    );
+
+    // add stripe price id to the db
+    product.stripe_price_id = stripePrice.id;
+    product.save();
+
+    if (stripePriceError) {
+      return serverErrorResponse(
+        "Error while creating price in stripe",
+        stripePriceError
+      );
+    }
+    //add the price in stripe
 
     return successResponse(res, "product created successfully", product);
   } catch (err) {
@@ -89,6 +113,7 @@ const deleteProduct = async (req, res) => {
     return serverErrorResponse(res, "Error while deleting product");
   }
 };
+
 const updateProduct = async (req, res) => {
   const { product_id } = req.params;
   const { name, description, price, category, inventory_quantity } = req.body;
@@ -107,6 +132,16 @@ const updateProduct = async (req, res) => {
         },
       }
     );
+
+    // if the price is updated
+    if (price) {
+      const [updatePriceStripe, updateStripePriceError] =
+        await updateStripePrice(product.stripe_price_id, price);
+      if (updateStripePriceError)
+        logger.error("Error while updating the price of a product in stripe" , updateStripePriceError)
+        return serverErrorResponse(res, "Error while updating the product info" )
+    }
+
     return successResponse(res, "product updated successfully", product);
   } catch (err) {
     logger.error("Error while updating product", err);
