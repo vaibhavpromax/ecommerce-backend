@@ -24,7 +24,12 @@ const getAddressOfUser = async (req, res) => {
 
 const addAddress = async (req, res) => {
   const { user_id } = req.user;
+  let primary = false;
   try {
+    const fetchAddress = await Address.findAll({ where: { user_id } });
+
+    if (fetchAddress.length === 0) primary = true;
+
     const {
       street_no,
       street_name,
@@ -40,6 +45,7 @@ const addAddress = async (req, res) => {
       postal_code: postal_code,
       city: city,
       country: country,
+      is_primary: primary,
       name_on_address,
     });
     successResponse(res, "Address added successfully", createdObject);
@@ -50,29 +56,39 @@ const addAddress = async (req, res) => {
 };
 const updateAddress = async (req, res) => {
   const { user_id } = req.user;
-  const { address_id } = req.params;
+  const {
+    street_no,
+    street_name,
+    postal_code,
+    city,
+    country,
+    is_primary,
+    address_id,
+    name_on_address,
+  } = req.body;
   try {
-    const {
-      street_no,
-      street_name,
-      postal_code,
-      city,
-      country,
-      name_on_address,
-    } = req.body;
+    if (is_primary) {
+      // set all addreses to be not primary
+      const updateAddress = await Address.update(
+        { is_primary: false },
+        { where: { user_id } }
+      );
+      logger.info("Addresses marked not primary", updateAddress);
+    }
+
     const createdObject = await Address.update(
       {
         street_no: street_no,
         street_name: street_name,
         postal_code: postal_code,
         city: city,
+        is_primary,
         country: country,
         name_on_address,
       },
       {
         where: {
-          user_id: user_id,
-          id: address_id,
+          address_id: address_id,
         },
       }
     );
@@ -83,4 +99,28 @@ const updateAddress = async (req, res) => {
   }
 };
 
-module.exports = { getAddressOfUser, addAddress, updateAddress };
+const deleteAddress = async (req, res) => {
+  const { user_id } = req.user;
+  const { address_id } = req.params;
+  try {
+    const addresses = await Address.findAll({ where: { user_id } });
+    const deleteObj = await Address.findOne({ where: { address_id } });
+
+    if (deleteObj.is_primary && addresses.length > 1) {
+      // delete the current address
+      await deleteObj.destroy();
+      // set another address as primary
+      const address = await Address.findOne({ where: { user_id } });
+      address.is_primary = true;
+      await address.save();
+    } else {
+      await deleteObj.destroy();
+    }
+    return successResponse(res, "Address deleted successfully");
+  } catch (error) {
+    logger.error("Error while deleting address", error);
+    return serverErrorResponse(res, "Error while deleting address");
+  }
+};
+
+module.exports = { getAddressOfUser, addAddress, updateAddress, deleteAddress };

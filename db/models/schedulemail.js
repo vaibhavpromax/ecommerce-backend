@@ -1,7 +1,7 @@
 "use strict";
 const { Model } = require("sequelize");
 module.exports = (sequelize, Sequelize) => {
-  class Notification extends Model {
+  class Schedulemail extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -11,36 +11,28 @@ module.exports = (sequelize, Sequelize) => {
       this.belongsTo(User, { foreignKey: "user_id" });
     }
   }
-  Notification.init(
+  Schedulemail.init(
     {
-      noti_id: {
+      schedulemail_id: {
         type: Sequelize.UUID,
-        defaultValue: Sequelize.UUIDV4,
         primaryKey: true,
+        defaultValue: Sequelize.UUIDV4,
       },
-      user_id: {
-        type: Sequelize.UUID,
-        allowNull: true ,
+      receiver: {
+        type: Sequelize.STRING,
+        allowNull: true,
       },
-      noti_type: {
+      subject: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      noti_detail: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      user_seen: {
+      body: {
         type: Sequelize.BOOLEAN,
         allowNull: false,
-        defaultValue: false,
       },
-      for_all: {
-        type: Sequelize.BOOLEAN,
-        defaultValue: false,
-      },
-      other_info: {
-        type: Sequelize.STRING,
+      schdeuled_timestamp: {
+        type: Sequelize.DATE,
+        allowNull: false,
       },
       createdAt: {
         allowNull: false,
@@ -53,8 +45,8 @@ module.exports = (sequelize, Sequelize) => {
     },
     {
       sequelize,
-      modelName: "Notification",
+      modelName: "Schedulemail",
     }
   );
-  return Notification;
+  return Schedulemail;
 };

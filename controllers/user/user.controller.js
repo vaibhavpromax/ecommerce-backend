@@ -32,7 +32,24 @@ const getCompleteUserDetails = async (req, res) => {
   }
 };
 
+const getUserDetails = async (req, res) => {
+  const { user_id } = req.user;
+  try {
+    const user = await User.findOne({
+      where: {
+        user_id: user_id,
+      },
+    });
+    successResponse(res, "User details fetched successfully", {
+      name: user?.first_name + user?.last_name,
+      email: user?.email,
+      username: user?.username,
+      phone_no: user?.phone_no,
+    });
+  } catch (err) {
+    logger.error(`Error while fetching user details ${err.message}`);
+    serverErrorResponse(res, err.message);
+  }
+};
 
-
-
-module.exports = { getCompleteUserDetails };
+module.exports = { getCompleteUserDetails, getUserDetails };

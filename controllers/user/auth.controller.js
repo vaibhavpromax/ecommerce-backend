@@ -24,21 +24,22 @@ const register = async (req, res) => {
   const {
     email,
     password,
-    phone_no,
+    // phone_no,
     first_name,
     last_name,
-    username,
-    gender,
+    // username,
+    // gender,
     referral_code,
   } = req.body;
 
-  // check if the referral code exists or not
   const [redisValue, redisErr] = await redisHelper.getValue(
     generateRedisKeyNames.referralCode(referral_code)
   );
-  if (redisValue === null)
-    return badRequestResponse(res, "Referral code is not valid is not valid");
-
+  if (referral_code) {
+    // check if the referral code exists or not
+    if (redisValue === null)
+      return badRequestResponse(res, "Referral code is not valid is not valid");
+  }
   // check if user already exists
   User.findOne({
     where: {
@@ -58,10 +59,10 @@ const register = async (req, res) => {
               email: email,
               first_name: first_name,
               last_name: last_name,
-              phone_no: phone_no,
-              username: username,
+              phone_no: "3479287408",
+              username: "testuser",
               password: passwordHash,
-              gender: gender,
+              gender: "M",
               referral_id: redisValue,
             })
               .then(async (us) => {
@@ -69,7 +70,7 @@ const register = async (req, res) => {
                   expiresIn: "72h",
                 });
 
-                if (referral_code) {
+                if (referral_code != null) {
                   // update the referral table with the person who is referred
                   try {
                     const updated_rows = await Referral.update(

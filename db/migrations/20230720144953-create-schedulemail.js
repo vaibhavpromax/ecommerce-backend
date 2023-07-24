@@ -9,30 +9,26 @@ module.exports = {
      * Example:
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
-    await queryInterface.createTable("Discounts", {
-      discount_id: {
+    await queryInterface.createTable("Schedulemails", {
+      schedulemail_id: {
         type: Sequelize.UUID,
         primaryKey: true,
         defaultValue: Sequelize.UUIDV4,
       },
-      code: {
+      receiver: {
         type: Sequelize.STRING,
         allowNull: true,
       },
-      value: {
+      subject: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      is_percent: {
+      body: {
         type: Sequelize.BOOLEAN,
         allowNull: false,
       },
-      expiryDate: {
+      schdeuled_timestamp: {
         type: Sequelize.DATE,
-        allowNull: false,
-      },
-      isActive: {
-        type: Sequelize.BOOLEAN,
         allowNull: false,
       },
       createdAt: {
@@ -53,6 +49,6 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
-    await queryInterface.dropTable("Discounts");
+    await queryInterface.dropTable("Schedulemails");
   },
 };
