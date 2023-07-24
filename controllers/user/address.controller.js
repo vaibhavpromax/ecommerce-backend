@@ -73,7 +73,7 @@ const updateAddress = async (req, res) => {
         { is_primary: false },
         { where: { user_id } }
       );
-      logger.info("Addresses marked not primary", updateAddress);
+      logger.info(`Addresses marked not primary ${updateAddress}`);
     }
 
     const createdObject = await Address.update(
@@ -118,7 +118,7 @@ const deleteAddress = async (req, res) => {
     }
     return successResponse(res, "Address deleted successfully");
   } catch (error) {
-    logger.error("Error while deleting address", error);
+    logger.error(`Error while deleting address ${error} `);
     return serverErrorResponse(res, "Error while deleting address");
   }
 };

@@ -44,7 +44,7 @@ const sendHtmlMails = async ({ subject = '', body, emailsToSend }) => {
     );
     return [mail, null];
   } catch (err) {
-    logger.error('Error while sending mails via AWS SES: ', err);
+    logger.error(`Error while sending mails via AWS SES: ${err} `);
     return [null, err.message];
   }
 };

@@ -85,7 +85,7 @@ const register = async (req, res) => {
                     );
                     logger.info("Referral updated in the table");
                   } catch (err) {
-                    logger.error("Referrals not updated", err);
+                    logger.error(`Referrals not updated ${err}`);
                   }
 
                   // create a discount row for new user
@@ -99,13 +99,11 @@ const register = async (req, res) => {
                       code: null,
                     });
                     logger.info(
-                      "Discount row created for referral",
-                      reff_discount
+                      `Discount row created for referral ${reff_discount}`
                     );
                   } catch (error) {
                     logger.error(
-                      "Discount row not created for referral",
-                      error
+                      `Discount row not created for referral ${error}`
                     );
                   }
                 }
@@ -130,7 +128,7 @@ const register = async (req, res) => {
       }
     })
     .catch((err) => {
-      console.log("error", err);
+      logger.error(err);
     });
 };
 

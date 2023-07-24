@@ -12,7 +12,7 @@ const deletePriceInStripe = async ({ price_id }) => {
     });
     return [price, null];
   } catch (error) {
-    logger.error("Error while delete price in stripe", error);
+    logger.error(`Error while delete price in stripe ${error} `);
     return [null, err];
   }
 };

@@ -16,7 +16,7 @@ const get_orders = async (req, res) => {
     const orders = await Order.findAll();
     return successResponse(res, "all orders fetched successfully", orders);
   } catch (err) {
-    logger.error("Error while fetching orders", err);
+    logger.error(`Error while fetching orders ${err}`);
     return serverErrorResponse(res, "Error while fetching orders");
   }
 };
@@ -37,12 +37,10 @@ const get_single_order = async (req, res) => {
         Address,
       },
     });
-    logger.info("Order fetched successfully", order)
-    return successResponse("Order fetched" , order)
-
-
+    logger.info(`Order fetched successfully ${order}`);
+    return successResponse("Order fetched", order);
   } catch (err) {
-    logger.error("Error while fetching order", err);
+    logger.error(`Error while fetching order ${err}`);
     return serverErrorResponse(res, "Error while fetching order");
   }
 };
@@ -50,18 +48,16 @@ const get_single_order = async (req, res) => {
 const make_order = async (req, res) => {
   const { user_id } = req.user;
   const { cart_id, discount_id, address_id } = req.body;
-  
+
   const cartItems = await Cart.findAll({
     where: {
-    user_id:user_id
-    }
-  })
-  
+      user_id: user_id,
+    },
+  });
+
   const total_price = cartItems?.map((item) => {
-    return 
-  })
-
-
+    return;
+  });
 
   try {
     const order = await Order.create({
@@ -90,7 +86,7 @@ const make_order = async (req, res) => {
     });
     return successResponse(res, "order created successfully", order);
   } catch (err) {
-    logger.error("Error while creating order", err);
+    logger.error(`Error while creating order ${err}`);
     return serverErrorResponse(res, "Error while creating order");
   }
 };
@@ -116,7 +112,7 @@ const update_order = async (req, res) => {
     );
     return successResponse(res, "order updated successfully", order);
   } catch (err) {
-    logger.error("Error while updating order", err);
+    logger.error(`Error while updating order ${err}`);
     return serverErrorResponse(res, "Error while updating order");
   }
 };

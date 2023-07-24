@@ -31,7 +31,7 @@ const createReferral = async (req, res) => {
     });
     return successResponse(res, "Referral created successfully", referral);
   } catch (err) {
-    logger.error("Error in creating referral", err);
+    logger.error(`Error in creating referral ${err}`);
     return serverErrorResponse(res, "Error in creating referral", err);
   }
 };
@@ -42,7 +42,7 @@ const checkReferral = async (req, res) => {
     const [redisValue, redisError] = await redisHelper.getValue(generateRedisKeyNames.referralCode(ref_code))
     
     if (redisError) {
-      logger.error("Error while checking referral code in redis" , redisError)
+      logger.error(`Error while checking referral code in redis ${redisError}`)
       return serverErrorResponse(res, "Error while checking referral")}
 
     if (redisValue === null) {
@@ -50,7 +50,7 @@ const checkReferral = async (req, res) => {
       return notFoundResponse(res, "Referral Code not present")}
     
   } catch (error) {
-    logger.error("Error in applying referral", error);
+    logger.error(`Error in applying referral ${error}`);
     return serverErrorResponse(res, "Error in applying referral");
   }
 };

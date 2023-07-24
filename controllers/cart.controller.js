@@ -42,7 +42,7 @@ const addToCart = async (req, res) => {
               return successResponse(res, "Cart updated successfully");
             }
           } catch (error) {
-            logger.error("error while deleting cartitem", error);
+            logger.error(`error while deleting cartitem ${error}`);
             return serverErrorResponse(res, "Error while updating cart");
           }
         }
@@ -60,10 +60,10 @@ const addToCart = async (req, res) => {
             cart_quantity: quantity,
             user_id: user_id,
           });
-          logger.info("new cart item created", newCartitem);
+          logger.info(`new cart item created ${newCartitem}` );
           return successResponse(res, "Cart updated successfully", newCartitem);
         } catch (error) {
-          logger.info("error while creating new cart item", error);
+          logger.info(`error while creating new cart item ${error}`);
           return serverErrorResponse(res, "Error while updating cart");
         }
       }
@@ -75,7 +75,7 @@ const addToCart = async (req, res) => {
           user_id: user_id,
           discount_id: discount_id,
         });
-        logger.info("New cart created", newCart);
+        logger.info(`New cart created${newCart}`);
 
         try {
           const newCartItem = await CartItem.create({
@@ -84,19 +84,19 @@ const addToCart = async (req, res) => {
             cart_id: newCart.cart_id,
             product_id: product_id,
           });
-          logger.info("New cart item made", newCartItem);
+          logger.info(`New cart item made ${newCartItem}`);
           return successResponse(res, "Cart updated successfully");
         } catch (error) {
-          logger.error("Error while creating cart item", error);
+          logger.error(`Error while creating cart item ${error}`);
           return serverErrorResponse(res, "Error while updating cart");
         }
       } catch (error) {
-        logger.error("Error while creating new cart", error);
+        logger.error(`Error while creating new cart ${error}`);
         return serverErrorResponse(res, "Error while updating cart");
       }
     }
   } catch (error) {
-    logger.error("Error while addiing to cart ", error);
+    logger.error(`Error while addiing to cart ${error}`);
     return serverErrorResponse(res, "Error while adding to cart");
   }
 };
@@ -128,7 +128,7 @@ const getCart = async (req, res) => {
         if (product) {
           return { price: product.price, quantity: item.cart_quantity };
         } else {
-          logger.error("Product not found for cartitem", item);
+          logger.error(`Product not found for cartitem ${item}`);
           return null;
         }
       });
@@ -147,11 +147,11 @@ const getCart = async (req, res) => {
       cart.save();
       return successResponse(res, "Cart fetched successfully", cart);
     } else {
-      logger.info("No cart found for user", user_id);
+      logger.info(`No cart found for user ${user_id}`);
       return notFoundResponse(res, "No cart found");
     }
   } catch (error) {
-    logger.error("Error fetching cart", error);
+    logger.error(`Error fetching cart ${error}`);
     return serverErrorResponse(res, "Error fetching cart", error);
   }
 };

@@ -13,7 +13,7 @@ const addPriceToStripe = async ({ currency, unitAmount, product_id }) => {
 
     return [price, null];
   } catch (error) {
-    logger.error("Error while adding price to stripe", error);
+    logger.error(`Error while adding price to stripe ${error}`);
     return [null, err];
   }
 };

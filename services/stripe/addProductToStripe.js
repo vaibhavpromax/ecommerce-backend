@@ -12,7 +12,7 @@
 
       return [product, null];
     } catch (error) {
-      logger.error("Error while adding product to stripe", error);
+      logger.error(`Error while adding product to stripe ${error}`);
       return [null, err];
     }
   };

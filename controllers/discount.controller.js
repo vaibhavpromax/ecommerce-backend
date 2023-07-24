@@ -25,7 +25,7 @@ const createDiscount = async (req, res) => {
     });
     return successResponse(res, "disount created successfully ", discount);
   } catch (error) {
-    logger.error("Error while creating discount", error);
+    logger.error(`Error while creating discount ${error}`);
     return serverErrorResponse(res, "Error while creating discount");
   }
 };

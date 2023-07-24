@@ -21,14 +21,14 @@ const createNotification = async (req, res) => {
       other_info,
     });
 
-    logger.info("Notification created successfully", notification);
+    logger.info(`Notification created successfully ${notification}`);
     return successResponse(
       res,
       "Notification created successfully",
       notification
     );
   } catch (err) {
-    logger.error("Error while creating notification", err);
+    logger.error(`Error while creating notification ${err}`);
     return serverErrorResponse(res, "Error while creating notification");
   }
 };
@@ -48,14 +48,14 @@ const getNotifications = async (req, res) => {
         ],
       },
     });
-    logger.info("Notifications fetched", notifications);
+    logger.info(`Notifications fetched ${notifications}`);
     return successResponse(
       res,
       "Notifications fetched succcessfully",
       notifications
     );
   } catch (err) {
-    logger.error("Error while fetching notifications", err);
+    logger.error(`Error while fetching notifications ${err}`);
     return serverErrorResponse(res, "Error while fetching");
   }
 };

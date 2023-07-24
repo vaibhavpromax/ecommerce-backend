@@ -15,7 +15,7 @@ const createWishlist = async (req, res) => {
     });
     return successResponse(res, "Wishlist created successfully", wishlist);
   } catch (error) {
-    logger.error("Error while creating wishlist", error);
+    logger.error(`Error while creating wishlist ${error}`);
     return serverErrorResponse(res, "Error while creating wishlist", error);
   }
 };
@@ -29,7 +29,7 @@ const getWishlist = async (req, res) => {
     });
     return successResponse(res, "Wishlist fetced successfully", list);
   } catch (err) {
-    logger.error("Error while fetching wishlist", err);
+    logger.error(`Error while fetching wishlist ${err}`);
     return serverErrorResponse(res, "Error while fetching wishlist", err);
   }
 };
@@ -41,8 +41,8 @@ const removeFromWishlist = async (req, res) => {
     const deleted_rows = Wishlist.destroy({ where: { user_id, wish_id: id } });
     return successResponse("Successfully removed from wishlist", deleted_rows);
   } catch (err) {
-    logger.error("Error while removing from wishlist", err);
-    return serverErrorResponse(res, "Error while removing ", err);
+    logger.error(`Error while removing from wishlist ${err}`);
+    return serverorResponse(res, "Error while removing ", err);
   }
 };
 

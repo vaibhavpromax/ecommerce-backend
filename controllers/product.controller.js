@@ -17,7 +17,7 @@ const getProducts = async (req, res) => {
     const products = await Product.findAll();
     return successResponse(res, "all products fetched successfully", products);
   } catch (err) {
-    logger.error("Error while fetching products", err);
+    logger.error(`Error while fetching products ${err}`);
     return serverErrorResponse(res, "Error while fetching products");
   }
 };
@@ -44,7 +44,7 @@ const getSingleProduct = async (req, res) => {
       review,
     });
   } catch (err) {
-    logger.error("Error while fetching product", err);
+    logger.error(`Error while fetching product ${err}`);
     return serverErrorResponse(res, "Error while fetching product");
   }
 };
@@ -94,7 +94,7 @@ const createProduct = async (req, res) => {
 
     return successResponse(res, "product created successfully", product);
   } catch (err) {
-    logger.error("Error while creating product", err);
+    logger.error(`Error while creating product ${err} `);
     return serverErrorResponse(res, "Error while creating product");
   }
 };
@@ -109,7 +109,7 @@ const deleteProduct = async (req, res) => {
     });
     return successResponse(res, "product deleted successfully", product);
   } catch (err) {
-    logger.error("Error while deleting product", err);
+    logger.error(`Error while deleting product ${err} `);
     return serverErrorResponse(res, "Error while deleting product");
   }
 };
@@ -138,13 +138,13 @@ const updateProduct = async (req, res) => {
       const [updatePriceStripe, updateStripePriceError] =
         await updateStripePrice(product.stripe_price_id, price);
       if (updateStripePriceError)
-        logger.error("Error while updating the price of a product in stripe" , updateStripePriceError)
+        logger.error(`Error while updating the price of a product in stripe ${updateStripePriceError}` )
         return serverErrorResponse(res, "Error while updating the product info" )
     }
 
     return successResponse(res, "product updated successfully", product);
   } catch (err) {
-    logger.error("Error while updating product", err);
+    logger.error(`Error while updating product ${err}`);
     return serverErrorResponse(res, "Error while updating product");
   }
 };

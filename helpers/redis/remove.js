@@ -9,7 +9,7 @@ const removeValue = (key) => {
       resolve([true, null]);
     } catch (err) {
       console.log(err);
-      logger.error(`Error while getting values from redis: `, err);
+      logger.error(`Error while getting values from redis: ${err}`);
       reject([null, err.mesage]);
     }
   });
