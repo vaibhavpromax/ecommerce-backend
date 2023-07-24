@@ -5,6 +5,7 @@ const {
   isAuth,
   forgetPassword,
   verifyOTP,
+  changePassword,
 } = require("../controllers/user/auth.controller");
 const {
   addAddress,
@@ -23,6 +24,7 @@ router.post("/login", login);
 router.post("/register", register);
 router.post("/forget-password", forgetPassword);
 router.post("/verify-otp", verifyOTP);
+router.post("/change-password", isAuth, changePassword);
 router.post("/add-address", isAuth, addAddress);
 router.get("/get-address", isAuth, getAddressOfUser);
 router.patch("/update-address", isAuth, updateAddress);

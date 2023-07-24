@@ -265,7 +265,55 @@ const verifyOTP = async (req, res) => {
   }
 };
 
-const isAuth = (req, res, next) => {
+const changePassword = async (req, res) => {
+  const { user_id } = req.user;
+  const { current_pass, new_pass } = req.body;
+
+  try {
+    const dbUser = await User.findOne({ where: { user_id } });
+
+    bcrypt.compare(current_pass, dbUser.password, (err, compareRes) => {
+      if (err) {
+        // error while comparing
+        logger.error(`Error in comparing pas ${err}`);
+        return serverErrorResponse(res, "Current password is incorrect");
+      } else if (compareRes) {
+        bcrypt.hash(new_pass, 12, async (err, passwordHash) => {
+          if (err) {
+            logger.error(`Error while generating new hash ${err}`);
+            return serverErrorResponse(
+              res,
+              "error while hashing the new password"
+            );
+          } else if (passwordHash) {
+            const updated_user = await User.update(
+              { password: passwordHash },
+              { where: { user_id } }
+            );
+            if (updated_user.length === 1)
+              return successResponse(res, "Password changed successfully");
+            else
+              return serverErrorResponse(res, "Error while changing password");
+          }
+        });
+
+        // // password match
+        // const token = jwt.sign({ user: dbUser }, "secret", {
+        //   expiresIn: "72h",
+        // });
+        // return successResponse(res, "User logged in successfully", {
+        //   token: token,
+        //   user: dbUser,
+        // });
+      }
+    });
+  } catch (error) {
+    logger.error(`Error while changing password ${error}`);
+    return serverErrorResponse(res, "Error while changing the password");
+  }
+};
+
+const isAuth = async (req, res, next) => {
   const authHeader = req.get("Authorization");
   if (!authHeader) {
     return unauthorizedResponse(res, "unauthorized");
@@ -290,6 +338,7 @@ module.exports = {
   register,
   isAuth,
   login,
+  changePassword,
   forgetPassword,
   verifyOTP,
 };
