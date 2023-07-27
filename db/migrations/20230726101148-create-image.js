@@ -10,44 +10,28 @@ module.exports = {
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
 
-    await queryInterface.createTable("Products", {
-      name: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      product_id: {
+    await queryInterface.createTable("Images", {
+      image_id: {
         type: Sequelize.UUID,
         defaultValue: Sequelize.UUIDV4,
         primaryKey: true,
       },
-      price: {
-        type: Sequelize.STRING,
-        allowNull: false,
+      product_id: {
+        type: Sequelize.UUID,
+        allowNull: true,
       },
-      category: {
-        type: Sequelize.STRING,
-        allowNull: false,
+      user_id: {
+        type: Sequelize.UUID,
+        allowNull: true,
       },
-      inventory_quantity: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
+      image_url: {
+        type: Sequelize.STRING,
+        allowNull: true,
       },
-      description: {
-        type: Sequelize.STRING,
-        allowNull: false,
+      is_primary: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false,
       },
-      image: {
-        type: Sequelize.STRING,
-        allowNull:true
-      },
-      stripe_product_id: {
-        type: Sequelize.STRING,
-        allowNull:true
-      }, 
-      stripe_price_id: {
-        type: Sequelize.STRING,
-        allowNull:true
-      } ,
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
@@ -66,6 +50,6 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
-    await queryInterface.dropTable("Products");
+    await queryInterface.dropTable("Images");
   },
 };

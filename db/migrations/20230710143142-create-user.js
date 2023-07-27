@@ -19,7 +19,7 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      stripe_cutomer_id: {
+      stripe_customer_id: {
         type: Sequelize.STRING,
         allowNull: true,
       },

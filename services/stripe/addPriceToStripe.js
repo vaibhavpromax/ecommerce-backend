@@ -3,7 +3,7 @@ const logger = require("../../utils/logger");
 require("dotenv").config();
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
-const addPriceToStripe = async ({ currency, unitAmount, product_id }) => {
+const addPriceToStripe = async (currency, unitAmount, product_id ) => {
   try {
     const price = await stripe.prices.create({
       product: product_id,

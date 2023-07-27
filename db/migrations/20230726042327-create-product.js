@@ -1,21 +1,16 @@
 "use strict";
-const { Model } = require("sequelize");
-module.exports = (sequelize, Sequelize) => {
-  class Product extends Model {
+
+/** @type {import('sequelize-cli').Migration} */
+module.exports = {
+  async up(queryInterface, Sequelize) {
     /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
+     * Add altering commands here.
+     *
+     * Example:
+     * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
-    static associate({ Order, Image, Review, CartItem }) {
-      this.hasMany(Order, { foreignKey: "product_id" });
-      this.hasMany(Review, { foreignKey: "product_id" });
-      this.hasMany(Image, { foreignKey: "product_id" });
-      this.hasMany(CartItem, { foreignKey: "product_id" });
-    }
-  }
-  Product.init(
-    {
+
+    await queryInterface.createTable("Products", {
       name: {
         type: Sequelize.STRING,
         allowNull: false,
@@ -65,7 +60,6 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.STRING,
         allowNull: false,
       },
-
       stripe_product_id: {
         type: Sequelize.STRING,
         allowNull: true,
@@ -82,11 +76,16 @@ module.exports = (sequelize, Sequelize) => {
         allowNull: false,
         type: Sequelize.DATE,
       },
-    },
-    {
-      sequelize,
-      modelName: "Product",
-    }
-  );
-  return Product;
+    });
+  },
+
+  async down(queryInterface, Sequelize) {
+    /**
+     * Add reverting commands here.
+     *
+     * Example:
+     * await queryInterface.dropTable('users');
+     */
+    await queryInterface.dropTable("Products");
+  },
 };

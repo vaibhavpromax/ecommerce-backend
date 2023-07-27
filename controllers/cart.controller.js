@@ -17,8 +17,9 @@ const addToCart = async (req, res) => {
   try {
     const cart = await Cart.findOne({
       where: { user_id: user_id },
-      include: { CartItem },
+      include: CartItem,
     });
+
     if (cart) {
       const cartitem = await CartItem.findOne({
         where: {
@@ -32,7 +33,7 @@ const addToCart = async (req, res) => {
         if (parseInt(quantity) === 0) {
           try {
             // if the cart had only that item remove the cart
-            if (cart.CartItem.length === 1) {
+            if (cart.dataValues.CartItems.length === 1) {
               await cartitem.destroy();
               await cart.destroy();
               return successResponse(res, "Cart updated successfully");
@@ -60,7 +61,7 @@ const addToCart = async (req, res) => {
             cart_quantity: quantity,
             user_id: user_id,
           });
-          logger.info(`new cart item created ${newCartitem}` );
+          logger.info(`new cart item created ${newCartitem}`);
           return successResponse(res, "Cart updated successfully", newCartitem);
         } catch (error) {
           logger.info(`error while creating new cart item ${error}`);
@@ -71,7 +72,6 @@ const addToCart = async (req, res) => {
       // if cart does not exist create it
       try {
         const newCart = await Cart.create({
-          product_id: product_id,
           user_id: user_id,
           discount_id: discount_id,
         });
@@ -109,36 +109,42 @@ const getCart = async (req, res) => {
         user_id: user_id,
       },
       include: {
-        CartItem,
+        model: CartItem,
+        include: Product,
       },
     });
 
-    const cartitems = cart.CartItem;
-    let cart_price, quant;
+    if (!null) {
+      return successResponse(res, "Cart empty", cart);
+    }
+    const cartitems = cart.CartItems;
+    let cart_price = 0,
+      quant;
+
     if (cart) {
       // get products from the products table
+
       let cart_arr;
-      cart_arr = await cartitems.map(async (item) => {
-        const product = await Product.findOne({
-          where: {
-            product_id: item.product_id,
-          },
-        });
+      cart_arr = cartitems?.map((it) => {
+        const item = it.dataValues;
+        const product = item.Product.dataValues;
 
         if (product) {
-          return { price: product.price, quantity: item.cart_quantity };
+          return {
+            price: product.price,
+            quantity: item.cart_quantity,
+          };
         } else {
           logger.error(`Product not found for cartitem ${item}`);
           return null;
         }
       });
-
       // find the total price of the cart
       cart_price = cart_arr.reduce((acc, obj) => {
-        acc + obj.price * obj.qunatity;
+        return acc + obj.price * parseInt(obj.quantity);
       }, 0);
 
-      // find the number of unique products in cartm  
+      // find the number of unique products in cartm
       quant = cart_arr.length;
 
       cart.cart_total = cart_price;
@@ -157,7 +163,3 @@ const getCart = async (req, res) => {
 };
 
 module.exports = { addToCart, getCart };
-
-
-
-

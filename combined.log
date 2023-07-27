@@ -296,3 +296,546 @@
 {"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
 {"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
 {"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"error","message":"Error while creating product SequelizeValidationError: notNull Violation: Product.product_length cannot be null,\nnotNull Violation: Product.product_width cannot be null,\nnotNull Violation: Product.product_height cannot be null,\nnotNull Violation: Product.product_weight cannot be null ","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"error","message":"Error while adding product to stripe Error: Missing required param: name.","service":"user-service"}
+{"level":"error","message":"Error while creating product ReferenceError: err is not defined ","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"Product created in db [object SequelizeInstance:Product]","service":"user-service"}
+{"level":"error","message":"Error while adding product to stripe Error: Missing required param: name.","service":"user-service"}
+{"level":"error","message":"Error while creating product ReferenceError: err is not defined ","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"Product created in db [object SequelizeInstance:Product]","service":"user-service"}
+{"level":"error","message":"Error while adding price to stripe Error: Missing required param: currency.","service":"user-service"}
+{"level":"error","message":"Error while creating product ReferenceError: err is not defined ","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"Product created in db [object SequelizeInstance:Product]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"error","message":"Error while fetching products Error: Include unexpected. Element has to be either a Model, an Association or an object.","service":"user-service"}
+{"level":"error","message":"Error while fetching products Error: Include unexpected. Element has to be either a Model, an Association or an object.","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"error","message":"Error while fetching product Error: Include unexpected. Element has to be either a Model, an Association or an object.","service":"user-service"}
+{"level":"error","message":"Error while fetching product Error: Include unexpected. Element has to be either a Model, an Association or an object.","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"error","message":"Error fetching cart Error: Include unexpected. Element has to be either a Model, an Association or an object.","service":"user-service"}
+{"level":"error","message":"Error fetching cart Error: Include unexpected. Element has to be either a Model, an Association or an object.","service":"user-service"}
+{"level":"error","message":"Error fetching cart Error: Include unexpected. Element has to be either a Model, an Association or an object.","service":"user-service"}
+{"level":"error","message":"Error fetching cart Error: Include unexpected. Element has to be either a Model, an Association or an object.","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"error","message":"Error fetching cart TypeError: Cannot read properties of null (reading 'CartItem')","service":"user-service"}
+{"level":"error","message":"Error fetching cart TypeError: Cannot read properties of null (reading 'CartItem')","service":"user-service"}
+{"level":"error","message":"Error while addiing to cart Error: Include unexpected. Element has to be either a Model, an Association or an object.","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"error","message":"Error while addiing to cart Error: Include unexpected. Element has to be either a Model, an Association or an object.","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"error","message":"Error while creating new cart SequelizeForeignKeyConstraintError: Cannot add or update a child row: a foreign key constraint fails (`ecommerce`.`carts`, CONSTRAINT `carts_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON UPDATE CASCADE)","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"error","message":"Error while creating new cart SequelizeForeignKeyConstraintError: Cannot add or update a child row: a foreign key constraint fails (`ecommerce`.`carts`, CONSTRAINT `carts_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON UPDATE CASCADE)","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"error","message":"Error while creating new cart SequelizeForeignKeyConstraintError: Cannot add or update a child row: a foreign key constraint fails (`ecommerce`.`carts`, CONSTRAINT `carts_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON UPDATE CASCADE)","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"error","message":"Error while creating new cart SequelizeForeignKeyConstraintError: Cannot add or update a child row: a foreign key constraint fails (`ecommerce`.`carts`, CONSTRAINT `carts_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON UPDATE CASCADE)","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"New cart created[object SequelizeInstance:Cart]","service":"user-service"}
+{"level":"info","message":"New cart item made [object SequelizeInstance:CartItem]","service":"user-service"}
+{"level":"error","message":"Error fetching cart TypeError: Cannot read properties of undefined (reading 'map')","service":"user-service"}
+{"level":"error","message":"Error fetching cart TypeError: Cannot read properties of undefined (reading 'map')","service":"user-service"}
+{"level":"error","message":"Error fetching cart TypeError: Cannot read properties of undefined (reading 'map')","service":"user-service"}
+{"level":"error","message":"Error fetching cart TypeError: Cannot read properties of undefined (reading 'map')","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"error","message":"Error fetching cart TypeError: Cannot read properties of undefined (reading 'map')","service":"user-service"}
+{"level":"error","message":"Error fetching cart TypeError: Cannot read properties of undefined (reading 'map')","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"Product created in db [object SequelizeInstance:Product]","service":"user-service"}
+{"level":"info","message":"new cart item created [object SequelizeInstance:CartItem]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"error","message":"Error fetching cart TypeError: cartitems?.map(...).then is not a function","service":"user-service"}
+{"level":"error","message":"Error fetching cart TypeError: cartitems?.map(...).then is not a function","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"error","message":"Error fetching cart TypeError: cartitems?.map(...).then is not a function","service":"user-service"}
+{"level":"error","message":"Error fetching cart TypeError: cartitems?.map(...).then is not a function","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"error","message":"Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')","service":"user-service"}
+{"level":"error","message":"Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"info","message":"[CONNECTED TO DATABASE]","service":"user-service"}
+{"level":"info","message":"[BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]","service":"user-service"}
+{"level":"error","message":"Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')","service":"user-service"}
+{"level":"error","message":"Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')","service":"user-service"}
+15:08:38 [32minfo[39m: [CONNECTED TO DATABASE]
+15:08:38 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:09:07 [31merror[39m: Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')
+15:09:07 [31merror[39m: Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')
+15:09:54 [32minfo[39m: [CONNECTED TO DATABASE]
+15:09:54 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:09:59 [31merror[39m: Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')
+15:09:59 [31merror[39m: Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')
+15:10:28 [32minfo[39m: [CONNECTED TO DATABASE]
+15:10:28 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:10:44 [32minfo[39m: [CONNECTED TO DATABASE]
+15:10:44 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:10:48 [31merror[39m: Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')
+15:10:48 [31merror[39m: Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')
+15:11:36 [32minfo[39m: [CONNECTED TO DATABASE]
+15:11:36 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:11:38 [31merror[39m: Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')
+15:11:38 [31merror[39m: Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')
+15:12:23 [32minfo[39m: [CONNECTED TO DATABASE]
+15:12:23 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:12:36 [32minfo[39m: [CONNECTED TO DATABASE]
+15:12:36 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:12:47 [32minfo[39m: [CONNECTED TO DATABASE]
+15:12:47 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:13:06 [31merror[39m: Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')
+15:13:06 [31merror[39m: Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')
+15:13:50 [32minfo[39m: [CONNECTED TO DATABASE]
+15:13:50 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:13:52 [31merror[39m: Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')
+15:13:52 [31merror[39m: Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')
+15:14:18 [32minfo[39m: [CONNECTED TO DATABASE]
+15:14:18 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:14:21 [31merror[39m: Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')
+15:14:21 [31merror[39m: Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')
+15:14:32 [32minfo[39m: [CONNECTED TO DATABASE]
+15:14:32 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:14:36 [31merror[39m: Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')
+15:14:36 [31merror[39m: Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')
+15:14:58 [32minfo[39m: [CONNECTED TO DATABASE]
+15:14:58 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:22:23 [32minfo[39m: [CONNECTED TO DATABASE]
+15:22:23 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:22:54 [32minfo[39m: [CONNECTED TO DATABASE]
+15:22:54 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:23:00 [32minfo[39m: undefined
+15:23:00 [31merror[39m: Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')
+15:23:00 [32minfo[39m: undefined
+15:23:00 [31merror[39m: Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')
+15:23:08 [32minfo[39m: [CONNECTED TO DATABASE]
+15:23:08 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:23:09 [32minfo[39m: [object SequelizeInstance:CartItem],[object SequelizeInstance:CartItem]
+15:23:09 [31merror[39m: Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')
+15:23:09 [32minfo[39m: [object SequelizeInstance:CartItem],[object SequelizeInstance:CartItem]
+15:23:09 [31merror[39m: Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')
+15:23:22 [32minfo[39m: [CONNECTED TO DATABASE]
+15:23:22 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:23:22 [31merror[39m: Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')
+15:23:22 [31merror[39m: Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')
+15:24:12 [32minfo[39m: [CONNECTED TO DATABASE]
+15:24:12 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:24:21 [32minfo[39m: [CONNECTED TO DATABASE]
+15:24:21 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:24:27 [31merror[39m: Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')
+15:24:27 [31merror[39m: Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')
+15:25:27 [32minfo[39m: [CONNECTED TO DATABASE]
+15:25:27 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:26:34 [32minfo[39m: [CONNECTED TO DATABASE]
+15:26:34 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:26:45 [31merror[39m: Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')
+15:26:47 [32minfo[39m: [CONNECTED TO DATABASE]
+15:26:47 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:26:47 [31merror[39m: Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')
+15:27:29 [32minfo[39m: [CONNECTED TO DATABASE]
+15:27:29 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:27:51 [32minfo[39m: [CONNECTED TO DATABASE]
+15:27:51 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:27:53 [32minfo[39m: [CONNECTED TO DATABASE]
+15:27:53 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:28:01 [32minfo[39m: [CONNECTED TO DATABASE]
+15:28:01 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:28:03 [31merror[39m: Error fetching cart ReferenceError: cart_arr is not defined
+15:28:40 [32minfo[39m: [CONNECTED TO DATABASE]
+15:28:40 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:28:48 [31merror[39m: Error fetching cart ReferenceError: cart_arr is not defined
+15:28:48 [31merror[39m: Error fetching cart ReferenceError: cart_arr is not defined
+15:29:10 [32minfo[39m: [CONNECTED TO DATABASE]
+15:29:10 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:29:12 [31merror[39m: Error fetching cart ReferenceError: cart_arr is not defined
+15:29:12 [31merror[39m: Error fetching cart ReferenceError: cart_arr is not defined
+15:29:51 [32minfo[39m: [CONNECTED TO DATABASE]
+15:29:51 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:30:04 [32minfo[39m: [CONNECTED TO DATABASE]
+15:30:04 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:30:25 [31merror[39m: Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')
+15:30:25 [31merror[39m: Error fetching cart TypeError: Cannot read properties of undefined (reading 'reduce')
+15:31:02 [32minfo[39m: [CONNECTED TO DATABASE]
+15:31:02 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:31:59 [32minfo[39m: [CONNECTED TO DATABASE]
+15:31:59 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:32:17 [32minfo[39m: [CONNECTED TO DATABASE]
+15:32:17 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:32:18 [31merror[39m: Error fetching cart ReferenceError: cart_arr is not defined
+15:32:18 [31merror[39m: Error fetching cart ReferenceError: cart_arr is not defined
+15:32:44 [32minfo[39m: [CONNECTED TO DATABASE]
+15:32:44 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:32:49 [31merror[39m: Error fetching cart ReferenceError: cart_arr is not defined
+15:32:49 [31merror[39m: Error fetching cart ReferenceError: cart_arr is not defined
+15:33:05 [32minfo[39m: [CONNECTED TO DATABASE]
+15:33:05 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:33:13 [32minfo[39m: [CONNECTED TO DATABASE]
+15:33:13 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:33:16 [31merror[39m: Error fetching cart ReferenceError: cart_arr is not defined
+15:33:16 [31merror[39m: Error fetching cart ReferenceError: cart_arr is not defined
+15:33:27 [32minfo[39m: [CONNECTED TO DATABASE]
+15:33:27 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:33:28 [31merror[39m: Error fetching cart ReferenceError: cart_arr is not defined
+15:33:28 [31merror[39m: Error fetching cart ReferenceError: cart_arr is not defined
+15:33:41 [32minfo[39m: [CONNECTED TO DATABASE]
+15:33:41 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:33:42 [31merror[39m: Error fetching cart ReferenceError: cart_arr is not defined
+15:33:42 [31merror[39m: Error fetching cart ReferenceError: cart_arr is not defined
+15:34:14 [32minfo[39m: [CONNECTED TO DATABASE]
+15:34:14 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:34:32 [32minfo[39m: [CONNECTED TO DATABASE]
+15:34:32 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:34:59 [32minfo[39m: [CONNECTED TO DATABASE]
+15:34:59 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:35:16 [32minfo[39m: [CONNECTED TO DATABASE]
+15:35:16 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:35:30 [32minfo[39m: [CONNECTED TO DATABASE]
+15:35:30 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:35:47 [32minfo[39m: [CONNECTED TO DATABASE]
+15:35:47 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:36:08 [32minfo[39m: [CONNECTED TO DATABASE]
+15:36:08 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:36:17 [32minfo[39m: [CONNECTED TO DATABASE]
+15:36:17 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:36:34 [32minfo[39m: [CONNECTED TO DATABASE]
+15:36:34 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:37:51 [32minfo[39m: [CONNECTED TO DATABASE]
+15:37:51 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:38:12 [32minfo[39m: [CONNECTED TO DATABASE]
+15:38:12 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:38:45 [32minfo[39m: [CONNECTED TO DATABASE]
+15:38:45 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:39:10 [32minfo[39m: [CONNECTED TO DATABASE]
+15:39:10 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:39:47 [32minfo[39m: [CONNECTED TO DATABASE]
+15:39:47 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:40:04 [32minfo[39m: [CONNECTED TO DATABASE]
+15:40:04 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:40:16 [32minfo[39m: [CONNECTED TO DATABASE]
+15:40:16 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:40:33 [32minfo[39m: [CONNECTED TO DATABASE]
+15:40:33 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:40:35 [32minfo[39m: [CONNECTED TO DATABASE]
+15:40:35 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+16:00:53 [31merror[39m: error while deleting cartitem TypeError: Cannot read properties of undefined (reading 'length')
+16:02:43 [32minfo[39m: [CONNECTED TO DATABASE]
+16:02:43 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+16:03:38 [31merror[39m: error while deleting cartitem TypeError: Cannot read properties of undefined (reading 'length')
+16:04:14 [32minfo[39m: [CONNECTED TO DATABASE]
+16:04:14 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+16:04:23 [31merror[39m: error while deleting cartitem TypeError: Cannot read properties of undefined (reading 'CartItem')
+16:05:01 [32minfo[39m: [CONNECTED TO DATABASE]
+16:05:01 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+16:05:06 [31merror[39m: error while deleting cartitem TypeError: Cannot read properties of undefined (reading 'CartItem')
+16:05:19 [32minfo[39m: [CONNECTED TO DATABASE]
+16:05:19 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+16:05:23 [32minfo[39m: [CONNECTED TO DATABASE]
+16:05:23 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+16:05:26 [31merror[39m: error while deleting cartitem TypeError: Cannot read properties of undefined (reading 'CartItems')
+16:05:56 [32minfo[39m: [CONNECTED TO DATABASE]
+16:05:56 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+16:06:46 [31merror[39m: Error fetching cart TypeError: Cannot read properties of null (reading 'CartItems')
+16:08:29 [32minfo[39m: [CONNECTED TO DATABASE]
+16:08:29 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+16:08:31 [31merror[39m: Error fetching cart TypeError: Cannot read properties of null (reading 'CartItems')
+16:08:31 [31merror[39m: Error fetching cart TypeError: Cannot read properties of null (reading 'CartItems')
+16:08:51 [32minfo[39m: [CONNECTED TO DATABASE]
+16:08:51 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
