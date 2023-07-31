@@ -6,14 +6,14 @@ const {
   makePaymentIntent,
   confirmIntent,
 } = require("../controllers/payment.controller");
-const { isAuth } = require("../controllers/user/auth.controller");
+const { authMiddleware } = require("../controllers/user/auth.controller");
 
 const router = express.Router();
 
-router.post("/create-stripe-customer",isAuth,  createCustomer);
-router.post("/attach", isAuth, attachPayment);
-router.post("/get-payment-methods", isAuth, getPaymentMethods);
-router.post("/create-intent", isAuth, makePaymentIntent);
+router.post("/create-stripe-customer", authMiddleware, createCustomer);
+router.post("/attach", authMiddleware, attachPayment);
+router.post("/get-payment-methods", authMiddleware, getPaymentMethods);
+router.post("/create-intent", authMiddleware, makePaymentIntent);
 router.post("/confirm-payment", confirmIntent);
 
 // reviews

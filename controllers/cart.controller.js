@@ -10,22 +10,33 @@ const {
 const Cart = db.Cart;
 const CartItem = db.CartItem;
 const Product = db.Product;
+const Image = db.Image;
 
 const addToCart = async (req, res) => {
-  const { user_id } = req.user;
+  const { user_id, session_id } = req.user;
+  console.log(user_id);
   const { product_id, quantity, discount_id = null } = req.body;
+  let cart_params, cart_item_params;
+  if (user_id) {
+    cart_params = { user_id: user_id };
+    cart_item_params = { user_id: user_id, product_id: product_id };
+  }
+  if (session_id) {
+    cart_params = { session_id: session_id };
+    cart_item_params = { session_id: session_id, product_id: product_id };
+  }
+
   try {
-    const cart = await Cart.findOne({
-      where: { user_id: user_id },
+    let cart;
+    cart = await Cart.findOne({
+      where: cart_params,
       include: CartItem,
     });
+    logger.info(`Cart found for ${cart_params}`);
 
     if (cart) {
       const cartitem = await CartItem.findOne({
-        where: {
-          user_id,
-          product_id,
-        },
+        where: cart_item_params,
       });
       // check if item already exists in cart
       if (cartitem) {
@@ -46,22 +57,37 @@ const addToCart = async (req, res) => {
             logger.error(`error while deleting cartitem ${error}`);
             return serverErrorResponse(res, "Error while updating cart");
           }
-        }
-        // add the item to cart update the quantity and also update the price of cart total and quantity
-        else {
+        } else {
+          // add the item to cart update the quantity and also update the price of cart total and quantity
           cartitem.cart_quantity = quantity;
           cartitem.save();
+          return successResponse(res, "Cart quantity updated");
         }
       } else {
         // if cart item does not exist create it
-        try {
-          const newCartitem = await CartItem.create({
+
+        let new_cart_item_params;
+
+        if (user_id) {
+          new_cart_item_params = {
             cart_id: cart.cart_id,
             product_id: product_id,
             cart_quantity: quantity,
             user_id: user_id,
-          });
-          logger.info(`new cart item created ${newCartitem}`);
+          };
+        }
+        if (session_id) {
+          new_cart_item_params = {
+            cart_id: cart.cart_id,
+            product_id: product_id,
+            cart_quantity: quantity,
+            session_id: session_id,
+          };
+        }
+
+        try {
+          const newCartitem = await CartItem.create(new_cart_item_params);
+          logger.info(`new cart item created ${new_cart_item_params}`);
           return successResponse(res, "Cart updated successfully", newCartitem);
         } catch (error) {
           logger.info(`error while creating new cart item ${error}`);
@@ -70,21 +96,46 @@ const addToCart = async (req, res) => {
       }
     } else {
       // if cart does not exist create it
-      try {
-        const newCart = await Cart.create({
+      let new_cart_params, new_cart_item;
+
+      if (user_id) {
+        new_cart_params = {
           user_id: user_id,
           discount_id: discount_id,
-        });
+        };
+      }
+      if (session_id) {
+        new_cart_params = {
+          session_id: session_id,
+          discount_id: discount_id,
+        };
+      }
+      try {
+        const newCart = await Cart.create(new_cart_params);
+        logger.info(`New cart created for ${new_cart_params}`);
         logger.info(`New cart created${newCart}`);
 
-        try {
-          const newCartItem = await CartItem.create({
+        if (user_id) {
+          new_cart_item = {
             user_id: user_id,
             cart_quantity: quantity,
             cart_id: newCart.cart_id,
             product_id: product_id,
-          });
-          logger.info(`New cart item made ${newCartItem}`);
+          };
+        }
+        if (session_id) {
+          new_cart_item = {
+            session_id: session_id,
+            cart_quantity: quantity,
+            cart_id: newCart.cart_id,
+            product_id: product_id,
+          };
+        }
+
+        try {
+          const newCartItem = await CartItem.create(new_cart_item);
+          logger.info(`New cart item made for ${new_cart_item}`);
+          logger.info(`New cart item made and new Cart made ${newCartItem}`);
           return successResponse(res, "Cart updated successfully");
         } catch (error) {
           logger.error(`Error while creating cart item ${error}`);
@@ -102,19 +153,25 @@ const addToCart = async (req, res) => {
 };
 
 const getCart = async (req, res) => {
-  const { user_id } = req.user;
+  const { user_id, session_id } = req.user;
+
+  let get_cart_params;
+  if (user_id) get_cart_params = { user_id: user_id };
+  if (session_id) get_cart_params = { session_id: session_id };
+
   try {
     const cart = await Cart.findOne({
-      where: {
-        user_id: user_id,
-      },
+      where: get_cart_params,
       include: {
         model: CartItem,
-        include: Product,
+        include: {
+          model: Product,
+          include: Image,
+        },
       },
     });
 
-    if (!null) {
+    if (cart === null) {
       return successResponse(res, "Cart empty", cart);
     }
     const cartitems = cart.CartItems;
@@ -131,7 +188,7 @@ const getCart = async (req, res) => {
 
         if (product) {
           return {
-            price: product.price,
+            price: product.selling_price,
             quantity: item.cart_quantity,
           };
         } else {
@@ -143,6 +200,8 @@ const getCart = async (req, res) => {
       cart_price = cart_arr.reduce((acc, obj) => {
         return acc + obj.price * parseInt(obj.quantity);
       }, 0);
+
+      console.log(cart_arr);
 
       // find the number of unique products in cartm
       quant = cart_arr.length;

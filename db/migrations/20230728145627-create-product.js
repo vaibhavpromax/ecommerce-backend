@@ -20,7 +20,11 @@ module.exports = {
         defaultValue: Sequelize.UUIDV4,
         primaryKey: true,
       },
-      price: {
+      cost_price: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      selling_price: {
         type: Sequelize.STRING,
         allowNull: false,
       },
@@ -62,6 +66,28 @@ module.exports = {
       },
       stripe_product_id: {
         type: Sequelize.STRING,
+        allowNull: true,
+      },
+      is_discount_percentage: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+        defaultValue: true,
+      },
+      is_discount_present: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+        defaultValue: true,
+      },
+      discount_value: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      discount_begin_date: {
+        type: Sequelize.DATE,
+        allowNull: true,
+      },
+      discount_end_date: {
+        type: Sequelize.DATE,
         allowNull: true,
       },
       stripe_price_id: {

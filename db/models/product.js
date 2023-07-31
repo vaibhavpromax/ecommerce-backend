@@ -7,11 +7,12 @@ module.exports = (sequelize, Sequelize) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate({ Order, Image, Review, CartItem }) {
+    static associate({ Order, Image, Review, CartItem, Wishlist }) {
       this.hasMany(Order, { foreignKey: "product_id" });
       this.hasMany(Review, { foreignKey: "product_id" });
       this.hasMany(Image, { foreignKey: "product_id" });
       this.hasMany(CartItem, { foreignKey: "product_id" });
+      this.hasMany(Wishlist, { foreignKey: "product_id" });
     }
   }
   Product.init(
@@ -25,7 +26,11 @@ module.exports = (sequelize, Sequelize) => {
         defaultValue: Sequelize.UUIDV4,
         primaryKey: true,
       },
-      price: {
+      cost_price: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      selling_price: {
         type: Sequelize.STRING,
         allowNull: false,
       },
@@ -65,9 +70,30 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.STRING,
         allowNull: false,
       },
-
       stripe_product_id: {
         type: Sequelize.STRING,
+        allowNull: true,
+      },
+      is_discount_percentage: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+        defaultValue: true,
+      },
+      is_discount_present: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+        defaultValue: true,
+      },
+      discount_value: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      discount_begin_date: {
+        type: Sequelize.DATE,
+        allowNull: true,
+      },
+      discount_end_date: {
+        type: Sequelize.DATE,
         allowNull: true,
       },
       stripe_price_id: {

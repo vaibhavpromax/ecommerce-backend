@@ -7,8 +7,10 @@ module.exports = (sequelize, Sequelize) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate({ User }) {
+    static associate({ User, Product,Session }) {
       this.belongsTo(User, { foreignKey: "user_id" });
+      this.belongsTo(Session, { foreignKey: "session_id" });
+      this.belongsTo(Product, { foreignKey: "product_id" });
     }
   }
   Wishlist.init(
@@ -21,6 +23,14 @@ module.exports = (sequelize, Sequelize) => {
       product_id: {
         type: Sequelize.UUID,
         allowNull: false,
+      },
+      session_id: {
+        type: Sequelize.UUID,
+        allowNull: true,
+      },
+      user_id: {
+        type: Sequelize.UUID,
+        allowNull: true,
       },
       product_id: {
         type: Sequelize.UUID,

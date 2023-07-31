@@ -2,10 +2,11 @@ const express = require("express");
 const {
   register,
   login,
-  isAuth,
+  authMiddleware,
   forgetPassword,
   verifyOTP,
   changePassword,
+  makeSession,
 } = require("../controllers/user/auth.controller");
 const {
   addAddress,
@@ -20,17 +21,18 @@ const {
 const { getNotifications } = require("../controllers/notification.controller");
 const router = express.Router();
 
-router.post("/login", login);
-router.post("/register", register);
+router.post("/login", authMiddleware, login);
+router.post("/register", authMiddleware, register);
 router.post("/forget-password", forgetPassword);
+router.get("/get-session", makeSession);
 router.post("/verify-otp", verifyOTP);
-router.post("/change-password", isAuth, changePassword);
-router.post("/add-address", isAuth, addAddress);
-router.get("/get-address", isAuth, getAddressOfUser);
-router.patch("/update-address", isAuth, updateAddress);
-router.delete("/delete-address/:address_id", isAuth, deleteAddress);
-router.get("/get-complete-user-info", isAuth, getCompleteUserDetails);
-router.get("/get-user-info", isAuth, getUserDetails);
-router.get("/get-notification", isAuth, getNotifications);
+router.post("/change-password", authMiddleware, changePassword);
+router.post("/add-address", authMiddleware, addAddress);
+router.get("/get-address", authMiddleware, getAddressOfUser);
+router.patch("/update-address", authMiddleware, updateAddress);
+router.delete("/delete-address/:address_id", authMiddleware, deleteAddress);
+router.get("/get-complete-user-info", authMiddleware, getCompleteUserDetails);
+router.get("/get-user-info", authMiddleware, getUserDetails);
+router.get("/get-notification", authMiddleware, getNotifications);
 
 module.exports = router;

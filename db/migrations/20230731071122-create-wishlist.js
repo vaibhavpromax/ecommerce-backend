@@ -19,6 +19,14 @@ module.exports = {
         type: Sequelize.UUID,
         allowNull: false,
       },
+      session_id: {
+        type: Sequelize.UUID,
+        allowNull: true,
+      },
+      user_id: {
+        type: Sequelize.UUID,
+        allowNull: true,
+      },
       product_id: {
         type: Sequelize.UUID,
         allowNull: false,
@@ -41,6 +49,6 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
-    await queryInterface.dropTable('Wishlists')
+    await queryInterface.dropTable("Wishlists");
   },
 };
