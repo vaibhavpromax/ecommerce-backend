@@ -20,11 +20,39 @@ module.exports = {
         defaultValue: Sequelize.UUIDV4,
         primaryKey: true,
       },
-      price: {
+      cost_price: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      category: {
+      selling_price: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      product_type: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      beans_type: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      product_length: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      product_width: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      product_height: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      product_weight: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      product_origin: {
         type: Sequelize.STRING,
         allowNull: false,
       },
@@ -36,18 +64,36 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      image: {
-        type: Sequelize.STRING,
-        allowNull:true
-      },
       stripe_product_id: {
         type: Sequelize.STRING,
-        allowNull:true
-      }, 
+        allowNull: true,
+      },
+      is_discount_percentage: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+        defaultValue: true,
+      },
+      is_discount_present: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+        defaultValue: true,
+      },
+      discount_value: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      discount_begin_date: {
+        type: Sequelize.DATE,
+        allowNull: true,
+      },
+      discount_end_date: {
+        type: Sequelize.DATE,
+        allowNull: true,
+      },
       stripe_price_id: {
         type: Sequelize.STRING,
-        allowNull:true
-      } ,
+        allowNull: true,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

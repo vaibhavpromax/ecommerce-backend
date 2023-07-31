@@ -15,11 +15,7 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      gender: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      stripe_cutomer_id: {
+      stripe_customer_id: {
         type: Sequelize.STRING,
         allowNull: true,
       },
@@ -27,10 +23,7 @@ module.exports = {
         type: Sequelize.UUID,
         allowNull: true,
       },
-      password: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
+   
       user_id: {
         type: Sequelize.UUID,
         defaultValue: Sequelize.UUIDV4,

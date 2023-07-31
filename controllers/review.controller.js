@@ -38,6 +38,11 @@ const delete_review = async (req, res) => {
   }
 };
 
+const get_product_reviews = async (req, res) => {
+  const { product_id } = req.body;
+}
+
+
 module.exports = {
   add_review,
   delete_review,

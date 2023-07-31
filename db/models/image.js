@@ -1,46 +1,40 @@
 "use strict";
 const { Model } = require("sequelize");
 module.exports = (sequelize, Sequelize) => {
-  class CartItem extends Model {
+  class Image extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate({ User, Cart, Product , Session}) {
+    static associate({ User, Product }) {
       // define association here
-      this.belongsTo(Product, { foreignKey: "product_id" });
       this.belongsTo(User, { foreignKey: "user_id" });
-      this.belongsTo(Session , {foreignKey:"session_id"})
-      this.belongsTo(Cart, { foreignKey: "cart_id" });
+      this.belongsTo(Product, { foreignKey: "product_id" });
     }
   }
-  CartItem.init(
+  Image.init(
     {
-      cart_item_id: {
+      image_id: {
         type: Sequelize.UUID,
-        primaryKey: true,
         defaultValue: Sequelize.UUIDV4,
+        primaryKey: true,
       },
       product_id: {
         type: Sequelize.UUID,
-        allowNull: false,
-      },
-      cart_quantity: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
+        allowNull: true,
       },
       user_id: {
         type: Sequelize.UUID,
         allowNull: true,
       },
-      session_id: {
-        type: Sequelize.UUID,
-        allowNull:true,
+      is_primary: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false,
       },
-      cart_id: {
-        type: Sequelize.UUID,
-        allowNull: false,
+      image_url: {
+        type: Sequelize.STRING,
+        allowNull: true,
       },
       createdAt: {
         allowNull: false,
@@ -53,8 +47,8 @@ module.exports = (sequelize, Sequelize) => {
     },
     {
       sequelize,
-      modelName: "CartItem",
+      modelName: "Image",
     }
   );
-  return CartItem;
+  return Image;
 };

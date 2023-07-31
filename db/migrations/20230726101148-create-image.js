@@ -9,29 +9,28 @@ module.exports = {
      * Example:
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
-    await queryInterface.createTable("Carts", {
-      cart_id: {
+
+    await queryInterface.createTable("Images", {
+      image_id: {
         type: Sequelize.UUID,
-        primaryKey: true,
         defaultValue: Sequelize.UUIDV4,
+        primaryKey: true,
       },
-      cart_total: {
-        type: Sequelize.STRING,
-        allowNull: false,
-        defaultValue: "0",
-      },
-      cart_quantity: {
-        type: Sequelize.BIGINT,
-        allowNull: false,
-        defaultValue: 0,
+      product_id: {
+        type: Sequelize.UUID,
+        allowNull: true,
       },
       user_id: {
         type: Sequelize.UUID,
-        allowNull: false,
-      },
-      discount_id: {
-        type: Sequelize.UUID,
         allowNull: true,
+      },
+      image_url: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      is_primary: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false,
       },
       createdAt: {
         allowNull: false,
@@ -51,6 +50,6 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
-    await queryInterface.dropTable("Carts");
+    await queryInterface.dropTable("Images");
   },
 };
