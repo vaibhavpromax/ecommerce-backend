@@ -129,3 +129,20 @@
 15:34:05 [31merror[39m: Error while updating the image table SequelizeForeignKeyConstraintError: Cannot add or update a child row: a foreign key constraint fails (`ecommerce`.`images`, CONSTRAINT `images_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`) ON DELETE SET NULL ON UPDATE CASCADE)
 15:40:56 [31merror[39m: Error while addiing to cart ReferenceError: newCart is not defined
 15:56:09 [31merror[39m: Error while updating the image table SequelizeForeignKeyConstraintError: Cannot add or update a child row: a foreign key constraint fails (`ecommerce`.`images`, CONSTRAINT `images_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`) ON DELETE SET NULL ON UPDATE CASCADE)
+17:25:50 [31merror[39m: Error while fetching product SequelizeDatabaseError: Unknown column 'Product.user_id' in 'where clause'
+12:32:04 [31merror[39m: Unknown column 'createdAt' in 'field list'
+12:34:23 [31merror[39m: Unknown column 'createdAt' in 'field list'
+22:11:54 [31merror[39m: Error while updating the image table TypeError: Cannot read properties of undefined (reading 'location')
+23:46:05 [31merror[39m: Error while updating the image table TypeError: Cannot read properties of undefined (reading 'location')
+23:49:53 [31merror[39m: Error while updating the image table TypeError: Cannot read properties of undefined (reading 'location')
+23:50:38 [31merror[39m: Error while updating the image table TypeError: Cannot read properties of undefined (reading 'location')
+23:50:59 [31merror[39m: Error while updating the image table TypeError: Cannot read properties of undefined (reading 'location')
+23:52:13 [31merror[39m: Error while updating the image table TypeError: Cannot read properties of undefined (reading 'location')
+23:53:20 [31merror[39m: Error while updating the image table TypeError: Cannot read properties of undefined (reading 'location')
+14:51:32 [31merror[39m: Error while updating the image table TypeError: Cannot read properties of undefined (reading 'location')
+14:54:13 [31merror[39m: Error while updating the image table TypeError: Cannot read properties of undefined (reading 'location')
+14:57:58 [31merror[39m: Error while updating the image table TypeError: Cannot read properties of undefined (reading 'location')
+17:48:14 [31merror[39m: Error while creating product SequelizeDatabaseError: Incorrect datetime value: 'Invalid date' for column 'discount_begin_date' at row 1 
+17:50:28 [31merror[39m: Error while creating product SequelizeDatabaseError: Incorrect datetime value: 'Invalid date' for column 'discount_begin_date' at row 1 
+20:03:33 [31merror[39m: Unknown column 'last_ordered' in 'field list'
+20:11:22 [31merror[39m: Unknown column 'last_ordered' in 'field list'

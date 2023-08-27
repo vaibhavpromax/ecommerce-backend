@@ -10,7 +10,7 @@ const Address = db.Address;
 const Order = db.Order;
 
 const getCompleteUserDetails = async (req, res) => {
-  const { user_id } = req.user;
+  const { user_id } = req.body;
   try {
     const createdObject = await User.findOne({
       where: {
@@ -40,7 +40,7 @@ const getUserDetails = async (req, res) => {
         user_id: user_id,
       },
     });
-    successResponse(res, "User details fetched successfully", {
+    return successResponse(res, "User details fetched successfully", {
       name: user?.first_name + user?.last_name,
       email: user?.email,
       username: user?.username,
@@ -48,8 +48,59 @@ const getUserDetails = async (req, res) => {
     });
   } catch (err) {
     logger.error(`Error while fetching user details ${err.message}`);
-    serverErrorResponse(res, err.message);
+    return serverErrorResponse(res, err.message);
   }
 };
 
-module.exports = { getCompleteUserDetails, getUserDetails };
+const uploadUserImage = async (req, res) => {
+  const { user_id } = req.user;
+
+  try {
+    const newImage = await Image.create({
+      product_id: null,
+      image_url: req.file.location,
+      user_id,
+    });
+    return successResponse(res, "User Image uploaded", newImage);
+  } catch (error) {
+    logger.error(`Error while updating the image table ${error}`);
+    return serverErrorResponse(res, "Error while uploading image");
+  }
+};
+const uploadImageController = async (req, res) => {
+  try {
+    console.log(req.file);
+    return successResponse(res, "Image uploaded", req.file.location);
+  } catch (error) {
+    logger.error(`Error while updating the image table ${error}`);
+    return serverErrorResponse(res, "Error while uploading image");
+  }
+};
+
+const getCustomers = async (req, res) => {
+  try {
+    const users = await User.findAll({
+      attributes: [
+        "first_name",
+        "last_name",
+        "email",
+        "user_id",
+        "last_ordered",
+        "phone_no",
+        "createdAt",
+      ],
+    });
+    return successResponse(res, "customers fetched successfully", users);
+  } catch (error) {
+    logger.error(`Error while fetching customers ${error}`);
+    return serverErrorResponse(res, "Error while fetching customers");
+  }
+};
+
+module.exports = {
+  getCompleteUserDetails,
+  getUserDetails,
+  uploadUserImage,
+  getCustomers,
+  uploadImageController,
+};

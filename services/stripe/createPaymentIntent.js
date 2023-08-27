@@ -6,6 +6,7 @@ const createPaymentIntent = async ({
   currency,
   userCustomerId,
   paymentMethod,
+  metadata,
 }) => {
   try {
     const paymentIntent = await stripe.paymentIntents.create({
@@ -15,6 +16,7 @@ const createPaymentIntent = async ({
       payment_method: paymentMethod,
       confirmation_method: "manual", // For 3D Security
       description: "Buy Product",
+      metadata: metadata,
     });
     return [paymentIntent, null];
   } catch (err) {

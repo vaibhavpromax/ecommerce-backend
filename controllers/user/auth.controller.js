@@ -26,7 +26,6 @@ const Wishlist = db.Wishlist;
 
 const register = async (req, res) => {
   const { user_id, session_id } = req.user;
-
   const {
     email,
     password,
@@ -384,7 +383,9 @@ const authMiddleware = async (req, res, next) => {
   if (!authHeader) {
     return unauthorizedResponse(res, "unauthorized");
   }
+
   const token = authHeader.split(" ")[1];
+  console.log(token);
   let decodedToken;
   try {
     decodedToken = jwt.verify(token, "secret");

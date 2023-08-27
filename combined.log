@@ -1529,3 +1529,119 @@
 16:17:49 [32minfo[39m: Cart users  updated 0
 16:17:49 [32minfo[39m: CartItem users  updated 0
 16:17:49 [32minfo[39m: Cart wishlist updated 0
+16:21:48 [32minfo[39m: [CONNECTED TO DATABASE]
+16:21:48 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+16:23:50 [32minfo[39m: session created with 9256a1d2-bd82-4329-9749-4ec1b9003c60
+16:24:40 [32minfo[39m: Cart users  updated 0
+16:24:40 [32minfo[39m: CartItem users  updated 0
+16:24:40 [32minfo[39m: Cart wishlist updated 0
+17:25:50 [31merror[39m: Error while fetching product SequelizeDatabaseError: Unknown column 'Product.user_id' in 'where clause'
+17:27:28 [32minfo[39m: [CONNECTED TO DATABASE]
+17:27:28 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+17:32:53 [32minfo[39m: [CONNECTED TO DATABASE]
+17:32:53 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+09:19:30 [32minfo[39m: [CONNECTED TO DATABASE]
+09:19:30 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+09:24:38 [32minfo[39m: [CONNECTED TO DATABASE]
+09:24:38 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+09:48:03 [32minfo[39m: [CONNECTED TO DATABASE]
+09:48:03 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+09:54:17 [32minfo[39m: [CONNECTED TO DATABASE]
+09:54:17 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+09:56:39 [32minfo[39m: [CONNECTED TO DATABASE]
+09:56:39 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+10:03:18 [32minfo[39m: [CONNECTED TO DATABASE]
+10:03:18 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+10:06:11 [32minfo[39m: [CONNECTED TO DATABASE]
+10:06:11 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:21:38 [32minfo[39m: [CONNECTED TO DATABASE]
+15:21:38 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+09:19:20 [32minfo[39m: [CONNECTED TO DATABASE]
+09:19:20 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+11:04:33 [32minfo[39m: [CONNECTED TO DATABASE]
+11:04:33 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+11:08:31 [32minfo[39m: [CONNECTED TO DATABASE]
+11:08:31 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+11:13:58 [32minfo[39m: [CONNECTED TO DATABASE]
+11:13:58 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+12:21:37 [32minfo[39m: [CONNECTED TO DATABASE]
+12:21:37 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+12:31:36 [32minfo[39m: [CONNECTED TO DATABASE]
+12:31:36 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+12:32:01 [32minfo[39m: [CONNECTED TO DATABASE]
+12:32:01 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+12:32:04 [31merror[39m: Unknown column 'createdAt' in 'field list'
+12:34:23 [31merror[39m: Unknown column 'createdAt' in 'field list'
+12:35:28 [32minfo[39m: [CONNECTED TO DATABASE]
+12:35:28 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+20:10:35 [32minfo[39m: [CONNECTED TO DATABASE]
+20:10:35 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+21:05:15 [32minfo[39m: [CONNECTED TO DATABASE]
+21:05:15 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+14:18:12 [32minfo[39m: [CONNECTED TO DATABASE]
+14:18:12 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+14:18:34 [32minfo[39m: [CONNECTED TO DATABASE]
+14:18:34 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+14:18:45 [32minfo[39m: [CONNECTED TO DATABASE]
+14:18:45 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+14:18:51 [32minfo[39m: [CONNECTED TO DATABASE]
+14:18:51 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+14:20:20 [32minfo[39m: [CONNECTED TO DATABASE]
+14:20:20 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+22:11:54 [31merror[39m: Error while updating the image table TypeError: Cannot read properties of undefined (reading 'location')
+23:46:05 [31merror[39m: Error while updating the image table TypeError: Cannot read properties of undefined (reading 'location')
+23:49:53 [31merror[39m: Error while updating the image table TypeError: Cannot read properties of undefined (reading 'location')
+23:50:38 [31merror[39m: Error while updating the image table TypeError: Cannot read properties of undefined (reading 'location')
+23:50:59 [31merror[39m: Error while updating the image table TypeError: Cannot read properties of undefined (reading 'location')
+23:52:13 [31merror[39m: Error while updating the image table TypeError: Cannot read properties of undefined (reading 'location')
+23:53:20 [31merror[39m: Error while updating the image table TypeError: Cannot read properties of undefined (reading 'location')
+14:50:56 [32minfo[39m: [CONNECTED TO DATABASE]
+14:50:56 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+14:51:32 [31merror[39m: Error while updating the image table TypeError: Cannot read properties of undefined (reading 'location')
+14:54:07 [32minfo[39m: [CONNECTED TO DATABASE]
+14:54:07 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+14:54:13 [31merror[39m: Error while updating the image table TypeError: Cannot read properties of undefined (reading 'location')
+14:57:58 [31merror[39m: Error while updating the image table TypeError: Cannot read properties of undefined (reading 'location')
+17:48:14 [31merror[39m: Error while creating product SequelizeDatabaseError: Incorrect datetime value: 'Invalid date' for column 'discount_begin_date' at row 1 
+17:50:28 [31merror[39m: Error while creating product SequelizeDatabaseError: Incorrect datetime value: 'Invalid date' for column 'discount_begin_date' at row 1 
+17:51:41 [32minfo[39m: [CONNECTED TO DATABASE]
+17:51:41 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+17:52:33 [32minfo[39m: [CONNECTED TO DATABASE]
+17:52:33 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+17:52:42 [32minfo[39m: Product created in db [object SequelizeInstance:Product]
+18:03:45 [32minfo[39m: [CONNECTED TO DATABASE]
+18:03:45 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+19:58:31 [32minfo[39m: session created with 42f14087-c9b3-4aa4-8fa5-b5ffc89ffeac
+20:00:10 [32minfo[39m: session created with 75a4290d-433c-45c1-9136-af150befd024
+20:03:33 [31merror[39m: Unknown column 'last_ordered' in 'field list'
+20:05:03 [32minfo[39m: [CONNECTED TO DATABASE]
+20:05:03 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+20:05:32 [32minfo[39m: session created with 75881b49-294f-4b68-9cb6-0c61304d0f32
+20:11:22 [31merror[39m: Unknown column 'last_ordered' in 'field list'
+20:18:17 [32minfo[39m: [CONNECTED TO DATABASE]
+20:18:17 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+20:18:49 [32minfo[39m: session created with f8f536f2-0183-4ee8-8804-782bf358edff
+20:19:15 [32minfo[39m: [CONNECTED TO DATABASE]
+20:19:15 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+20:20:12 [32minfo[39m: [CONNECTED TO DATABASE]
+20:20:12 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+20:20:18 [32minfo[39m: Cart users  updated 0
+20:20:18 [32minfo[39m: CartItem users  updated 0
+20:20:18 [32minfo[39m: Cart wishlist updated 0
+20:22:22 [32minfo[39m: session created with 731817bd-0ca8-4c1b-b7b6-0577ff808af4
+20:23:18 [32minfo[39m: Cart users  updated 0
+20:23:18 [32minfo[39m: CartItem users  updated 0
+20:23:18 [32minfo[39m: Cart wishlist updated 0
+20:23:29 [32minfo[39m: session created with 8733c356-2926-4b2e-abf5-aab365c4361a
+20:23:46 [32minfo[39m: Cart users  updated 0
+20:23:46 [32minfo[39m: CartItem users  updated 0
+20:23:46 [32minfo[39m: Cart wishlist updated 0
+20:23:54 [32minfo[39m: session created with 5ff8bf59-537e-4e6d-bea6-4b8fc13e6df4
+20:24:47 [32minfo[39m: Cart users  updated 0
+20:24:47 [32minfo[39m: CartItem users  updated 0
+20:24:47 [32minfo[39m: Cart wishlist updated 0
+20:43:20 [32minfo[39m: [CONNECTED TO DATABASE]
+20:43:20 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+20:47:53 [32minfo[39m: Product created in db [object SequelizeInstance:Product]
+13:24:53 [32minfo[39m: [CONNECTED TO DATABASE]
+13:24:53 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]

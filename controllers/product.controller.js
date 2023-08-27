@@ -1,9 +1,13 @@
 const { response } = require("express");
 const db = require("../db/models");
-const addImagetoProduct = require("../helpers/addImageToProduct");
+// const addImagetoProduct = require("../helpers/addImageToProduct");
 
 const logger = require("../utils/logger");
-const { serverErrorResponse, successResponse } = require("../utils/response");
+const {
+  serverErrorResponse,
+  successResponse,
+  notFoundResponse,
+} = require("../utils/response");
 const addProductToStripe = require("../services/stripe/addProductToStripe");
 const addPriceToStripe = require("../services/stripe/addPriceToStripe");
 const updateStripePrice = require("../services/stripe/updateStripePrice");
@@ -47,20 +51,53 @@ const getProducts = async (req, res) => {
   }
 };
 
+const getProductsForAdmin = async (req, res) => {
+  try {
+    const products = await Product.findAll();
+    return successResponse(res, "all products fetched successfully", products);
+  } catch (err) {
+    logger.error(`Error while fetching products ${err}`);
+    return serverErrorResponse(res, "Error while fetching products");
+  }
+};
+
+const getProductsFromId = async (req, res) => {
+  const product_arr = req.body;
+  let products;
+  try {
+    if (product_arr) {
+      products = product_arr.map(async (prod) => {
+        const product = await Product.findOne(options);
+        if (!product) {
+          logger.error(`No product found with id ${prod}`);
+          return notFoundResponse(res, "Product with id was not found");
+        }
+        return product;
+      });
+    } else {
+      products = await Product.findAll();
+    }
+    console.log(products);
+    return successResponse(res, "Fetched Products successfully", products);
+  } catch (error) {
+    logger.error(`Error while fetching products ${error}`);
+    return serverErrorResponse(res, "Error while fetching products");
+  }
+};
+
 const getSingleProduct = async (req, res) => {
   const { user_id, session_id } = req.user;
   const { product_id } = req.params;
 
   let get_prod_params, get_wish_params;
+  get_prod_params = { product_id: product_id };
   if (user_id) {
-    get_prod_params = { user_id: user_id };
     get_wish_params = {
       user_id: user_id,
       product_id: product_id,
     };
   }
   if (session_id) {
-    get_prod_params = { session_id: session_id };
     get_wish_params = {
       session_id: session_id,
       product_id: product_id,
@@ -112,6 +149,8 @@ const createProduct = async (req, res) => {
     discount_value,
     discount_begin_date,
     discount_end_date,
+    sec_images,
+    primary_image,
   } = req.body;
 
   try {
@@ -131,8 +170,26 @@ const createProduct = async (req, res) => {
       is_discount_percentage,
       is_discount_present,
       discount_value,
-      discount_begin_date,
-      discount_end_date,
+      discount_begin_date: "2023-07-28 15:09:07",
+      discount_end_date: "2023-07-28 15:09:07",
+    });
+
+    const parsedProduct = JSON.parse(JSON.stringify(product));
+
+    sec_images.map(async (img) => {
+      await Image.create({
+        product_id: parsedProduct.product_id,
+        image_url: img.url,
+        user_id: null,
+        is_primary: false,
+      });
+    });
+
+    await Image.create({
+      product_id: parsedProduct.product_id,
+      image_url: primary_image,
+      user_id: null,
+      is_primary: true,
     });
 
     //create product in stripe
@@ -226,27 +283,16 @@ const updateProduct = async (req, res) => {
   }
 };
 
-const addImage = async (req, res) => {
-  const { product_id, is_primary, image_url } = req.body;
-
-  // upload.single("image")(req.body.file, res, (err) => {
-  //   if (err) {
-  //     // Handle error
-  //     logger.error(`Error while uploading to S3 ${err}`);
-  //     return serverErrorResponse("error uploading image to S3");
-  //   }
-  //   // File uploaded successfully
-  //   imageUrl = req.file.location;
-  // });
-
+const addImageToProduct = async (req, res) => {
+  const { product_id, is_primary } = req.body;
   try {
     const newImage = await Image.create({
       product_id,
-      image_url,
+      image_url: req.file.location,
       user_id: null,
       is_primary,
     });
-    return successResponse(res, "Image uploaded", newImage);
+    return successResponse(res, "Product Image uploaded", newImage);
   } catch (error) {
     logger.error(`Error while updating the image table ${error}`);
     return serverErrorResponse(res, "Error while uploading image");
@@ -256,8 +302,10 @@ const addImage = async (req, res) => {
 module.exports = {
   getProducts,
   getSingleProduct,
+  getProductsForAdmin,
   createProduct,
   deleteProduct,
   updateProduct,
-  addImage,
+  addImageToProduct,
+  getProductsFromId,
 };

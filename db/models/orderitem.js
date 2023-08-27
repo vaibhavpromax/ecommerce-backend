@@ -1,24 +1,21 @@
-
 "use strict";
 const { Model } = require("sequelize");
 module.exports = (sequelize, Sequelize) => {
-  class CartItem extends Model {
+  class OrderItem extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate({ User, Cart, Product , Session}) {
+    static associate({ Order, Product }) {
       // define association here
       this.belongsTo(Product, { foreignKey: "product_id" });
-      this.belongsTo(User, { foreignKey: "user_id" });
-      this.belongsTo(Session , {foreignKey:"session_id"})
-      this.belongsTo(Cart, { foreignKey: "cart_id" });
+      this.belongsTo(Order, { foreignKey: "order_id" });
     }
   }
-  CartItem.init(
+  OrderItem.init(
     {
-      cart_item_id: {
+      order_item_id: {
         type: Sequelize.UUID,
         primaryKey: true,
         defaultValue: Sequelize.UUIDV4,
@@ -27,19 +24,11 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.UUID,
         allowNull: false,
       },
-      cart_quantity: {
+      item_quantity: {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
-      user_id: {
-        type: Sequelize.UUID,
-        allowNull: true,
-      },
-      session_id: {
-        type: Sequelize.UUID,
-        allowNull:true,
-      },
-      cart_id: {
+      order_id: {
         type: Sequelize.UUID,
         allowNull: false,
       },
@@ -54,8 +43,8 @@ module.exports = (sequelize, Sequelize) => {
     },
     {
       sequelize,
-      modelName: "CartItem",
+      modelName: "OrderItem",
     }
   );
-  return CartItem;
+  return OrderItem;
 };

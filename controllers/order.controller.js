@@ -9,11 +9,20 @@ const User = db.User;
 const Address = db.Address;
 const Review = db.Review;
 const Discount = db.Discount;
+const Image = db.Image;
+const OrderItem = db.OrderItem;
 
-const get_orders = async (req, res) => {
-  const { user_id } = req.user;
+const get_all_orders = async (req, res) => {
   try {
-    const orders = await Order.findAll();
+    const orders = await Order.findAll({
+      include: {
+        model: OrderItem,
+        include: {
+          model: Product,
+          include: Image,
+        },
+      },
+    });
     return successResponse(res, "all orders fetched successfully", orders);
   } catch (err) {
     logger.error(`Error while fetching orders ${err}`);
@@ -21,30 +30,59 @@ const get_orders = async (req, res) => {
   }
 };
 
-const get_single_order = async (req, res) => {
-  const { order_id } = req.params;
-  let user, product, order, address, review;
+const get_orders_of_user = async (req, res) => {
+  const { user_id } = req.params;
   try {
-    const order = await Order.findOne({
+    const orders = await Order.findAll({
       where: {
-        order_id: order_id,
-      },
-      include: {
-        User,
-        Product,
-        Review,
-        Discount,
-        Address,
+        user_id: user_id,
       },
     });
-    logger.info(`Order fetched successfully ${order}`);
-    return successResponse("Order fetched", order);
-  } catch (err) {
-    logger.error(`Error while fetching order ${err}`);
-    return serverErrorResponse(res, "Error while fetching order");
+    return successResponse(res, "All orders fetched successfully", orders);
+  } catch (error) {
+    logger.error(`Error while fetching orders ${error}`);
+    return serverErrorResponse(
+      res,
+      "Error while fetching the orders of a user"
+    );
   }
 };
 
+// const get_single_order = async (req, res) => {
+//   const { order_id } = req.params;
+//   let user, product, order, address, review;
+//   try {
+//     const order = await Order.findOne({
+//       where: {
+//         order_id: order_id,
+//       },
+//       include: [
+//         {
+//           model: User,
+//         },
+//         {
+//           model: OrderItem,
+//         },
+//         {
+//           model: Product,
+//         },
+//         {
+//           model: Discount,
+//         },
+//         {
+//           model: Address,
+//         },
+//       ],
+//     });
+//     logger.info(`Order fetched successfully ${order}`);
+//     return successResponse("Order fetched", order);
+//   } catch (err) {
+//     logger.error(`Error while fetching order ${err}`);
+//     return serverErrorResponse(res, "Error while fetching order");
+//   }
+// };
+
+// this controller is not useful
 const make_order = async (req, res) => {
   const { user_id } = req.user;
   const { cart_id, discount_id, address_id } = req.body;
@@ -118,8 +156,8 @@ const update_order = async (req, res) => {
 };
 
 module.exports = {
-  get_orders,
+  get_all_orders,
   make_order,
   update_order,
-  get_single_order,
+  get_orders_of_user,
 };
