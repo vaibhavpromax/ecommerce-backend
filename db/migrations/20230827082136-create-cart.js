@@ -9,27 +9,29 @@ module.exports = {
      * Example:
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
-    await queryInterface.createTable("Wishlists", {
-      wish_id: {
+    await queryInterface.createTable("Carts", {
+      cart_id: {
         type: Sequelize.UUID,
-        allowNull: false,
+        primaryKey: true,
         defaultValue: Sequelize.UUIDV4,
       },
-      product_id: {
-        type: Sequelize.UUID,
+      cart_total: {
+        type: Sequelize.STRING,
         allowNull: false,
+        defaultValue: "0",
       },
-      session_id: {
-        type: Sequelize.UUID,
-        allowNull: true,
+      cart_quantity: {
+        type: Sequelize.BIGINT,
+        allowNull: false,
+        defaultValue: 0,
       },
       user_id: {
         type: Sequelize.UUID,
         allowNull: true,
       },
-      product_id: {
+      discount_id: {
         type: Sequelize.UUID,
-        allowNull: false,
+        allowNull: true,
       },
       createdAt: {
         allowNull: false,
@@ -49,6 +51,6 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
-    await queryInterface.dropTable("Wishlists");
+    await queryInterface.dropTable("Carts");
   },
 };

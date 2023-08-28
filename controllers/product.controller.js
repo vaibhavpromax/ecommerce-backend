@@ -18,39 +18,6 @@ const Image = db.Image;
 const Review = db.Review;
 const Wishlist = db.Wishlist;
 
-const getProducts = async (req, res) => {
-  const { user_id, session_id } = req.user;
-  let wish_params;
-  if (user_id) wish_params = { user_id: user_id };
-  if (session_id) wish_params = { session_id: session_id };
-
-  try {
-    const products = await Product.findAll({ include: Image });
-    const wishlists = await Wishlist.findAll({
-      where: wish_params,
-    });
-    const parsedProducts = JSON.parse(JSON.stringify(products));
-    const parsedWishlist = JSON.parse(JSON.stringify(wishlists));
-    const wishlist_product_arr = parsedWishlist.map((p) => p.product_id);
-
-    let modified_products_arr;
-    modified_products_arr = parsedProducts.map((p) => {
-      return {
-        ...p,
-        is_wishlisted: wishlist_product_arr.includes(p.product_id),
-      };
-    });
-    return successResponse(
-      res,
-      "all products fetched successfully",
-      modified_products_arr
-    );
-  } catch (err) {
-    logger.error(`Error while fetching products ${err}`);
-    return serverErrorResponse(res, "Error while fetching products");
-  }
-};
-
 const getProductsForAdmin = async (req, res) => {
   try {
     const products = await Product.findAll();
@@ -62,22 +29,27 @@ const getProductsForAdmin = async (req, res) => {
 };
 
 const getProductsFromId = async (req, res) => {
-  const product_arr = req.body;
-  let products;
+  const { product_arr } = req.body;
+  let options;
+  if (product_arr) {
+    options = {
+      where: {
+        product_id: product_arr,
+      },
+      include: {
+        model: Image,
+      },
+    };
+  } else {
+    options = {
+      include: {
+        model: Image,
+      },
+    };
+  }
   try {
-    if (product_arr) {
-      products = product_arr.map(async (prod) => {
-        const product = await Product.findOne(options);
-        if (!product) {
-          logger.error(`No product found with id ${prod}`);
-          return notFoundResponse(res, "Product with id was not found");
-        }
-        return product;
-      });
-    } else {
-      products = await Product.findAll();
-    }
-    console.log(products);
+    const products = await Product.findAll(options);
+
     return successResponse(res, "Fetched Products successfully", products);
   } catch (error) {
     logger.error(`Error while fetching products ${error}`);
@@ -86,50 +58,28 @@ const getProductsFromId = async (req, res) => {
 };
 
 const getSingleProduct = async (req, res) => {
-  const { user_id, session_id } = req.user;
   const { product_id } = req.params;
-
-  let get_prod_params, get_wish_params;
-  get_prod_params = { product_id: product_id };
-  if (user_id) {
-    get_wish_params = {
-      user_id: user_id,
-      product_id: product_id,
-    };
-  }
-  if (session_id) {
-    get_wish_params = {
-      session_id: session_id,
-      product_id: product_id,
-    };
-  }
 
   try {
     const product = await Product.findOne({
-      where: get_prod_params,
-      include: Image,
+      where: {
+        product_id,
+      },
+      include: [
+        {
+          model: Image,
+        },
+        { model: Review },
+      ],
     });
-
-    const wishlist = await Wishlist.findOne({
-      where: get_wish_params,
-    });
-
-    const parsedProduct = JSON.parse(JSON.stringify(product));
-
-    let modified_response = { ...parsedProduct, is_wishlisted: false };
-    if (wishlist) modified_response = { ...parsedProduct, is_wishlisted: true };
-
-    return successResponse(
-      res,
-      "product fetched successfully",
-      modified_response
-    );
+    return successResponse(res, "product fetched successfully", product);
   } catch (err) {
     logger.error(`Error while fetching product ${err}`);
     return serverErrorResponse(res, "Error while fetching product");
   }
 };
 
+// upload product to s3 get the links and then create all together
 const createProduct = async (req, res) => {
   const {
     name,
@@ -153,6 +103,7 @@ const createProduct = async (req, res) => {
     primary_image,
   } = req.body;
 
+  console.log("pri", primary_image);
   try {
     const product = await Product.create({
       name,
@@ -283,6 +234,7 @@ const updateProduct = async (req, res) => {
   }
 };
 
+// not using this logic
 const addImageToProduct = async (req, res) => {
   const { product_id, is_primary } = req.body;
   try {
@@ -300,7 +252,6 @@ const addImageToProduct = async (req, res) => {
 };
 
 module.exports = {
-  getProducts,
   getSingleProduct,
   getProductsForAdmin,
   createProduct,

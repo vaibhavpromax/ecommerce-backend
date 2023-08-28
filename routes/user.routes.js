@@ -6,7 +6,6 @@ const {
   forgetPassword,
   verifyOTP,
   changePassword,
-  makeSession,
 } = require("../controllers/user/auth.controller");
 const {
   addAddress,
@@ -27,7 +26,6 @@ const router = express.Router();
 router.post("/login", authMiddleware, login);
 router.post("/register", authMiddleware, register);
 router.post("/forget-password", forgetPassword);
-router.get("/get-session", makeSession);
 router.post("/verify-otp", verifyOTP);
 router.post("/change-password", authMiddleware, changePassword);
 router.post("/add-address", authMiddleware, addAddress);

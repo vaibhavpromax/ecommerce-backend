@@ -132,10 +132,7 @@ const adminAuthMiddleware = async (req, res, next) => {
 
     // decodedToken has the value of admin stored on the local storage
 
-    // if (decodedToken?.user?.is_authenticated)
-    //   req.user = { user_id: decodedToken.user.user_id, session_id: null };
-    // else
-    //   req.user = { session_id: decodedToken.session.session_id, user_id: null };
+  
   } catch (err) {
     console.log(err);
     return serverErrorResponse(res, "could not decode the token");
