@@ -1,24 +1,36 @@
 "use strict";
 const { Model } = require("sequelize");
 module.exports = (sequelize, Sequelize) => {
-  class Session extends Model {
+  class OrderItem extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate({}) {}
+    static associate({ Order, Product }) {
+      // define association here
+      this.belongsTo(Product, { foreignKey: "product_id" });
+      this.belongsTo(Order, { foreignKey: "order_id" });
+    }
   }
-  Session.init(
+  OrderItem.init(
     {
-      session_id: {
+      order_item_id: {
         type: Sequelize.UUID,
         primaryKey: true,
         defaultValue: Sequelize.UUIDV4,
       },
-      is_authenticated: {
-        type: Sequelize.BOOLEAN,
-        defaultValue: false,
+      product_id: {
+        type: Sequelize.UUID,
+        allowNull: false,
+      },
+      item_quantity: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+      },
+      order_id: {
+        type: Sequelize.UUID,
+        allowNull: false,
       },
       createdAt: {
         allowNull: false,
@@ -31,8 +43,8 @@ module.exports = (sequelize, Sequelize) => {
     },
     {
       sequelize,
-      modelName: "Session",
+      modelName: "OrderItem",
     }
   );
-  return Session;
+  return OrderItem;
 };

@@ -1,3 +1,5 @@
+// not using this
+
 const db = require("../db/models");
 const upload = require("../services/amazon/uploadImage");
 
@@ -29,4 +31,4 @@ const addImagetoProduct = async ({ product_id, req }, res) => {
   }
 };
 
-module.exports = addImagetoProduct;
+// module.exports = addImagetoProduct;

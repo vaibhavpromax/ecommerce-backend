@@ -13,17 +13,13 @@ const Product = db.Product;
 const Image = db.Image;
 
 const addToCart = async (req, res) => {
-  const { user_id, session_id } = req.user;
+  const { user_id } = req.user;
   console.log(user_id);
   const { product_id, quantity, discount_id = null } = req.body;
   let cart_params, cart_item_params;
   if (user_id) {
     cart_params = { user_id: user_id };
     cart_item_params = { user_id: user_id, product_id: product_id };
-  }
-  if (session_id) {
-    cart_params = { session_id: session_id };
-    cart_item_params = { session_id: session_id, product_id: product_id };
   }
 
   try {
@@ -76,14 +72,6 @@ const addToCart = async (req, res) => {
             user_id: user_id,
           };
         }
-        if (session_id) {
-          new_cart_item_params = {
-            cart_id: cart.cart_id,
-            product_id: product_id,
-            cart_quantity: quantity,
-            session_id: session_id,
-          };
-        }
 
         try {
           const newCartitem = await CartItem.create(new_cart_item_params);
@@ -104,12 +92,6 @@ const addToCart = async (req, res) => {
           discount_id: discount_id,
         };
       }
-      if (session_id) {
-        new_cart_params = {
-          session_id: session_id,
-          discount_id: discount_id,
-        };
-      }
       try {
         const newCart = await Cart.create(new_cart_params);
         logger.info(`New cart created for ${new_cart_params}`);
@@ -118,14 +100,6 @@ const addToCart = async (req, res) => {
         if (user_id) {
           new_cart_item = {
             user_id: user_id,
-            cart_quantity: quantity,
-            cart_id: newCart.cart_id,
-            product_id: product_id,
-          };
-        }
-        if (session_id) {
-          new_cart_item = {
-            session_id: session_id,
             cart_quantity: quantity,
             cart_id: newCart.cart_id,
             product_id: product_id,
@@ -153,11 +127,10 @@ const addToCart = async (req, res) => {
 };
 
 const getCart = async (req, res) => {
-  const { user_id, session_id } = req.user;
+  const { user_id } = req.user;
 
   let get_cart_params;
   if (user_id) get_cart_params = { user_id: user_id };
-  if (session_id) get_cart_params = { session_id: session_id };
 
   try {
     const cart = await Cart.findOne({

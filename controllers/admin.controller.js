@@ -4,6 +4,7 @@ const logger = require("../utils/logger");
 const { serverErrorResponse, successResponse } = require("../utils/response");
 
 const Mail = db.Mail;
+const Admin = db.Admin;
 
 const get_emails = async (req, res) => {
   try {
@@ -14,6 +15,7 @@ const get_emails = async (req, res) => {
     serverErrorResponse(res, err.message);
   }
 };
+
 
 module.exports = {
   get_emails,

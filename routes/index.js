@@ -1,5 +1,5 @@
 const construction_routes = require("./under_construction.routes");
-const admin_routes = require("./admin.routes");
+const admin_routes = require("./admin/admin.routes");
 const user_routes = require("./user.routes");
 const product_routes = require("./product.routes");
 const order_routes = require("./order.routes");

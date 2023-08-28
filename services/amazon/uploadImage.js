@@ -12,7 +12,7 @@ AWS.config.update({
 const s3 = new AWS.S3();
 
 // Configure Multer and Multer-S3
-const upload = multer({
+const uploadImage = multer({
   storage: multerS3({
     s3: s3,
     bucket: "ecommerce-images",
@@ -27,19 +27,29 @@ const upload = multer({
   }),
 });
 
-const uploadImage = (req, res) => {
-  // 'image' is the name of the file input field in the form
-  let imageUrl;
-  upload.single("image")(req, res, (err) => {
-    if (err) {
-      // Handle error
-      return [null, err];
-    }
-    // File uploaded successfully
-    imageUrl = req.file.location;
-  });
-  console.log(imageUrl);
-  return [imageUrl, null];
-};
+// const uploadImage = (req, res) => {
+//   // 'image' is the name of the file input field in the form
+//   let imageUrl;
+//   upload.single("image")(req, res, (err) => {
+//     if (err) {
+//       // Handle error
+//       return [null, err];
+//     }
+//     // File uploaded successfully
+//     imageUrl = req.file.location;
+//   });
+//   console.log(imageUrl);
+//   return [imageUrl, null];
+// };
 
-module.exports = upload;
+// const uploadImage = multer({
+//   storage: upload,
+//   // fileFilter: (req, file, callback) => {
+//   //   sanitizeFile(file, callback);
+//   // },
+//   // limits: {
+//   //   fileSize: 1024 * 1024 * 2, // 2mb file size
+//   // },
+// });
+
+module.exports = uploadImage;

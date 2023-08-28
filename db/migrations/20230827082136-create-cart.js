@@ -29,10 +29,6 @@ module.exports = {
         type: Sequelize.UUID,
         allowNull: true,
       },
-      session_id: {
-        type: Sequelize.UUID,
-        allowNull: true,
-      },
       discount_id: {
         type: Sequelize.UUID,
         allowNull: true,

@@ -7,11 +7,10 @@ module.exports = (sequelize, Sequelize) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate({ User, Cart, Product , Session}) {
+    static associate({ User, Cart, Product }) {
       // define association here
       this.belongsTo(Product, { foreignKey: "product_id" });
       this.belongsTo(User, { foreignKey: "user_id" });
-      this.belongsTo(Session , {foreignKey:"session_id"})
       this.belongsTo(Cart, { foreignKey: "cart_id" });
     }
   }
@@ -34,10 +33,7 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.UUID,
         allowNull: true,
       },
-      session_id: {
-        type: Sequelize.UUID,
-        allowNull:true,
-      },
+
       cart_id: {
         type: Sequelize.UUID,
         allowNull: false,

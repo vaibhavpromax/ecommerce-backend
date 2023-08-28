@@ -7,29 +7,31 @@ module.exports = {
      * Add altering commands here.
      *
      * Example:
-     * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
+     * await queryInterface.createTable('Admins', { id: Sequelize.INTEGER });
+     *
      */
-    await queryInterface.createTable("Wishlists", {
-      wish_id: {
-        type: Sequelize.UUID,
+
+    await queryInterface.createTable("Admins", {
+      first_name: {
+        type: Sequelize.STRING,
         allowNull: false,
+      },
+      last_name: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      email: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      password: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      admin_id: {
+        type: Sequelize.UUID,
         defaultValue: Sequelize.UUIDV4,
-      },
-      product_id: {
-        type: Sequelize.UUID,
-        allowNull: false,
-      },
-      session_id: {
-        type: Sequelize.UUID,
-        allowNull: true,
-      },
-      user_id: {
-        type: Sequelize.UUID,
-        allowNull: true,
-      },
-      product_id: {
-        type: Sequelize.UUID,
-        allowNull: false,
+        primaryKey: true,
       },
       createdAt: {
         allowNull: false,
@@ -47,8 +49,8 @@ module.exports = {
      * Add reverting commands here.
      *
      * Example:
-     * await queryInterface.dropTable('users');
+     * await queryInterface.dropTable('Admins');
      */
-    await queryInterface.dropTable("Wishlists");
+    await queryInterface.dropTable("Admins");
   },
 };

@@ -1,6 +1,7 @@
 "use strict";
 
 /** @type {import('sequelize-cli').Migration} */
+
 module.exports = {
   async up(queryInterface, Sequelize) {
     /**
@@ -93,6 +94,10 @@ module.exports = {
       stripe_price_id: {
         type: Sequelize.STRING,
         allowNull: true,
+      },
+      quantity_purchased: {
+        type: Sequelize.INTEGER,
+        defaultValue: 0,
       },
       createdAt: {
         allowNull: false,

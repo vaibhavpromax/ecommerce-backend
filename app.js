@@ -35,7 +35,7 @@ const routes = require("./routes");
 const { verify } = require("jsonwebtoken");
 app.use("/ecommerce", routes);
 
-app.get("/", (_, res) => {
+  app.get("/", (_, res) => {
   res.status(200).send("Backend up and running");
 });
 

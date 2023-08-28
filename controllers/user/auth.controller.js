@@ -19,14 +19,11 @@ const amazonService = require("../../services/amazon");
 const Referral = db.Referral;
 const User = db.User;
 const Discount = db.Discount;
-const Session = db.Session;
 const CartItem = db.CartItem;
 const Cart = db.Cart;
 const Wishlist = db.Wishlist;
 
 const register = async (req, res) => {
-  const { user_id, session_id } = req.user;
-
   const {
     email,
     password,
@@ -79,29 +76,6 @@ const register = async (req, res) => {
                   user_id: parsedUser.user_id,
                   is_authenticated: true,
                 };
-                const updateUser = async () => {
-                  // update cart with the user_id
-                  const updated_cart = await Cart.update(
-                    { user_id: us.user_id },
-                    { where: { session_id: session_id } }
-                  );
-                  logger.info(`Cart users  updated ${updated_cart}`);
-                  //update cart items with user_id
-                  const updated_cart_items = await CartItem.update(
-                    { user_id: us.user_id },
-                    { where: { session_id: session_id } }
-                  );
-                  logger.info(`CartItem users  updated ${updated_cart_items}`);
-
-                  //update wishlist with user_id
-                  const updated_wishlist = await Wishlist.update(
-                    { user_id: us.user_id },
-                    { where: { user_id: session_id } }
-                  );
-                  logger.info(`Cart wishlist updated ${updated_wishlist}`);
-                };
-
-                updateUser();
 
                 const token = jwt.sign({ user: tokenPayload }, "secret", {
                   expiresIn: "72h",
@@ -170,7 +144,6 @@ const register = async (req, res) => {
 };
 
 const login = (req, res, next) => {
-  const { user_id, session_id } = req.user;
   const { password, email } = req.body;
   // checks if email exists
   User.findOne({
@@ -198,30 +171,6 @@ const login = (req, res, next) => {
               user_id: dbUser.user_id,
               is_authenticated: true,
             };
-
-            const updateUser = async () => {
-              // update cart with the user_id
-              const updated_cart = await Cart.update(
-                { user_id: dbUser.user_id },
-                { where: { session_id: session_id } }
-              );
-              logger.info(`Cart users  updated ${updated_cart}`);
-              //update cart items with user_id
-              const updated_cart_items = await CartItem.update(
-                { user_id: dbUser.user_id },
-                { where: { session_id: session_id } }
-              );
-              logger.info(`CartItem users  updated ${updated_cart_items}`);
-
-              //update wishlist with user_id
-              const updated_wishlist = await Wishlist.update(
-                { user_id: dbUser.user_id },
-                { where: { user_id: session_id } }
-              );
-              logger.info(`Cart wishlist updated ${updated_wishlist}`);
-            };
-
-            updateUser();
 
             // password match
             const token = jwt.sign({ user: tokenPayload }, "secret", {
@@ -384,15 +333,14 @@ const authMiddleware = async (req, res, next) => {
   if (!authHeader) {
     return unauthorizedResponse(res, "unauthorized");
   }
+
   const token = authHeader.split(" ")[1];
+  console.log(token);
   let decodedToken;
   try {
     decodedToken = jwt.verify(token, "secret");
     console.log(decodedToken);
-    if (decodedToken?.user?.is_authenticated)
-      req.user = { user_id: decodedToken.user.user_id, session_id: null };
-    else
-      req.user = { session_id: decodedToken.session.session_id, user_id: null };
+    req.user = decodedToken.user_id;
   } catch (err) {
     console.log(err);
     return serverErrorResponse(res, "could not decode the token");
@@ -405,21 +353,6 @@ const authMiddleware = async (req, res, next) => {
   }
 };
 
-const makeSession = async (req, res) => {
-  try {
-    const session = await Session.create({});
-    const sessionToken = jwt.sign({ session: session.dataValues }, "secret", {
-      expiresIn: "72h",
-    });
-
-    logger.info(`session created with ${session.dataValues.session_id}`);
-    return successResponse(res, "Session created", { token: sessionToken });
-  } catch (error) {
-    logger.error(`Error while creating a session ${error}`);
-    return serverErrorResponse(res, "Error while creating a session");
-  }
-};
-
 module.exports = {
   register,
   authMiddleware,
@@ -427,5 +360,4 @@ module.exports = {
   changePassword,
   forgetPassword,
   verifyOTP,
-  makeSession,
 };
