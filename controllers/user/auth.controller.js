@@ -77,7 +77,7 @@ const register = async (req, res) => {
                   is_authenticated: true,
                 };
 
-                const token = jwt.sign({ user: tokenPayload }, "secret", {
+                const token = jwt.sign(tokenPayload, "secret", {
                   expiresIn: "72h",
                 });
 
@@ -173,7 +173,7 @@ const login = (req, res, next) => {
             };
 
             // password match
-            const token = jwt.sign({ user: tokenPayload }, "secret", {
+            const token = jwt.sign(tokenPayload, "secret", {
               expiresIn: "72h",
             });
             return successResponse(res, "User logged in successfully", {
@@ -265,7 +265,7 @@ const verifyOTP = async (req, res) => {
 
     if (user === null) return notFoundResponse(res, "User not found");
 
-    const accessToken = jwt.sign({ user: user.dataValues }, "secret", {
+    const accessToken = jwt.sign(user.dataValues, "secret", {
       expiresIn: "72h",
     });
 
@@ -335,12 +335,11 @@ const authMiddleware = async (req, res, next) => {
   }
 
   const token = authHeader.split(" ")[1];
-  console.log(token);
   let decodedToken;
   try {
     decodedToken = jwt.verify(token, "secret");
     console.log(decodedToken);
-    req.user = decodedToken.user_id;
+    req.user = decodedToken;
   } catch (err) {
     console.log(err);
     return serverErrorResponse(res, "could not decode the token");
