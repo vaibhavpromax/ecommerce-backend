@@ -8,9 +8,9 @@ const Product = db.Product;
 const Image = db.Image;
 
 const createWishlist = async (req, res) => {
+  console.log("hello", req.user);
   const { user_id } = req.user;
   const { id } = req.params;
-
   let create_wish_params;
   if (user_id) create_wish_params = { product_id: id, user_id };
   try {

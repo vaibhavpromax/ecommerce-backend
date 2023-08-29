@@ -5,3 +5,4 @@
 11:47:19 [31merror[39m: Error while fetching products TypeError: product_arr.map is not a function
 11:47:28 [31merror[39m: Error while fetching products TypeError: product_arr.map is not a function
 11:48:01 [31merror[39m: Error while fetching products TypeError: product_arr.map is not a function
+01:45:24 [31merror[39m: Error while creating wishlist Error: Missing where attribute in the options parameter passed to findOrCreate. Please note that the API has changed, and is now options only (an object with where, defaults keys, transaction etc.)

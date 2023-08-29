@@ -23,8 +23,8 @@ const { getNotifications } = require("../controllers/notification.controller");
 const uploadImage = require("../services/amazon/uploadImage");
 const router = express.Router();
 
-router.post("/login", authMiddleware, login);
-router.post("/register", authMiddleware, register);
+router.post("/login", login);
+router.post("/register", register);
 router.post("/forget-password", forgetPassword);
 router.post("/verify-otp", verifyOTP);
 router.post("/change-password", authMiddleware, changePassword);
