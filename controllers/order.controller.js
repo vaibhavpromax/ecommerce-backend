@@ -48,84 +48,38 @@ const get_orders_of_user = async (req, res) => {
   }
 };
 
-// const get_single_order = async (req, res) => {
-//   const { order_id } = req.params;
-//   let user, product, order, address, review;
-//   try {
-//     const order = await Order.findOne({
-//       where: {
-//         order_id: order_id,
-//       },
-//       include: [
-//         {
-//           model: User,
-//         },
-//         {
-//           model: OrderItem,
-//         },
-//         {
-//           model: Product,
-//         },
-//         {
-//           model: Discount,
-//         },
-//         {
-//           model: Address,
-//         },
-//       ],
-//     });
-//     logger.info(`Order fetched successfully ${order}`);
-//     return successResponse("Order fetched", order);
-//   } catch (err) {
-//     logger.error(`Error while fetching order ${err}`);
-//     return serverErrorResponse(res, "Error while fetching order");
-//   }
-// };
-
-// this controller is not useful
-const make_order = async (req, res) => {
-  const { user_id } = req.user;
-  const { cart_id, discount_id, address_id } = req.body;
-
-  const cartItems = await Cart.findAll({
-    where: {
-      user_id: user_id,
-    },
-  });
-
-  const total_price = cartItems?.map((item) => {
-    return;
-  });
-
+const getOrderDetailsForAdmin = async (req, res) => {
+  const { order_id } = req.params;
+  let user, product, order, address, review;
   try {
-    const order = await Order.create({
-      product_id,
-      quantity,
-      address_id,
-      total_price,
-      user_id,
-      is_order_completed: false,
-    }).then(() => {
-      Product.update(
+    const order = await Order.findOne({
+      where: {
+        order_id: order_id,
+      },
+      include: [
         {
-          // update the quantity of the corresponding product in the products table
-          inventory_quantity: db.sequelize.literal(
-            `inventory_quantity - ${quantity}`
-          ),
+          model: User,
         },
         {
-          where: {
-            product_id: product_id,
+          model: OrderItem,
+          include: {
+            model: Product,
+            include: {
+              model: Image,
+            },
           },
-        }
-      ).catch((err) => {
-        console.log(err);
-      });
+        },
+        ,
+        {
+          model: Address,
+        },
+      ],
     });
-    return successResponse(res, "order created successfully", order);
+    logger.info(`Order fetched successfully ${order}`);
+    return successResponse("Order fetched", order);
   } catch (err) {
-    logger.error(`Error while creating order ${err}`);
-    return serverErrorResponse(res, "Error while creating order");
+    logger.error(`Error while fetching order ${err}`);
+    return serverErrorResponse(res, "Error while fetching order");
   }
 };
 
@@ -157,7 +111,7 @@ const update_order = async (req, res) => {
 
 module.exports = {
   get_all_orders,
-  make_order,
+  getOrderDetailsForAdmin,
   update_order,
   get_orders_of_user,
 };

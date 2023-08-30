@@ -9,48 +9,45 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const Cart = db.Cart;
 const Order = db.Order;
 const OrderItem = db.OrderItem;
-const CartItem=db.CartItem;
+const CartItem = db.CartItem;
 
 // this function is called when payment confirm webhook is called
-const confirmOrder = async (intent_id ) => {
-
-
+const confirmOrder = async (intent_id) => {
   const paymentIntent = await stripe.paymentIntents.retrieve(intent_id);
 
-//console.log('paymentIntent' , paymentIntent)
+  //console.log('paymentIntent' , paymentIntent)
 
   const cart_id = paymentIntent.metadata["cart_id"];
   const user_id = paymentIntent.metadata["user_id"];
   const address_id = paymentIntent.metadata["address_id"];
   let cart;
   try {
-    cart = await Cart.findOne({ where: { cart_id } , include:CartItem });
+    cart = await Cart.findOne({ where: { cart_id }, include: CartItem });
   } catch (error) {
     logger.error(`Error while finding cart while confirming order ${error}`);
     return;
   }
 
-
   const parsedCart = JSON.parse(JSON.stringify(cart));
-  
-console.log(parsedCart);
-try {
+
+  console.log(parsedCart);
+  try {
     const order = await Order.create({
       user_id,
       address_id,
-      stripe_payment_id:paymentIntent.id,
-      total_price:parsedCart?.cart_total,
-      shipping_price:"20",
+      stripe_payment_id: paymentIntent.id,
+      total_price: parsedCart?.cart_total,
+      shipping_price: "20",
       order_status: "PLACED",
       cart_id: cart.cart_id,
     });
     const parsedOrder = JSON.parse(JSON.stringify(order));
 
-console.log(parsedOrder)
+    console.log(parsedOrder);
 
     try {
-      parsedCart?.CartItems.map(async(item) => {
-await OrderItem.create({
+      parsedCart?.CartItems.map(async (item) => {
+        await OrderItem.create({
           product_id: item.product_id,
           item_quantity: item.cart_quantity,
           order_id: parsedOrder.order_id,
@@ -64,12 +61,11 @@ await OrderItem.create({
     return [null, error];
   }
 
-logger.info(`Order Created successsfully for intent id ${intent_id} ` )
-
+  logger.info(`Order Created successsfully for intent id ${intent_id} `);
 };
 
 const createStripeWebHook = async (req, res) => {
-logger.info('hello from webhook')
+  logger.info("hello from webhook");
   const sig = req.headers["stripe-signature"];
   let event;
 
@@ -79,29 +75,27 @@ logger.info('hello from webhook')
       sig,
       process.env.STRIPE_WEBHOOK_SECRET
     );
-logger.info("Webhook received");   
- console.log(event);
+    logger.info("Webhook received");
+    console.log(event);
   } catch (err) {
-logger.error("error in webhook ");
+    logger.error("error in webhook ");
     console.log(err);
     serverErrorResponse(res, "error occured while creating webhook");
   }
 
   // Unexpected event type
   switch (event.type) {
+    case "customer.created":
+      logger.info("stripe customer created");
+      break;
 
-case  "customer.created":
-logger.info("stripe customer created");
-break;
-
-
-
-    case "payment_intent.succeeded" :
+    case "payment_intent.succeeded":
       intent = event.data.object;
       confirmOrder(intent.id);
       console.log("Succeeded:", intent.id);
       break;
-case "payment_intent.requires_action":
+    // check for this event 
+    case "payment_intent.requires_action":
       intent = event.data.object;
       confirmOrder(intent.id);
       console.log("Succeeded:", intent.id);
