@@ -61,20 +61,15 @@ const getPaymentMethods = async (req, res) => {
   let customerId;
   const { user_id } = req.user;
 
-  User.findOne({ where: { user_id: user_id } })
-    .then((user) => {
-      if (user) {
-        customerId = user.stripe_customer_id;
-      } else {
-        logger.error("User not found");
-        return notFoundResponse("user not found");
-      }
-    })
-    .catch((error) => {
-      logger.error(error.message);
-    });
+const user = await User.findOne({ where: { user_id: user_id } })
+    
+if(!user) {
 
-  const [paymentMethods, err] = await listCustomerPayMethods(customerId);
+return notFoundResponse(res ,  "User with this id does not exist  ") }
+
+const parsedUser = JSON.parse(JSON.stringify(user))
+
+  const [paymentMethods, err] = await listCustomerPayMethods(parsedUser?.stripe_customer_id);
 
   if (err) {
     logger.error(`Error while fetching payment methods ${err}`);
@@ -88,8 +83,9 @@ const makePaymentIntent = async (req, res) => {
   const { paymentMethod, cart_id, address_id } = req.body;
   let userCustomerId, amount, currency;
 
-  const cart = Cart.findOne({ where: { cart_id }, include: User });
-  const cartObj = JSON.stringify(JSON.parse(cart));
+  const cart = await Cart.findOne({ where: { cart_id }, include: User });
+  const cartObj = JSON.parse(JSON.stringify(cart));
+
 
   // User.findOne({ where: { user_id: user_id } })
   //   .then((user) => {
@@ -104,8 +100,8 @@ const makePaymentIntent = async (req, res) => {
   //     logger.error(error.message);
   //   });
 
-  if (cartObj.users[0].stripe_customer_id)
-    userCustomerId = cartObj.users[0].stripe_customer_id;
+  if (cartObj.User.stripe_customer_id)
+    userCustomerId = cartObj.User.stripe_customer_id;
   else {
     logger.error("User not found");
     return notFoundResponse("user not found");
@@ -131,6 +127,7 @@ const confirmIntent = async (req, res) => {
     paymentMethod,
     paymentIntent,
   });
+console.log(err);
   if (err) return serverErrorResponse(res, "error during confirmation");
   return successResponse(res, "Payment confirmed", confirmIntent);
 };

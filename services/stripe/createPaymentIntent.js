@@ -16,6 +16,7 @@ const createPaymentIntent = async ({
       payment_method: paymentMethod,
       confirmation_method: "manual", // For 3D Security
       description: "Buy Product",
+setup_future_usage:'off_session',
       metadata: metadata,
     });
     return [paymentIntent, null];

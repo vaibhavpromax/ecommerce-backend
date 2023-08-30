@@ -143,3 +143,5 @@
 11:28:03 [32minfo[39m: Cart found for [object Object]
 11:28:03 [32minfo[39m: new cart item created [object Object]
 11:28:03 [32minfo[39m: new cart item created [object Object]
+06:15:13 [32minfo[39m: [CONNECTED TO DATABASE]
+06:15:14 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
