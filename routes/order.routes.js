@@ -12,7 +12,7 @@ const {
 
 const router = express.Router();
 
-router.get("/get-orders", authMiddleware, get_all_orders);
+// router.get("/get-orders", authMiddleware, get_all_orders);
 router.get("/get-order/:order_id", authMiddleware, get_orders_of_user);
 // router.post("/create-order", authMiddleware, make_order);
 router.patch("/update-order/:order_id", authMiddleware, update_order);

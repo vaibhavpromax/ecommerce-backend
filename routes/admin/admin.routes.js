@@ -20,6 +20,11 @@ const {
   getCustomers,
   uploadImageController,
 } = require("../../controllers/user/user.controller");
+const {
+  get_all_orders,
+  getOrderDetailsForAdmin,
+  get_orders_of_user,
+} = require("../../controllers/order.controller");
 
 const router = express.Router();
 
@@ -30,6 +35,10 @@ router.post("/notification/create", createNotification);
 router.post("/add-image", uploadImage.single("image"), uploadImageController);
 router.post("/add-product", createProduct);
 router.get("/get-products", getProductsForAdmin);
+router.get("/get-all-orders", get_all_orders);
+router.get("/get-order-details/:id", getOrderDetailsForAdmin);
+router.get("/get-customer-orders/:id", get_orders_of_user);
+
 router.post("/login", login_admin);
 router.post("/register", register_admin);
 
