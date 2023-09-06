@@ -49,12 +49,12 @@ const get_orders_of_user = async (req, res) => {
 };
 
 const getOrderDetailsForAdmin = async (req, res) => {
-  const { order_id } = req.params;
+  const { id } = req.params;
   let user, product, order, address, review;
   try {
     const order = await Order.findOne({
       where: {
-        order_id: order_id,
+        order_id: id,
       },
       include: [
         {
@@ -69,14 +69,13 @@ const getOrderDetailsForAdmin = async (req, res) => {
             },
           },
         },
-        ,
         {
           model: Address,
         },
       ],
     });
     logger.info(`Order fetched successfully ${order}`);
-    return successResponse("Order fetched", order);
+    return successResponse(res, "Order fetched", order);
   } catch (err) {
     logger.error(`Error while fetching order ${err}`);
     return serverErrorResponse(res, "Error while fetching order");
@@ -109,9 +108,32 @@ const update_order = async (req, res) => {
   }
 };
 
+const create_order = async (req, res) => {
+  const { user_id } = req.user;
+  const { address_id } = req.body;
+
+  try {
+    cart_arr = await Cart.findAll({
+      where: { user_id },
+      include: { model: Product },
+    });
+    const parsedCart = JSON.parse(JSON.stringify(cart_arr));
+    let total, final_amount, quantity;
+
+    const order = await Order.create({
+      user_id,
+      address_id,
+    });
+  } catch (error) {
+    logger.error(`Error while creating order ${error}`);
+    return serverErrorResponse(res, "Error while placing order");
+  }
+};
+
 module.exports = {
   get_all_orders,
   getOrderDetailsForAdmin,
   update_order,
   get_orders_of_user,
+  create_order,
 };

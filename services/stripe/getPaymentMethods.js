@@ -4,10 +4,7 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const listCustomerPayMethods = async (customerId) => {
   try {
     const paymentMethods = await stripe.customers.listPaymentMethods(
-      customerId,
-      {
-        type: "card",
-      }
+      customerId
     );
     return [paymentMethods, null];
   } catch (err) {

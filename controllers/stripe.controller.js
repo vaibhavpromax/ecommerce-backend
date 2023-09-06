@@ -9,56 +9,37 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const Cart = db.Cart;
 const Order = db.Order;
 const OrderItem = db.OrderItem;
-const CartItem = db.CartItem;
+const Product = db.Product;
 
 // this function is called when payment confirm webhook is called
 const confirmOrder = async (intent_id) => {
   const paymentIntent = await stripe.paymentIntents.retrieve(intent_id);
 
-  //console.log('paymentIntent' , paymentIntent)
+  const order_id = paymentIntent.metadata["order_id"];
+  let order;
 
-  const cart_id = paymentIntent.metadata["cart_id"];
-  const user_id = paymentIntent.metadata["user_id"];
-  const address_id = paymentIntent.metadata["address_id"];
-  let cart;
   try {
-    cart = await Cart.findOne({ where: { cart_id }, include: CartItem });
+    // update the order status and payment status of the order and stripe id
+
+    const updated = await Order.update(
+      {
+        order_status: "PLACED",
+        payment_status: "PAID",
+        stripe_payment_id: intent_id,
+      },
+      {
+        where: {
+          order_id,
+        },
+      }
+    );
+
+    logger.info(`Order table updated ${updated}`);
   } catch (error) {
-    logger.error(`Error while finding cart while confirming order ${error}`);
+    logger.error(
+      `Error while finding cart_arr while confirming order ${error}`
+    );
     return;
-  }
-
-  const parsedCart = JSON.parse(JSON.stringify(cart));
-
-  console.log(parsedCart);
-  try {
-    const order = await Order.create({
-      user_id,
-      address_id,
-      stripe_payment_id: paymentIntent.id,
-      total_price: parsedCart?.cart_total,
-      shipping_price: "20",
-      order_status: "PLACED",
-      cart_id: cart.cart_id,
-    });
-    const parsedOrder = JSON.parse(JSON.stringify(order));
-
-    console.log(parsedOrder);
-
-    try {
-      parsedCart?.CartItems.map(async (item) => {
-        await OrderItem.create({
-          product_id: item.product_id,
-          item_quantity: item.cart_quantity,
-          order_id: parsedOrder.order_id,
-        });
-      });
-    } catch (error) {
-      logger.error(`Error while creating order item ${error}`);
-    }
-  } catch (error) {
-    logger.error(`Error while creating order ${error}`);
-    return [null, error];
   }
 
   logger.info(`Order Created successsfully for intent id ${intent_id} `);
@@ -94,10 +75,10 @@ const createStripeWebHook = async (req, res) => {
       confirmOrder(intent.id);
       console.log("Succeeded:", intent.id);
       break;
-    // check for this event 
+    // check for this event
     case "payment_intent.requires_action":
       intent = event.data.object;
-      confirmOrder(intent.id);
+      await confirmOrder(intent.id);
       console.log("Succeeded:", intent.id);
       break;
     case "payment_intent.payment_failed":

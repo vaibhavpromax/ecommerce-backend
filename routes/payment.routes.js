@@ -1,7 +1,7 @@
 const express = require("express");
 const {
   createCustomer,
-  attachPayment,
+  createAndAttachPaymentMethod,
   getPaymentMethods,
   makePaymentIntent,
   confirmIntent,
@@ -10,8 +10,8 @@ const { authMiddleware } = require("../controllers/user/auth.controller");
 
 const router = express.Router();
 
-router.post("/create-stripe-customer", authMiddleware, createCustomer);
-router.post("/attach", authMiddleware, attachPayment);
+// router.post("/create-stripe-customer", authMiddleware, createCustomer);
+router.post("/attach", authMiddleware, createAndAttachPaymentMethod);
 router.post("/get-payment-methods", authMiddleware, getPaymentMethods);
 router.post("/create-intent", authMiddleware, makePaymentIntent);
 router.post("/confirm-payment", confirmIntent);
