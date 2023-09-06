@@ -6,3 +6,49 @@
 11:47:28 [31merror[39m: Error while fetching products TypeError: product_arr.map is not a function
 11:48:01 [31merror[39m: Error while fetching products TypeError: product_arr.map is not a function
 01:45:24 [31merror[39m: Error while creating wishlist Error: Missing where attribute in the options parameter passed to findOrCreate. Please note that the API has changed, and is now options only (an object with where, defaults keys, transaction etc.)
+15:30:50 [31merror[39m: Error while updating cart SequelizeDatabaseError: Unknown column 'Cart.product_id' in 'where clause'
+15:51:51 [31merror[39m: Error while updating cart SequelizeDatabaseError: Unknown column 'quantity' in 'field list'
+15:53:12 [31merror[39m: Error while updating cart SequelizeDatabaseError: Unknown column 'quantity' in 'field list'
+15:53:24 [31merror[39m: Error while updating cart SequelizeDatabaseError: Unknown column 'quantity' in 'field list'
+16:53:39 [31merror[39m: Failed to connect to db Cannot drop table 'discounts' referenced by a foreign key constraint 'carts_ibfk_3' on table 'carts'.
+16:54:35 [31merror[39m: Failed to connect to db Cannot drop table 'discounts' referenced by a foreign key constraint 'carts_ibfk_3' on table 'carts'.
+17:08:35 [31merror[39m: Error while updating cart SequelizeForeignKeyConstraintError: Cannot add or update a child row: a foreign key constraint fails (`ecommerce`.`carts`, CONSTRAINT `carts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE)
+12:54:31 [31merror[39m: Error while creating address notNull Violation: Address.address_phone_no cannot be null
+12:54:45 [31merror[39m: Error while creating address notNull Violation: Address.address_phone_no cannot be null
+12:55:48 [31merror[39m: Error while creating address notNull Violation: Address.address_phone_no cannot be null
+15:03:01 [31merror[39m: Error while fetching payment methods Error: Stripe: Argument "customer" must be a string, but got: null (on API request to `GET /v1/customers/{customer}/payment_methods`)
+15:04:06 [31merror[39m: Error while fetching payment methods Error: Stripe: Argument "customer" must be a string, but got: null (on API request to `GET /v1/customers/{customer}/payment_methods`)
+15:05:14 [31merror[39m: Error while fetching payment methods Error: Stripe: Argument "customer" must be a string, but got: null (on API request to `GET /v1/customers/{customer}/payment_methods`)
+15:05:16 [31merror[39m: Error while fetching payment methods Error: Stripe: Argument "customer" must be a string, but got: null (on API request to `GET /v1/customers/{customer}/payment_methods`)
+15:19:08 [31merror[39m: Error while fetching payment methods Error: Stripe: Argument "customer" must be a string, but got: null (on API request to `GET /v1/customers/{customer}/payment_methods`)
+15:19:29 [31merror[39m: Error while fetching payment methods Error: Stripe: Argument "customer" must be a string, but got: null (on API request to `GET /v1/customers/{customer}/payment_methods`)
+15:20:17 [31merror[39m: Error while fetching payment methods Error: Stripe: Argument "customer" must be a string, but got: null (on API request to `GET /v1/customers/{customer}/payment_methods`)
+15:20:55 [31merror[39m: Error while fetching payment methods Error: Stripe: Argument "customer" must be a string, but got: null (on API request to `GET /v1/customers/{customer}/payment_methods`)
+15:21:04 [31merror[39m: Error while fetching payment methods Error: Stripe: Argument "customer" must be a string, but got: null (on API request to `GET /v1/customers/{customer}/payment_methods`)
+15:21:38 [31merror[39m: Error while fetching payment methods Error: Stripe: Argument "customer" must be a string, but got: null (on API request to `GET /v1/customers/{customer}/payment_methods`)
+15:21:53 [31merror[39m: Error while fetching payment methods Error: Stripe: Argument "customer" must be a string, but got: null (on API request to `GET /v1/customers/{customer}/payment_methods`)
+15:22:39 [31merror[39m: Error while fetching payment methods Error: Stripe: Argument "customer" must be a string, but got: null (on API request to `GET /v1/customers/{customer}/payment_methods`)
+15:22:48 [31merror[39m: Error while fetching payment methods Error: Stripe: Argument "customer" must be a string, but got: null (on API request to `GET /v1/customers/{customer}/payment_methods`)
+15:26:35 [31merror[39m: Error while attaching payment method Error: PaymentMethods of type card cannot be attached to Customers directly without 3DS due to Indian payment regulations. Please instead provide the PaymentMethod and Customer alongside a SetupIntent or PaymentIntent with the `setup_future_usage` parameter. See https://support.stripe.com/questions/guide-for-saving-cards-in-india for more details.
+15:56:53 [31merror[39m: Error while confirming setup intent Error: A `return_url` must be specified because this Setup Intent is configured to automatically accept the payment methods enabled in the Dashboard, some of which may require a full page redirect to succeed. If you do not want to accept redirect-based payment methods, set `automatic_payment_methods[enabled]` to `true` and `automatic_payment_methods[allow_redirects]` to `never` when creating Setup Intents and Payment Intents.
+16:00:28 [31merror[39m: Error while attaching payment method Error: PaymentMethods of type card cannot be attached to Customers directly without 3DS due to Indian payment regulations. Please instead provide the PaymentMethod and Customer alongside a SetupIntent or PaymentIntent with the `setup_future_usage` parameter. See https://support.stripe.com/questions/guide-for-saving-cards-in-india for more details.
+21:01:00 [31merror[39m: Error while fetching order Error: Include unexpected. Element has to be either a Model, an Association or an object.
+21:04:01 [31merror[39m: Error while fetching order Error: Include unexpected. Element has to be either a Model, an Association or an object.
+21:04:15 [31merror[39m: Error while fetching order Error: Include unexpected. Element has to be either a Model, an Association or an object.
+21:04:22 [31merror[39m: Error while fetching order Error: Include unexpected. Element has to be either a Model, an Association or an object.
+21:04:26 [31merror[39m: Error while fetching order Error: Include unexpected. Element has to be either a Model, an Association or an object.
+21:07:59 [31merror[39m: Error while fetching order Error: Include unexpected. Element has to be either a Model, an Association or an object.
+21:08:30 [31merror[39m: Error while fetching order Error: Include unexpected. Element has to be either a Model, an Association or an object.
+21:08:31 [31merror[39m: Error while fetching order Error: Include unexpected. Element has to be either a Model, an Association or an object.
+21:09:17 [31merror[39m: Error while fetching order Error: Include unexpected. Element has to be either a Model, an Association or an object.
+21:09:19 [31merror[39m: Error while fetching order Error: Include unexpected. Element has to be either a Model, an Association or an object.
+21:10:26 [31merror[39m: Error while fetching order Error: Include unexpected. Element has to be either a Model, an Association or an object.
+21:10:36 [31merror[39m: Error while fetching order Error: Include unexpected. Element has to be either a Model, an Association or an object.
+21:12:09 [31merror[39m: Error while fetching order Error: Include unexpected. Element has to be either a Model, an Association or an object.
+10:33:15 [31merror[39m: Error while fetching order Error: Include unexpected. Element has to be either a Model, an Association or an object.
+10:33:46 [31merror[39m: Error while fetching order Error: Include unexpected. Element has to be either a Model, an Association or an object.
+11:25:20 [31merror[39m: Error while creating setup intent Error: Invalid URL: An explicit scheme (such as https) must be provided.
+11:26:34 [31merror[39m: Error while creating setup intent Error: You cannot confirm this SetupIntent because it's missing a payment method. Update the SetupIntent with a payment method and then confirm it again.
+12:27:11 [31merror[39m: Error while creating setup intent Error: Your card has insufficient funds.
+12:52:24 [31merror[39m: Error while fetching payment methods Error: An error occurred with our connection to Stripe.
+12:52:29 [31merror[39m: Error while fetching payment methods Error: An error occurred with our connection to Stripe.

@@ -27,7 +27,6 @@ const addAddress = async (req, res) => {
   let primary = false;
   try {
     const fetchAddress = await Address.findAll({ where: { user_id } });
-
     if (fetchAddress.length === 0) primary = true;
 
     const {
@@ -37,6 +36,8 @@ const addAddress = async (req, res) => {
       city,
       country,
       name_on_address,
+      address_name,
+      address_phone_no,
     } = req.body;
     const createdObject = await Address.create({
       user_id: user_id,
@@ -47,6 +48,8 @@ const addAddress = async (req, res) => {
       country: country,
       is_primary: primary,
       name_on_address,
+      address_name,
+      address_phone_no,
     });
     successResponse(res, "Address added successfully", createdObject);
   } catch (err) {

@@ -19,7 +19,6 @@ const amazonService = require("../../services/amazon");
 const Referral = db.Referral;
 const User = db.User;
 const Discount = db.Discount;
-const CartItem = db.CartItem;
 const Cart = db.Cart;
 const Wishlist = db.Wishlist;
 

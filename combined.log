@@ -145,3 +145,407 @@
 11:28:03 [32minfo[39m: new cart item created [object Object]
 06:15:13 [32minfo[39m: [CONNECTED TO DATABASE]
 06:15:14 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+13:01:25 [32minfo[39m: [CONNECTED TO DATABASE]
+13:01:25 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+13:02:01 [32minfo[39m: [CONNECTED TO DATABASE]
+13:02:01 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:30:50 [31merror[39m: Error while updating cart SequelizeDatabaseError: Unknown column 'Cart.product_id' in 'where clause'
+15:51:43 [32minfo[39m: [CONNECTED TO DATABASE]
+15:51:43 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:51:51 [31merror[39m: Error while updating cart SequelizeDatabaseError: Unknown column 'quantity' in 'field list'
+15:53:12 [31merror[39m: Error while updating cart SequelizeDatabaseError: Unknown column 'quantity' in 'field list'
+15:53:17 [32minfo[39m: [CONNECTED TO DATABASE]
+15:53:17 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:53:24 [31merror[39m: Error while updating cart SequelizeDatabaseError: Unknown column 'quantity' in 'field list'
+15:57:59 [32minfo[39m: [CONNECTED TO DATABASE]
+15:57:59 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:58:44 [32minfo[39m: [CONNECTED TO DATABASE]
+15:58:44 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+16:53:39 [31merror[39m: Failed to connect to db Cannot drop table 'discounts' referenced by a foreign key constraint 'carts_ibfk_3' on table 'carts'.
+16:54:35 [31merror[39m: Failed to connect to db Cannot drop table 'discounts' referenced by a foreign key constraint 'carts_ibfk_3' on table 'carts'.
+16:56:09 [32minfo[39m: [CONNECTED TO DATABASE]
+16:56:09 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+17:01:56 [32minfo[39m: [CONNECTED TO DATABASE]
+17:01:56 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+17:05:05 [32minfo[39m: Product created in db [object SequelizeInstance:Product]
+17:05:24 [32minfo[39m: Product created in db [object SequelizeInstance:Product]
+17:05:33 [32minfo[39m: Product created in db [object SequelizeInstance:Product]
+17:05:50 [32minfo[39m: Product created in db [object SequelizeInstance:Product]
+17:06:04 [32minfo[39m: Product created in db [object SequelizeInstance:Product]
+17:08:35 [31merror[39m: Error while updating cart SequelizeForeignKeyConstraintError: Cannot add or update a child row: a foreign key constraint fails (`ecommerce`.`carts`, CONSTRAINT `carts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE)
+17:09:34 [32minfo[39m: Cart created 
+17:09:39 [32minfo[39m: Cart created 
+17:09:40 [32minfo[39m: Cart created 
+17:09:47 [32minfo[39m: Cart created 
+17:10:10 [32minfo[39m: Cart exists 
+17:11:10 [32minfo[39m: [CONNECTED TO DATABASE]
+17:11:10 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+17:11:24 [32minfo[39m: Cart exists 
+17:11:34 [32minfo[39m: Cart exists 
+17:12:22 [32minfo[39m: Fetched cart successfully
+17:13:13 [32minfo[39m: Fetched cart successfully
+17:13:42 [32minfo[39m: Fetched cart successfully
+17:13:56 [32minfo[39m: Fetched cart successfully
+17:14:50 [32minfo[39m: Cart exists 
+17:14:50 [32minfo[39m: Fetched cart successfully
+17:14:52 [32minfo[39m: Cart exists 
+17:14:52 [32minfo[39m: Fetched cart successfully
+17:14:55 [32minfo[39m: Cart exists 
+17:14:55 [32minfo[39m: Fetched cart successfully
+17:54:34 [32minfo[39m: Cart exists 
+17:54:34 [32minfo[39m: Fetched cart successfully
+17:54:36 [32minfo[39m: Cart exists 
+17:54:36 [32minfo[39m: Fetched cart successfully
+17:54:52 [32minfo[39m: [CONNECTED TO DATABASE]
+17:54:52 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+17:55:08 [32minfo[39m: Cart exists 
+17:55:08 [32minfo[39m: Fetched cart successfully
+17:55:10 [32minfo[39m: Cart exists 
+17:55:10 [32minfo[39m: Fetched cart successfully
+17:55:12 [32minfo[39m: Fetched cart successfully
+17:55:18 [32minfo[39m: Cart exists 
+17:55:18 [32minfo[39m: Fetched cart successfully
+17:55:20 [32minfo[39m: Cart exists 
+17:55:20 [32minfo[39m: Fetched cart successfully
+17:55:20 [32minfo[39m: Cart exists 
+17:55:20 [32minfo[39m: Fetched cart successfully
+17:55:21 [32minfo[39m: Cart exists 
+17:55:21 [32minfo[39m: Fetched cart successfully
+17:55:21 [32minfo[39m: Cart exists 
+17:55:21 [32minfo[39m: Fetched cart successfully
+17:55:21 [32minfo[39m: Cart exists 
+17:55:21 [32minfo[39m: Fetched cart successfully
+17:55:21 [32minfo[39m: Cart exists 
+17:55:21 [32minfo[39m: Fetched cart successfully
+17:55:21 [32minfo[39m: Cart exists 
+17:55:21 [32minfo[39m: Fetched cart successfully
+17:55:22 [32minfo[39m: Cart exists 
+17:55:22 [32minfo[39m: Fetched cart successfully
+17:55:22 [32minfo[39m: Cart exists 
+17:55:22 [32minfo[39m: Fetched cart successfully
+17:55:22 [32minfo[39m: Cart exists 
+17:55:22 [32minfo[39m: Fetched cart successfully
+17:55:22 [32minfo[39m: Cart exists 
+17:55:22 [32minfo[39m: Fetched cart successfully
+17:55:22 [32minfo[39m: Cart exists 
+17:55:22 [32minfo[39m: Fetched cart successfully
+17:55:23 [32minfo[39m: Cart exists 
+17:55:23 [32minfo[39m: Fetched cart successfully
+17:55:23 [32minfo[39m: Cart exists 
+17:55:23 [32minfo[39m: Fetched cart successfully
+17:55:23 [32minfo[39m: Cart exists 
+17:55:23 [32minfo[39m: Fetched cart successfully
+17:55:23 [32minfo[39m: Cart exists 
+17:55:23 [32minfo[39m: Fetched cart successfully
+17:55:23 [32minfo[39m: Cart exists 
+17:55:23 [32minfo[39m: Fetched cart successfully
+17:55:23 [32minfo[39m: Cart exists 
+17:55:23 [32minfo[39m: Fetched cart successfully
+17:55:24 [32minfo[39m: Cart exists 
+17:55:24 [32minfo[39m: Fetched cart successfully
+17:55:28 [32minfo[39m: Cart exists 
+17:55:28 [32minfo[39m: Cart items deleted 
+17:55:28 [32minfo[39m: Fetched cart successfully
+17:55:29 [32minfo[39m: Cart exists 
+17:55:29 [32minfo[39m: Cart items deleted 
+17:55:29 [32minfo[39m: Fetched cart successfully
+17:55:29 [32minfo[39m: Cart exists 
+17:55:29 [32minfo[39m: Cart items deleted 
+17:55:29 [32minfo[39m: Fetched cart successfully
+17:55:30 [32minfo[39m: Cart exists 
+17:55:30 [32minfo[39m: Cart items deleted 
+17:55:30 [32minfo[39m: Fetched cart successfully
+21:53:30 [32minfo[39m: [CONNECTED TO DATABASE]
+21:53:31 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+00:57:03 [32minfo[39m: [CONNECTED TO DATABASE]
+00:57:03 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+13:21:34 [32minfo[39m: [CONNECTED TO DATABASE]
+13:21:34 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+20:52:18 [32minfo[39m: [CONNECTED TO DATABASE]
+20:52:18 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+21:07:55 [32minfo[39m: Fetched cart successfully
+22:17:20 [32minfo[39m: Fetched cart successfully
+22:17:24 [32minfo[39m: Fetched cart successfully
+22:17:42 [32minfo[39m: Fetched cart successfully
+22:19:09 [32minfo[39m: Addresses marked not primary 2
+22:20:06 [32minfo[39m: Fetched cart successfully
+22:21:11 [32minfo[39m: Fetched cart successfully
+22:21:48 [32minfo[39m: Fetched cart successfully
+22:21:52 [32minfo[39m: Fetched cart successfully
+22:24:14 [32minfo[39m: Fetched cart successfully
+22:24:56 [32minfo[39m: Fetched cart successfully
+22:25:08 [32minfo[39m: Fetched cart successfully
+22:25:20 [32minfo[39m: Fetched cart successfully
+22:26:10 [32minfo[39m: Fetched cart successfully
+22:26:50 [32minfo[39m: Fetched cart successfully
+22:27:52 [32minfo[39m: Fetched cart successfully
+22:28:49 [32minfo[39m: Fetched cart successfully
+22:28:55 [32minfo[39m: Fetched cart successfully
+22:29:17 [32minfo[39m: Fetched cart successfully
+22:35:18 [32minfo[39m: Fetched cart successfully
+23:02:57 [32minfo[39m: Fetched cart successfully
+23:35:38 [32minfo[39m: Fetched cart successfully
+23:36:17 [32minfo[39m: Fetched cart successfully
+23:38:28 [32minfo[39m: [CONNECTED TO DATABASE]
+23:38:28 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+23:39:37 [32minfo[39m: Fetched cart successfully
+23:40:11 [32minfo[39m: Fetched cart successfully
+23:40:48 [32minfo[39m: Fetched cart successfully
+23:40:52 [32minfo[39m: Fetched cart successfully
+23:42:04 [32minfo[39m: Fetched cart successfully
+23:43:04 [32minfo[39m: [CONNECTED TO DATABASE]
+23:43:04 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+23:43:40 [32minfo[39m: Fetched cart successfully
+09:47:30 [32minfo[39m: [CONNECTED TO DATABASE]
+09:47:30 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+09:47:54 [32minfo[39m: Fetched cart successfully
+09:52:38 [32minfo[39m: Fetched cart successfully
+09:52:44 [32minfo[39m: Fetched cart successfully
+09:53:06 [32minfo[39m: Fetched cart successfully
+09:53:11 [32minfo[39m: Fetched cart successfully
+09:54:45 [32minfo[39m: Fetched cart successfully
+09:55:55 [32minfo[39m: Fetched cart successfully
+09:56:53 [32minfo[39m: Fetched cart successfully
+12:54:31 [31merror[39m: Error while creating address notNull Violation: Address.address_phone_no cannot be null
+12:54:45 [31merror[39m: Error while creating address notNull Violation: Address.address_phone_no cannot be null
+12:55:26 [32minfo[39m: [CONNECTED TO DATABASE]
+12:55:26 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+12:55:48 [31merror[39m: Error while creating address notNull Violation: Address.address_phone_no cannot be null
+12:57:23 [32minfo[39m: Fetched cart successfully
+12:57:28 [32minfo[39m: Cart created 
+12:57:29 [32minfo[39m: Cart created 
+12:57:30 [32minfo[39m: Cart created 
+12:57:36 [32minfo[39m: Fetched cart successfully
+12:57:37 [32minfo[39m: Fetched cart successfully
+12:58:45 [32minfo[39m: Fetched cart successfully
+14:57:26 [32minfo[39m: Fetched cart successfully
+14:58:57 [32minfo[39m: Fetched cart successfully
+15:00:30 [32minfo[39m: Fetched cart successfully
+15:00:49 [32minfo[39m: Fetched cart successfully
+15:01:41 [32minfo[39m: Fetched cart successfully
+15:02:07 [32minfo[39m: Fetched cart successfully
+15:02:53 [32minfo[39m: Fetched cart successfully
+15:03:01 [32minfo[39m: Fetched cart successfully
+15:03:01 [31merror[39m: Error while fetching payment methods Error: Stripe: Argument "customer" must be a string, but got: null (on API request to `GET /v1/customers/{customer}/payment_methods`)
+15:04:06 [31merror[39m: Error while fetching payment methods Error: Stripe: Argument "customer" must be a string, but got: null (on API request to `GET /v1/customers/{customer}/payment_methods`)
+15:04:06 [32minfo[39m: Fetched cart successfully
+15:05:14 [31merror[39m: Error while fetching payment methods Error: Stripe: Argument "customer" must be a string, but got: null (on API request to `GET /v1/customers/{customer}/payment_methods`)
+15:05:14 [32minfo[39m: Fetched cart successfully
+15:05:16 [31merror[39m: Error while fetching payment methods Error: Stripe: Argument "customer" must be a string, but got: null (on API request to `GET /v1/customers/{customer}/payment_methods`)
+15:05:16 [32minfo[39m: Fetched cart successfully
+15:19:08 [31merror[39m: Error while fetching payment methods Error: Stripe: Argument "customer" must be a string, but got: null (on API request to `GET /v1/customers/{customer}/payment_methods`)
+15:19:08 [32minfo[39m: Fetched cart successfully
+15:19:29 [32minfo[39m: Fetched cart successfully
+15:19:29 [31merror[39m: Error while fetching payment methods Error: Stripe: Argument "customer" must be a string, but got: null (on API request to `GET /v1/customers/{customer}/payment_methods`)
+15:20:17 [32minfo[39m: Fetched cart successfully
+15:20:17 [31merror[39m: Error while fetching payment methods Error: Stripe: Argument "customer" must be a string, but got: null (on API request to `GET /v1/customers/{customer}/payment_methods`)
+15:20:55 [31merror[39m: Error while fetching payment methods Error: Stripe: Argument "customer" must be a string, but got: null (on API request to `GET /v1/customers/{customer}/payment_methods`)
+15:20:55 [32minfo[39m: Fetched cart successfully
+15:21:04 [31merror[39m: Error while fetching payment methods Error: Stripe: Argument "customer" must be a string, but got: null (on API request to `GET /v1/customers/{customer}/payment_methods`)
+15:21:04 [32minfo[39m: Fetched cart successfully
+15:21:38 [32minfo[39m: Fetched cart successfully
+15:21:38 [31merror[39m: Error while fetching payment methods Error: Stripe: Argument "customer" must be a string, but got: null (on API request to `GET /v1/customers/{customer}/payment_methods`)
+15:21:53 [32minfo[39m: Fetched cart successfully
+15:21:53 [31merror[39m: Error while fetching payment methods Error: Stripe: Argument "customer" must be a string, but got: null (on API request to `GET /v1/customers/{customer}/payment_methods`)
+15:22:09 [32minfo[39m: [CONNECTED TO DATABASE]
+15:22:09 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:22:39 [31merror[39m: Error while fetching payment methods Error: Stripe: Argument "customer" must be a string, but got: null (on API request to `GET /v1/customers/{customer}/payment_methods`)
+15:22:39 [32minfo[39m: Fetched cart successfully
+15:22:48 [31merror[39m: Error while fetching payment methods Error: Stripe: Argument "customer" must be a string, but got: null (on API request to `GET /v1/customers/{customer}/payment_methods`)
+15:22:48 [32minfo[39m: Fetched cart successfully
+15:24:52 [32minfo[39m: [CONNECTED TO DATABASE]
+15:24:52 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:24:58 [32minfo[39m: Fetched cart successfully
+15:26:34 [32minfo[39m: Customer created in stripe with Id cus_Oa6CYI1fJWBtgk
+15:26:35 [31merror[39m: Error while attaching payment method Error: PaymentMethods of type card cannot be attached to Customers directly without 3DS due to Indian payment regulations. Please instead provide the PaymentMethod and Customer alongside a SetupIntent or PaymentIntent with the `setup_future_usage` parameter. See https://support.stripe.com/questions/guide-for-saving-cards-in-india for more details.
+15:53:17 [32minfo[39m: [CONNECTED TO DATABASE]
+15:53:17 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:53:23 [32minfo[39m: Fetched cart successfully
+15:53:36 [32minfo[39m: Fetched cart successfully
+15:54:10 [32minfo[39m: Fetched cart successfully
+15:54:41 [32minfo[39m: Fetched cart successfully
+15:54:45 [32minfo[39m: Fetched cart successfully
+15:55:15 [32minfo[39m: Fetched cart successfully
+15:55:30 [32minfo[39m: Fetched cart successfully
+15:55:51 [32minfo[39m: Fetched cart successfully
+15:55:56 [32minfo[39m: Fetched cart successfully
+15:56:53 [32minfo[39m: Setup intent created [object Object]
+15:56:53 [31merror[39m: Error while confirming setup intent Error: A `return_url` must be specified because this Setup Intent is configured to automatically accept the payment methods enabled in the Dashboard, some of which may require a full page redirect to succeed. If you do not want to accept redirect-based payment methods, set `automatic_payment_methods[enabled]` to `true` and `automatic_payment_methods[allow_redirects]` to `never` when creating Setup Intents and Payment Intents.
+15:57:39 [32minfo[39m: [CONNECTED TO DATABASE]
+15:57:39 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:57:45 [32minfo[39m: Fetched cart successfully
+15:58:26 [32minfo[39m: Setup intent created [object Object]
+15:58:27 [32minfo[39m: Intent confirmed [object Object]
+15:59:11 [32minfo[39m: [CONNECTED TO DATABASE]
+15:59:11 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:59:16 [32minfo[39m: [CONNECTED TO DATABASE]
+15:59:16 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:59:20 [32minfo[39m: Fetched cart successfully
+15:59:44 [32minfo[39m: [CONNECTED TO DATABASE]
+15:59:44 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+16:00:27 [32minfo[39m: Setup intent created [object Object]
+16:00:28 [32minfo[39m: Intent confirmed [object Object]
+16:00:28 [32minfo[39m: Customer created in stripe with Id cus_Oa6k5NbojGPTPO
+16:00:28 [31merror[39m: Error while attaching payment method Error: PaymentMethods of type card cannot be attached to Customers directly without 3DS due to Indian payment regulations. Please instead provide the PaymentMethod and Customer alongside a SetupIntent or PaymentIntent with the `setup_future_usage` parameter. See https://support.stripe.com/questions/guide-for-saving-cards-in-india for more details.
+16:01:36 [32minfo[39m: [CONNECTED TO DATABASE]
+16:01:36 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+16:05:57 [32minfo[39m: Fetched cart successfully
+16:06:44 [32minfo[39m: Setup intent created [object Object]
+16:06:45 [32minfo[39m: Intent confirmed [object Object]
+16:07:04 [32minfo[39m: [CONNECTED TO DATABASE]
+16:07:04 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+16:07:15 [32minfo[39m: Setup intent created [object Object]
+16:07:16 [32minfo[39m: Intent confirmed [object Object]
+16:07:16 [32minfo[39m: Customer created in stripe with Id cus_Oa6qLmapEakVjE
+16:14:51 [32minfo[39m: [CONNECTED TO DATABASE]
+16:14:51 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+16:15:24 [32minfo[39m: [CONNECTED TO DATABASE]
+16:15:24 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+16:15:35 [32minfo[39m: Setup intent created [object Object]
+16:15:36 [32minfo[39m: Intent confirmed [object Object]
+16:15:36 [32minfo[39m: Customer created in stripe with Id cus_Oa6zTZVnXrM1fz
+16:17:14 [32minfo[39m: [CONNECTED TO DATABASE]
+16:17:14 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+16:17:22 [32minfo[39m: Fetched cart successfully
+16:27:31 [32minfo[39m: [CONNECTED TO DATABASE]
+16:27:31 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+16:30:03 [32minfo[39m: Setup intent created [object Object]
+16:30:03 [32minfo[39m: Intent confirmed [object Object]
+16:30:03 [32minfo[39m: Customer created in stripe with Id cus_Oa7DwBSGisXFOi
+16:33:52 [32minfo[39m: Fetched cart successfully
+16:34:55 [32minfo[39m: Fetched cart successfully
+16:35:10 [32minfo[39m: Fetched cart successfully
+16:35:38 [32minfo[39m: Fetched cart successfully
+16:38:05 [32minfo[39m: Fetched cart successfully
+16:38:23 [32minfo[39m: Fetched cart successfully
+16:39:08 [32minfo[39m: Fetched cart successfully
+16:40:20 [32minfo[39m: Fetched cart successfully
+16:40:55 [32minfo[39m: Fetched cart successfully
+16:41:54 [32minfo[39m: Fetched cart successfully
+16:43:04 [32minfo[39m: [CONNECTED TO DATABASE]
+16:43:04 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+16:43:10 [32minfo[39m: The total value of this cart is 1410
+16:43:32 [32minfo[39m: [CONNECTED TO DATABASE]
+16:43:32 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+16:43:39 [32minfo[39m: [CONNECTED TO DATABASE]
+16:43:39 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+16:43:44 [32minfo[39m: The total value of this cart is 1410
+16:45:25 [32minfo[39m: [CONNECTED TO DATABASE]
+16:45:25 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+16:45:40 [32minfo[39m: The total value of this cart is 1410
+16:47:01 [32minfo[39m: [CONNECTED TO DATABASE]
+16:47:01 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+16:47:12 [32minfo[39m: The total value of this cart is 1410
+16:58:09 [32minfo[39m: [CONNECTED TO DATABASE]
+16:58:09 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+16:59:21 [32minfo[39m: Setup intent created [object Object]
+16:59:21 [32minfo[39m: Intent confirmed [object Object]
+16:59:49 [32minfo[39m: Fetched cart successfully
+17:05:44 [32minfo[39m: Fetched cart successfully
+20:25:51 [32minfo[39m: [CONNECTED TO DATABASE]
+20:25:51 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+20:42:26 [32minfo[39m: Setup intent created [object Object]
+20:42:26 [32minfo[39m: Intent confirmed [object Object]
+21:01:00 [31merror[39m: Error while fetching order Error: Include unexpected. Element has to be either a Model, an Association or an object.
+21:04:01 [31merror[39m: Error while fetching order Error: Include unexpected. Element has to be either a Model, an Association or an object.
+21:04:15 [31merror[39m: Error while fetching order Error: Include unexpected. Element has to be either a Model, an Association or an object.
+21:04:22 [31merror[39m: Error while fetching order Error: Include unexpected. Element has to be either a Model, an Association or an object.
+21:04:26 [31merror[39m: Error while fetching order Error: Include unexpected. Element has to be either a Model, an Association or an object.
+21:07:59 [31merror[39m: Error while fetching order Error: Include unexpected. Element has to be either a Model, an Association or an object.
+21:08:30 [31merror[39m: Error while fetching order Error: Include unexpected. Element has to be either a Model, an Association or an object.
+21:08:31 [31merror[39m: Error while fetching order Error: Include unexpected. Element has to be either a Model, an Association or an object.
+21:09:17 [31merror[39m: Error while fetching order Error: Include unexpected. Element has to be either a Model, an Association or an object.
+21:09:19 [31merror[39m: Error while fetching order Error: Include unexpected. Element has to be either a Model, an Association or an object.
+21:10:26 [31merror[39m: Error while fetching order Error: Include unexpected. Element has to be either a Model, an Association or an object.
+21:10:36 [31merror[39m: Error while fetching order Error: Include unexpected. Element has to be either a Model, an Association or an object.
+21:12:09 [31merror[39m: Error while fetching order Error: Include unexpected. Element has to be either a Model, an Association or an object.
+21:13:42 [32minfo[39m: Fetched cart successfully
+21:15:38 [32minfo[39m: Setup intent created [object Object]
+21:15:39 [32minfo[39m: Intent confirmed [object Object]
+10:31:54 [32minfo[39m: [CONNECTED TO DATABASE]
+10:31:54 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+10:33:15 [31merror[39m: Error while fetching order Error: Include unexpected. Element has to be either a Model, an Association or an object.
+10:33:46 [32minfo[39m: [CONNECTED TO DATABASE]
+10:33:46 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+10:33:46 [31merror[39m: Error while fetching order Error: Include unexpected. Element has to be either a Model, an Association or an object.
+10:34:16 [32minfo[39m: [CONNECTED TO DATABASE]
+10:34:16 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+10:34:16 [32minfo[39m: Order fetched successfully [object SequelizeInstance:Order]
+10:34:19 [32minfo[39m: Order fetched successfully [object SequelizeInstance:Order]
+10:34:33 [32minfo[39m: Order fetched successfully [object SequelizeInstance:Order]
+10:35:38 [32minfo[39m: Order fetched successfully [object SequelizeInstance:Order]
+11:11:14 [32minfo[39m: [CONNECTED TO DATABASE]
+11:11:14 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+11:21:43 [32minfo[39m: Fetched cart successfully
+11:25:20 [31merror[39m: Error while creating setup intent Error: Invalid URL: An explicit scheme (such as https) must be provided.
+11:26:24 [32minfo[39m: [CONNECTED TO DATABASE]
+11:26:24 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+11:26:34 [31merror[39m: Error while creating setup intent Error: You cannot confirm this SetupIntent because it's missing a payment method. Update the SetupIntent with a payment method and then confirm it again.
+11:28:15 [32minfo[39m: [CONNECTED TO DATABASE]
+11:28:15 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+11:28:20 [32minfo[39m: Setup intent created [object Object]
+11:28:20 [32minfo[39m: Customer created in stripe with Id cus_OaPZk1si9OpLrl
+11:46:24 [32minfo[39m: [CONNECTED TO DATABASE]
+11:46:24 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+11:46:50 [32minfo[39m: Fetched cart successfully
+11:47:24 [32minfo[39m: [CONNECTED TO DATABASE]
+11:47:24 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+11:47:25 [32minfo[39m: Fetched cart successfully
+11:48:06 [32minfo[39m: Setup intent created [object Object]
+11:48:19 [32minfo[39m: Fetched cart successfully
+11:49:07 [32minfo[39m: Setup intent created [object Object]
+11:50:00 [32minfo[39m: Fetched cart successfully
+11:50:33 [32minfo[39m: Setup intent created [object Object]
+11:51:52 [32minfo[39m: The total value of this cart is 1410
+12:23:56 [32minfo[39m: [CONNECTED TO DATABASE]
+12:23:56 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+12:24:18 [32minfo[39m: [CONNECTED TO DATABASE]
+12:24:18 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+12:24:47 [32minfo[39m: [CONNECTED TO DATABASE]
+12:24:47 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+12:25:24 [32minfo[39m: [CONNECTED TO DATABASE]
+12:25:24 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+12:25:25 [32minfo[39m: Fetched cart successfully
+12:27:07 [32minfo[39m: [CONNECTED TO DATABASE]
+12:27:07 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+12:27:11 [31merror[39m: Error while creating setup intent Error: Your card has insufficient funds.
+12:27:50 [32minfo[39m: Setup intent created [object Object]
+12:27:50 [32minfo[39m: Customer created in stripe with Id cus_OaPwzq21IwjCSV
+12:29:35 [32minfo[39m: Fetched cart successfully
+12:29:49 [32minfo[39m: Fetched cart successfully
+12:29:59 [32minfo[39m: Fetched cart successfully
+12:30:55 [32minfo[39m: Fetched cart successfully
+12:31:09 [32minfo[39m: Fetched cart successfully
+12:31:57 [32minfo[39m: Fetched cart successfully
+12:32:49 [32minfo[39m: Fetched cart successfully
+12:35:02 [32minfo[39m: Fetched cart successfully
+12:52:24 [32minfo[39m: Fetched cart successfully
+12:52:24 [31merror[39m: Error while fetching payment methods Error: An error occurred with our connection to Stripe.
+12:52:29 [32minfo[39m: Fetched cart successfully
+12:52:29 [31merror[39m: Error while fetching payment methods Error: An error occurred with our connection to Stripe.
+12:53:00 [32minfo[39m: Fetched cart successfully
+12:54:33 [32minfo[39m: Fetched cart successfully
+12:54:49 [32minfo[39m: The total value of this cart is 1410
+12:57:14 [32minfo[39m: Fetched cart successfully
+12:57:20 [32minfo[39m: The total value of this cart is 1410
+12:58:32 [32minfo[39m: Fetched cart successfully
+12:58:33 [32minfo[39m: Fetched cart successfully
+12:58:45 [32minfo[39m: The total value of this cart is 1410
+12:59:47 [32minfo[39m: [CONNECTED TO DATABASE]
+12:59:47 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+12:59:52 [32minfo[39m: Fetched cart successfully
+13:00:07 [32minfo[39m: The total value of this cart is 1410
+13:00:47 [32minfo[39m: Fetched cart successfully
+13:05:25 [32minfo[39m: [CONNECTED TO DATABASE]
+13:05:25 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+13:05:33 [32minfo[39m: The total value of this cart is 1410
+13:09:56 [32minfo[39m: Fetched cart successfully
+13:10:05 [32minfo[39m: The total value of this cart is 1410
+13:17:01 [32minfo[39m: Fetched cart successfully
+14:40:24 [32minfo[39m: Order fetched successfully [object SequelizeInstance:Order]
+14:42:19 [32minfo[39m: Fetched cart successfully
+14:42:59 [32minfo[39m: The total value of this cart is 1410
+14:43:59 [32minfo[39m: [CONNECTED TO DATABASE]
+14:43:59 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+14:51:49 [32minfo[39m: Fetched cart successfully
+14:52:14 [32minfo[39m: The total value of this cart is 1410
