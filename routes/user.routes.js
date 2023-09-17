@@ -34,7 +34,12 @@ router.patch("/update-address", authMiddleware, updateAddress);
 router.delete("/delete-address/:address_id", authMiddleware, deleteAddress);
 router.get("/get-user-info", authMiddleware, getUserDetails);
 router.get("/get-notification", authMiddleware, getNotifications);
-router.post("/upload-user-pic", uploadImage.single("image"), uploadUserImage);
+router.post(
+  "/upload-user-pic",
+  authMiddleware,
+  uploadImage.single("image"),
+  uploadUserImage
+);
 
 router.post(
   "/upload-image",

@@ -16,6 +16,8 @@ const confirmOrder = async (intent_id) => {
   const paymentIntent = await stripe.paymentIntents.retrieve(intent_id);
 
   const order_id = paymentIntent.metadata["order_id"];
+  const user_id = paymentIntent.metadata["user_id"];
+  const product_arr = JSON.parse(paymentIntent.metadata["product_arr"]);
   let order;
 
   try {
@@ -33,6 +35,45 @@ const confirmOrder = async (intent_id) => {
         },
       }
     );
+
+    const userUpdate = await User.update(
+      {
+        last_ordered: new Date(),
+      },
+      {
+        where: {
+          user_id: user_id,
+        },
+      }
+    );
+    logger.info(`user updated ${userUpdate}`);
+
+    const destroyCart = await Cart.destroy({ where: { user_id } });
+
+    logger.info(`Cart deleted ${destroyCart}`);
+
+    product_arr?.map(async (product) => {
+      await Product.increment(
+        {
+          quantity_purchased: product?.quantity,
+        },
+        {
+          where: {
+            product_id: product.product_id,
+          },
+        }
+      );
+      await Product?.decrement(
+        {
+          inventory_quantity: product?.quantity,
+        },
+        {
+          where: {
+            product_id: product.product_id,
+          },
+        }
+      );
+    });
 
     logger.info(`Order table updated ${updated}`);
   } catch (error) {

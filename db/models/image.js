@@ -24,10 +24,7 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.UUID,
         allowNull: true,
       },
-      user_id: {
-        type: Sequelize.UUID,
-        allowNull: true,
-      },
+
       is_primary: {
         type: Sequelize.BOOLEAN,
         defaultValue: false,

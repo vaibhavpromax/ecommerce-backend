@@ -8,6 +8,7 @@ const createPaymentIntent = async ({
   paymentMethod,
   email,
   metadata,
+  confirm = false,
 }) => {
   try {
     const paymentIntent = await stripe.paymentIntents.create({
@@ -18,6 +19,7 @@ const createPaymentIntent = async ({
       // confirmation_method: "manual", // For 3D Security
       description: "Buy Product",
       metadata: metadata,
+      confirm: confirm,
       receipt_email: email,
     });
     return [paymentIntent, null];

@@ -73,7 +73,7 @@ const register = async (req, res) => {
                   last_name: parsedUser.last_name,
                   user_name: parsedUser.user_name,
                   user_id: parsedUser.user_id,
-                  is_authenticated: true,
+                  profile_pic_url: parsedUser.profile_pic_url,
                 };
 
                 const token = jwt.sign(tokenPayload, "secret", {
@@ -168,7 +168,7 @@ const login = (req, res, next) => {
               last_name: dbUser.last_name,
               user_name: dbUser.user_name,
               user_id: dbUser.user_id,
-              is_authenticated: true,
+              profile_pic_url: dbUser.profile_pic_url,
             };
 
             // password match
@@ -328,6 +328,7 @@ const changePassword = async (req, res) => {
 };
 
 const authMiddleware = async (req, res, next) => {
+  // console.log(req);
   const authHeader = req.get("Authorization");
   if (!authHeader) {
     return unauthorizedResponse(res, "unauthorized");
@@ -337,7 +338,6 @@ const authMiddleware = async (req, res, next) => {
   let decodedToken;
   try {
     decodedToken = jwt.verify(token, "secret");
-    console.log(decodedToken);
     req.user = decodedToken;
   } catch (err) {
     console.log(err);

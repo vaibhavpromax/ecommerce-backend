@@ -82,6 +82,37 @@ const getOrderDetailsForAdmin = async (req, res) => {
   }
 };
 
+const getOrderDetailsForProfile = async (req, res) => {
+  const { user_id } = req.user;
+  try {
+    const order = await Order.findAll({
+      where: {
+        user_id: user_id,
+      },
+      include: [
+        {
+          model: OrderItem,
+          include: {
+            model: Product,
+            include: {
+              model: Image,
+            },
+          },
+        },
+        {
+          model: Address,
+        },
+      ],
+    });
+    console.log(order);
+    logger.info(`Order fetched successfully ${order}`);
+    return successResponse(res, "Order fetched", order);
+  } catch (err) {
+    logger.error(`Error while fetching order ${err}`);
+    return serverErrorResponse(res, "Error while fetching order");
+  }
+};
+
 const update_order = async (req, res) => {
   const { order_id } = req.params;
   const { product_id, quantity, address_id, total_price, is_order_completed } =
@@ -135,5 +166,6 @@ module.exports = {
   getOrderDetailsForAdmin,
   update_order,
   get_orders_of_user,
+  getOrderDetailsForProfile,
   create_order,
 };

@@ -52,3 +52,41 @@
 12:27:11 [31merror[39m: Error while creating setup intent Error: Your card has insufficient funds.
 12:52:24 [31merror[39m: Error while fetching payment methods Error: An error occurred with our connection to Stripe.
 12:52:29 [31merror[39m: Error while fetching payment methods Error: An error occurred with our connection to Stripe.
+23:51:02 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+23:59:40 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+00:00:06 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+00:00:18 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+00:13:24 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+00:36:21 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+11:35:12 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+11:51:48 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+12:01:54 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+12:02:54 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+12:02:56 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+16:46:01 [31merror[39m: Error while deleting products Error: WHERE parameter "product_id" has invalid "undefined" value 
+16:46:19 [31merror[39m: Error while deleting products Error: WHERE parameter "product_id" has invalid "undefined" value 
+22:07:57 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+11:23:12 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+20:07:52 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+20:07:55 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+20:27:35 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+20:27:43 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+00:03:36 [31merror[39m: Error while fetching user details WHERE parameter "admin_id" has invalid "undefined" value
+00:04:19 [31merror[39m: Error while fetching user details WHERE parameter "admin_id" has invalid "undefined" value
+00:04:43 [31merror[39m: Error while fetching user details WHERE parameter "admin_id" has invalid "undefined" value
+00:04:45 [31merror[39m: Error while fetching user details WHERE parameter "admin_id" has invalid "undefined" value
+00:05:24 [31merror[39m: Error while fetching user details WHERE parameter "admin_id" has invalid "undefined" value
+03:19:35 [31merror[39m: Error while fetching user details Unknown column 'profile_pic_url' in 'field list'
+03:41:14 [31merror[39m: Error while updating the user profile pic TypeError: Cannot read properties of undefined (reading 'location')
+03:42:26 [31merror[39m: Error while updating the user profile pic TypeError: Cannot read properties of undefined (reading 'location')
+03:43:42 [31merror[39m: Error while updating the user profile pic TypeError: Cannot read properties of undefined (reading 'location')
+03:48:48 [31merror[39m: Error while updating the user profile pic TypeError: Cannot read properties of undefined (reading 'location')
+03:53:47 [31merror[39m: Error while updating the user profile pic TypeError: Cannot read properties of undefined (reading 'location')
+03:56:45 [31merror[39m: Error while updating the user profile pic TypeError: Cannot read properties of undefined (reading 'location')
+03:59:06 [31merror[39m: Error while updating the user profile pic TypeError: Cannot read properties of undefined (reading 'location')
+04:00:59 [31merror[39m: Error while updating the user profile pic TypeError: Cannot read properties of undefined (reading 'location')
+04:01:11 [31merror[39m: Error while updating the user profile pic TypeError: Cannot read properties of undefined (reading 'location')
+04:03:46 [31merror[39m: Error while updating the user profile pic TypeError: Cannot read properties of undefined (reading 'location')
+13:45:26 [31merror[39m: Error while fetching user details Cannot delete or update a parent row: a foreign key constraint fails (`ecommerce`.`addresses`, CONSTRAINT `addresses_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON UPDATE CASCADE)
+13:48:04 [31merror[39m: Error while fetching user details Cannot delete or update a parent row: a foreign key constraint fails (`ecommerce`.`addresses`, CONSTRAINT `addresses_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON UPDATE CASCADE)
+13:56:10 [31merror[39m: Error while fetching user details user is not defined

@@ -7,6 +7,7 @@ const payment_routes = require("./payment.routes");
 const discount_routes = require("./discount.routes");
 const cart_routes = require("./cart.routes");
 const wish_routes = require("./wishlist.routes");
+const review_routes = require("./review.routes");
 const router = require("express").Router();
 
 router.use("/construction", construction_routes);
@@ -18,5 +19,6 @@ router.use("/payment", payment_routes);
 router.use("/discount", discount_routes);
 router.use("/cart", cart_routes);
 router.use("/wishlist", wish_routes);
+router.use("/review", review_routes);
 
 module.exports = router;

@@ -40,7 +40,7 @@ const login_admin = (req, res) => {
             };
 
             // password match
-            const token = jwt.sign({ user: tokenPayload }, "secret", {
+            const token = jwt.sign({ admin: tokenPayload }, "secret", {
               expiresIn: "72h",
             });
             return successResponse(res, "Admin logged in successfully", {
@@ -91,7 +91,7 @@ const register_admin = async (req, res) => {
                   admin_id: parsedAdmin.admin_id,
                 };
 
-                const token = jwt.sign({ user: tokenPayload }, "secret", {
+                const token = jwt.sign({ admin: tokenPayload }, "secret", {
                   expiresIn: "72h",
                 });
 
@@ -129,10 +129,9 @@ const adminAuthMiddleware = async (req, res, next) => {
   let decodedToken;
   try {
     decodedToken = jwt.verify(token, "secret");
-
+    console.log(decodedToken);
     // decodedToken has the value of admin stored on the local storage
-
-  
+    req.admin = decodedToken.admin;
   } catch (err) {
     console.log(err);
     return serverErrorResponse(res, "could not decode the token");
@@ -145,8 +144,48 @@ const adminAuthMiddleware = async (req, res, next) => {
   }
 };
 
+const changeAdminPassword = async (req, res) => {
+  const { admin_id } = req.admin;
+  const { current_pass, new_pass } = req.body;
+
+  try {
+    const dbAdmin = await Admin.findOne({ where: { admin_id } });
+
+    bcrypt.compare(current_pass, dbAdmin.password, (err, compareRes) => {
+      if (err) {
+        // error while comparing
+        logger.error(`Error in comparing pas ${err}`);
+        return serverErrorResponse(res, "Current password is incorrect");
+      } else if (compareRes) {
+        bcrypt.hash(new_pass, 12, async (err, passwordHash) => {
+          if (err) {
+            logger.error(`Error while generating new hash ${err}`);
+            return serverErrorResponse(
+              res,
+              "error while hashing the new password"
+            );
+          } else if (passwordHash) {
+            const updated_admin = await Admin.update(
+              { password: passwordHash },
+              { where: { admin_id } }
+            );
+            if (updated_admin.length === 1)
+              return successResponse(res, "Password changed successfully");
+            else
+              return serverErrorResponse(res, "Error while changing password");
+          }
+        });
+      }
+    });
+  } catch (error) {
+    logger.error(`Error while changing password ${error}`);
+    return serverErrorResponse(res, "Error while changing the password");
+  }
+};
+
 module.exports = {
   register_admin,
+  changeAdminPassword,
   login_admin,
   adminAuthMiddleware,
 };
