@@ -16,7 +16,25 @@ const get_emails = async (req, res) => {
   }
 };
 
+const fetch_admin_details = async (req, res) => {
+  const { admin_id } = req.admin;
+  try {
+    const admin = await Admin.findOne({
+      where: {
+        admin_id: admin_id,
+      },
+    });
+    return successResponse(res, "User details fetched successfully", {
+      name: admin?.first_name + admin?.last_name,
+      email: admin?.email,
+    });
+  } catch (err) {
+    logger.error(`Error while fetching user details ${err.message}`);
+    return serverErrorResponse(res, err.message);
+  }
+};
 
 module.exports = {
   get_emails,
+  fetch_admin_details,
 };

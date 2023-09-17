@@ -28,6 +28,22 @@ const getProductsForAdmin = async (req, res) => {
   }
 };
 
+const deleteProducts = async (req, res) => {
+  const { id_arr } = req.body;
+  try {
+    const deletedProducts = await Product.destroy({
+      where: {
+        product_id: id_arr,
+      },
+    });
+    logger.info(`${deletedProducts} number of products successfully deleted`);
+    return successResponse(res, "Number of products deleted", deleteProducts);
+  } catch (error) {
+    logger.error(`Error while deleting products ${error} `);
+    return serverErrorResponse(res, "Error while deleting products");
+  }
+};
+
 const getProductsFromId = async (req, res) => {
   const { product_arr } = req.body;
   let options;
@@ -182,21 +198,6 @@ const createProduct = async (req, res) => {
   }
 };
 
-const deleteProduct = async (req, res) => {
-  const { product_id } = req.params;
-  try {
-    const product = await Product.destroy({
-      where: {
-        product_id: product_id,
-      },
-    });
-    return successResponse(res, "product deleted successfully", product);
-  } catch (err) {
-    logger.error(`Error while deleting product ${err} `);
-    return serverErrorResponse(res, "Error while deleting product");
-  }
-};
-
 const updateProduct = async (req, res) => {
   const { product_id } = req.params;
   const { name, description, price, category, inventory_quantity } = req.body;
@@ -255,7 +256,7 @@ module.exports = {
   getSingleProduct,
   getProductsForAdmin,
   createProduct,
-  deleteProduct,
+  deleteProducts,
   updateProduct,
   addImageToProduct,
   getProductsFromId,

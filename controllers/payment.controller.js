@@ -72,21 +72,11 @@ const createAndAttachPaymentMethod = async (req, res) => {
     return serverErrorResponse(res, "an error occured");
   }
 
-  // const [confirmSetup, confirmIntentError] = await confirmSetupIntent({
-  //   paymentMethod: paymentMethod.id,
-  //   setupIntentId: setupIntent.id,
-  // });
-
-  // console.log(confirmSetup);
-
   if (setupIntent?.status != "succeeded") {
     return successResponse(res, "Next action needed", {
       next_action: setupIntent?.next_action,
     });
   }
-  // if (confirmIntentError) {
-  //   return serverErrorResponse(res, "an error occured");
-  // }
 
   logger.info(
     `Customer created in stripe with Id ${dbUser.stripe_customer_id}`
@@ -133,13 +123,17 @@ const makePaymentIntent = async (req, res) => {
     return notFoundResponse("user not found");
   }
   let total = 0;
-  cartObj.map((cartItem) => {
+  const product_arr = cartObj.map((cartItem) => {
     total =
       total +
       parseFloat(cartItem?.Product?.selling_price) *
         parseInt(cartItem?.cart_quantity);
+    return {
+      product_id: cartItem.product_id,
+      quantity: cartItem.cart_quantity,
+    };
   });
-
+  console.log(product_arr);
   // make order entry in the table
   let order;
   try {
@@ -167,6 +161,8 @@ const makePaymentIntent = async (req, res) => {
   currency = "usd";
   let metadata = {
     order_id: order?.order_id,
+    user_id: user_id,
+    product_arr: JSON.stringify(product_arr),
   };
   const [paymentIntent, err] = await createPaymentIntent({
     amount: total,
@@ -201,9 +197,100 @@ const confirmIntent = async (req, res) => {
   });
 };
 
+const createPaymentIntentWithoutAttaching = async (req, res) => {
+  const { user_id } = req.user;
+  const { paymentMethod, address_id } = req.body;
+  let userCustomerId;
+  const cartArr = await Cart.findAll({
+    where: { user_id },
+    include: [{ model: User }, { model: Product }],
+  });
+  const cartObj = JSON.parse(JSON.stringify(cartArr));
+
+  const dbUser = await User.findOne({ where: { user_id: user_id } });
+  const parsedUser = JSON.parse(JSON.stringify(dbUser));
+  let name = parsedUser.first_name + " " + parsedUser.last_name;
+  // create a stripe customer if there does not exist one
+  if (!dbUser.stripe_customer_id) {
+    const [customer, customerError] = await createStripeCustomer({
+      name,
+      email: parsedUser.email,
+      phone: parsedUser.phone_no,
+    });
+    dbUser.stripe_customer_id = customer.id;
+    await dbUser.save();
+    if (customerError) {
+      return serverErrorResponse(res, "an error occured");
+    }
+  }
+  console.log(dbUser.stripe_customer_id);
+  userCustomerId = dbUser.stripe_customer_id;
+  let total = 0;
+  const product_arr = cartObj.map((cartItem) => {
+    total =
+      total +
+      parseFloat(cartItem?.Product?.selling_price) *
+        parseInt(cartItem?.cart_quantity);
+    return {
+      product_id: cartItem.product_id,
+      quantity: cartItem.cart_quantity,
+    };
+  });
+
+  // make order entry in the table
+  let order;
+  try {
+    order = await Order.create({
+      user_id,
+      address_id,
+      total_price: total,
+      shipping_price: "20",
+    });
+
+    const parsedOrder = JSON.parse(JSON.stringify(order));
+    cartObj.map(async (item) => {
+      await OrderItem.create({
+        product_id: item?.Product?.product_id,
+        item_quantity: item.cart_quantity,
+        order_id: parsedOrder.order_id,
+      });
+    });
+  } catch (error) {
+    logger.error(`Error while creating a order ${error}`);
+    return serverErrorResponse(res, "Error while creating order");
+  }
+  logger.info(`The total value of this cart is ${total}`);
+
+  currency = "usd";
+
+  let metadata = {
+    order_id: order?.order_id,
+    user_id: user_id,
+    product_arr: JSON.stringify(product_arr),
+  };
+
+  const [paymentIntent, err] = await createPaymentIntent({
+    amount: total,
+    currency: currency,
+    userCustomerId: userCustomerId,
+    paymentMethod: paymentMethod.id,
+    email: cartObj[0]?.User?.email,
+    confirm: true,
+    metadata: metadata,
+  });
+  if (err) {
+    logger.error(`Error while creating a payment intent ${err}`);
+    return serverErrorResponse(res, "an error occured");
+  }
+  return successResponse(res, "Payment intent created", {
+    paymentIntent: paymentIntent,
+  });
+};
+
 module.exports = {
   // createCustomer,
   createAndAttachPaymentMethod,
+  createPaymentIntentWithoutAttaching,
   getPaymentMethods,
   makePaymentIntent,
   confirmIntent,

@@ -4,6 +4,7 @@ const logger = require("../utils/logger");
 const { serverErrorResponse, successResponse } = require("../utils/response");
 
 const Review = db.Review;
+const User = db.User;
 
 const add_review = async (req, res) => {
   const { user_id } = req.user;
@@ -23,6 +24,26 @@ const add_review = async (req, res) => {
   }
 };
 
+const getProductReview = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const reviews = await Review.findAll({
+      where: {
+        product_id: id,
+      },
+      include: {
+        model: User,
+      },
+    });
+
+    return successResponse(res, "Reviews fetched successfully", reviews);
+  } catch (error) {
+    logger.error(`Error while fetching reviews ${error}`);
+    return serverErrorResponse(res, "Error while fetching response");
+  }
+};
+
 const delete_review = async (req, res) => {
   const { review_id } = req.params;
   try {
@@ -38,12 +59,8 @@ const delete_review = async (req, res) => {
   }
 };
 
-const get_product_reviews = async (req, res) => {
-  const { product_id } = req.body;
-}
-
-
 module.exports = {
   add_review,
+  getProductReview,
   delete_review,
 };

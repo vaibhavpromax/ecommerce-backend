@@ -25,7 +25,12 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.STRING,
         allowNull: true,
       },
-
+      profile_pic_url: {
+        type: Sequelize.TEXT,
+        defaultValue:
+          "https://ecommerce-images.s3.ap-south-1.amazonaws.com/user.png",
+        allowNull: true,
+      },
       email: {
         type: Sequelize.STRING,
         allowNull: false,

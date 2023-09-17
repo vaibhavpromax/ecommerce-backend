@@ -549,3 +549,319 @@
 14:43:59 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
 14:51:49 [32minfo[39m: Fetched cart successfully
 14:52:14 [32minfo[39m: The total value of this cart is 1410
+16:02:14 [32minfo[39m: [CONNECTED TO DATABASE]
+16:02:14 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+16:03:10 [32minfo[39m: Fetched cart successfully
+16:03:19 [32minfo[39m: The total value of this cart is 1410
+16:04:33 [32minfo[39m: Fetched cart successfully
+16:04:39 [32minfo[39m: The total value of this cart is 1410
+16:05:14 [32minfo[39m: Fetched cart successfully
+16:05:19 [32minfo[39m: The total value of this cart is 1410
+16:06:14 [32minfo[39m: Fetched cart successfully
+16:06:22 [32minfo[39m: The total value of this cart is 1410
+17:20:04 [32minfo[39m: [CONNECTED TO DATABASE]
+17:20:04 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+17:21:18 [32minfo[39m: Fetched cart successfully
+17:21:23 [32minfo[39m: Cart created 
+17:21:24 [32minfo[39m: Cart created 
+17:21:26 [32minfo[39m: Cart created 
+17:21:28 [32minfo[39m: Fetched cart successfully
+17:21:34 [32minfo[39m: Fetched cart successfully
+17:21:43 [32minfo[39m: Fetched cart successfully
+17:22:12 [32minfo[39m: Fetched cart successfully
+17:23:01 [32minfo[39m: Setup intent created [object Object]
+11:41:39 [32minfo[39m: [CONNECTED TO DATABASE]
+11:41:39 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+12:03:06 [32minfo[39m: [CONNECTED TO DATABASE]
+12:03:06 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+12:03:34 [32minfo[39m: Fetched cart successfully
+12:18:23 [32minfo[39m: [CONNECTED TO DATABASE]
+12:18:23 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+19:13:39 [32minfo[39m: [CONNECTED TO DATABASE]
+19:13:39 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+18:05:07 [32minfo[39m: [CONNECTED TO DATABASE]
+18:05:07 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+01:12:01 [32minfo[39m: [CONNECTED TO DATABASE]
+01:12:01 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+14:30:44 [32minfo[39m: [CONNECTED TO DATABASE]
+14:30:44 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+18:06:42 [32minfo[39m: [CONNECTED TO DATABASE]
+18:06:42 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+19:46:05 [32minfo[39m: [CONNECTED TO DATABASE]
+19:46:05 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+19:47:53 [32minfo[39m: Product created in db [object SequelizeInstance:Product]
+19:48:13 [32minfo[39m: Product created in db [object SequelizeInstance:Product]
+19:48:59 [32minfo[39m: Product created in db [object SequelizeInstance:Product]
+19:49:19 [32minfo[39m: Product created in db [object SequelizeInstance:Product]
+19:49:38 [32minfo[39m: Product created in db [object SequelizeInstance:Product]
+19:52:03 [32minfo[39m: [CONNECTED TO DATABASE]
+19:52:03 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+23:51:02 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+23:59:40 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+00:00:06 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+00:00:18 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+00:13:24 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+00:36:21 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+11:35:05 [32minfo[39m: [CONNECTED TO DATABASE]
+11:35:05 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+11:35:12 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+11:49:55 [32minfo[39m: [CONNECTED TO DATABASE]
+11:49:55 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+11:51:48 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+12:01:54 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+12:02:54 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+12:02:56 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+16:46:01 [31merror[39m: Error while deleting products Error: WHERE parameter "product_id" has invalid "undefined" value 
+16:46:19 [31merror[39m: Error while deleting products Error: WHERE parameter "product_id" has invalid "undefined" value 
+16:48:36 [32minfo[39m: 1 number of products successfully deleted
+16:49:39 [32minfo[39m: 1 number of products successfully deleted
+16:49:54 [32minfo[39m: [CONNECTED TO DATABASE]
+16:49:54 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+16:53:43 [32minfo[39m: 1 number of products successfully deleted
+18:33:53 [32minfo[39m: [CONNECTED TO DATABASE]
+18:33:53 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+22:06:23 [32minfo[39m: [CONNECTED TO DATABASE]
+22:06:23 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+22:07:57 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+22:08:36 [32minfo[39m: Order fetched successfully null
+22:43:45 [32minfo[39m: Order fetched successfully null
+22:44:04 [32minfo[39m: Order fetched successfully null
+22:48:19 [32minfo[39m: Order fetched successfully null
+22:55:09 [32minfo[39m: Order fetched successfully null
+22:57:34 [32minfo[39m: Order fetched successfully null
+22:58:08 [32minfo[39m: Order fetched successfully null
+23:09:41 [32minfo[39m: Order fetched successfully null
+23:20:34 [32minfo[39m: Order fetched successfully null
+23:21:05 [32minfo[39m: Order fetched successfully null
+23:21:12 [32minfo[39m: Order fetched successfully null
+23:21:55 [32minfo[39m: Order fetched successfully null
+23:23:05 [32minfo[39m: Order fetched successfully null
+23:41:08 [32minfo[39m: Order fetched successfully null
+09:27:35 [32minfo[39m: [CONNECTED TO DATABASE]
+09:27:35 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+09:28:30 [32minfo[39m: Order fetched successfully null
+09:59:18 [32minfo[39m: Order fetched successfully null
+09:59:29 [32minfo[39m: Order fetched successfully null
+10:01:06 [32minfo[39m: Order fetched successfully null
+10:01:23 [32minfo[39m: Order fetched successfully null
+10:02:07 [32minfo[39m: Order fetched successfully null
+10:04:28 [32minfo[39m: Order fetched successfully null
+10:12:25 [32minfo[39m: Order fetched successfully null
+10:12:36 [32minfo[39m: Order fetched successfully null
+10:12:39 [32minfo[39m: Order fetched successfully null
+10:13:06 [32minfo[39m: Order fetched successfully null
+10:13:32 [32minfo[39m: Order fetched successfully null
+10:14:04 [32minfo[39m: Order fetched successfully null
+10:14:10 [32minfo[39m: Order fetched successfully null
+10:14:12 [32minfo[39m: Order fetched successfully null
+10:15:04 [32minfo[39m: Order fetched successfully null
+10:15:22 [32minfo[39m: Order fetched successfully null
+10:19:28 [32minfo[39m: Order fetched successfully null
+10:21:24 [32minfo[39m: Order fetched successfully null
+10:21:49 [32minfo[39m: Order fetched successfully null
+10:22:29 [32minfo[39m: Order fetched successfully null
+10:24:00 [32minfo[39m: Order fetched successfully null
+10:24:41 [32minfo[39m: Order fetched successfully null
+10:26:11 [32minfo[39m: Order fetched successfully null
+10:28:06 [32minfo[39m: Order fetched successfully null
+10:34:13 [32minfo[39m: Order fetched successfully null
+10:35:01 [32minfo[39m: Order fetched successfully null
+10:35:37 [32minfo[39m: Order fetched successfully null
+10:36:14 [32minfo[39m: Order fetched successfully null
+10:36:23 [32minfo[39m: Order fetched successfully null
+10:36:42 [32minfo[39m: Order fetched successfully null
+10:36:49 [32minfo[39m: Order fetched successfully null
+10:37:04 [32minfo[39m: Order fetched successfully null
+11:16:46 [32minfo[39m: Order fetched successfully null
+11:20:25 [32minfo[39m: Order fetched successfully null
+11:23:12 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+15:17:56 [32minfo[39m: Notifications fetched 
+15:29:24 [32minfo[39m: Cart created 
+15:29:25 [32minfo[39m: Cart created 
+15:29:30 [32minfo[39m: Fetched cart successfully
+15:30:20 [32minfo[39m: Fetched cart successfully
+15:32:52 [32minfo[39m: Fetched cart successfully
+15:54:07 [32minfo[39m: Fetched cart successfully
+16:10:20 [32minfo[39m: Fetched cart successfully
+17:17:17 [32minfo[39m: Fetched cart successfully
+17:37:40 [32minfo[39m: Fetched cart successfully
+17:42:32 [32minfo[39m: Fetched cart successfully
+17:44:09 [32minfo[39m: Fetched cart successfully
+17:44:28 [32minfo[39m: Fetched cart successfully
+17:45:12 [32minfo[39m: Fetched cart successfully
+17:45:31 [32minfo[39m: Fetched cart successfully
+17:46:25 [32minfo[39m: Fetched cart successfully
+17:47:24 [32minfo[39m: Fetched cart successfully
+17:49:08 [32minfo[39m: Fetched cart successfully
+17:49:56 [32minfo[39m: Fetched cart successfully
+17:50:34 [32minfo[39m: Fetched cart successfully
+17:50:46 [32minfo[39m: Fetched cart successfully
+17:51:08 [32minfo[39m: Fetched cart successfully
+17:51:31 [32minfo[39m: Fetched cart successfully
+18:02:40 [32minfo[39m: Fetched cart successfully
+18:05:37 [32minfo[39m: Fetched cart successfully
+18:05:55 [32minfo[39m: Fetched cart successfully
+18:06:06 [32minfo[39m: Fetched cart successfully
+18:06:16 [32minfo[39m: Fetched cart successfully
+18:06:42 [32minfo[39m: Fetched cart successfully
+18:07:36 [32minfo[39m: Fetched cart successfully
+19:12:15 [32minfo[39m: [CONNECTED TO DATABASE]
+19:12:15 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+19:12:45 [32minfo[39m: Order fetched successfully null
+19:13:11 [32minfo[39m: Order fetched successfully null
+19:13:22 [32minfo[39m: Order fetched successfully null
+19:14:15 [32minfo[39m: [CONNECTED TO DATABASE]
+19:14:15 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+19:14:19 [32minfo[39m: Order fetched successfully 
+19:14:34 [32minfo[39m: Order fetched successfully 
+19:14:39 [32minfo[39m: Order fetched successfully 
+19:14:44 [32minfo[39m: Order fetched successfully 
+19:14:52 [32minfo[39m: Order fetched successfully 
+19:15:46 [32minfo[39m: Fetched cart successfully
+19:15:49 [32minfo[39m: Fetched cart successfully
+19:22:04 [32minfo[39m: Fetched cart successfully
+20:07:52 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+20:07:55 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+20:27:35 [32minfo[39m: [CONNECTED TO DATABASE]
+20:27:35 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+20:27:35 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+20:27:43 [31merror[39m: Error while fetching customers TypeError: (intermediate value) is not iterable
+20:28:03 [32minfo[39m: [CONNECTED TO DATABASE]
+20:28:03 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+20:28:26 [32minfo[39m: [CONNECTED TO DATABASE]
+20:28:26 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+20:32:08 [32minfo[39m: Order fetched successfully null
+20:37:52 [32minfo[39m: 2 number of products successfully deleted
+20:40:05 [32minfo[39m: Order fetched successfully null
+20:40:50 [32minfo[39m: Order fetched successfully null
+20:40:51 [32minfo[39m: Order fetched successfully null
+20:41:02 [32minfo[39m: Order fetched successfully null
+20:43:34 [32minfo[39m: Order fetched successfully null
+20:43:42 [32minfo[39m: Order fetched successfully null
+20:44:41 [32minfo[39m: Order fetched successfully null
+20:44:50 [32minfo[39m: Order fetched successfully null
+20:49:30 [32minfo[39m: Order fetched successfully null
+20:48:31 [32minfo[39m: [CONNECTED TO DATABASE]
+20:48:31 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+22:07:23 [32minfo[39m: [CONNECTED TO DATABASE]
+22:07:23 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+22:15:14 [32minfo[39m: Order fetched successfully null
+22:30:49 [32minfo[39m: Order fetched successfully null
+22:40:06 [32minfo[39m: Order fetched successfully null
+22:58:14 [32minfo[39m: Fetched cart successfully
+23:14:05 [32minfo[39m: Product created in db [object SequelizeInstance:Product]
+00:02:54 [32minfo[39m: [CONNECTED TO DATABASE]
+00:02:54 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+00:03:36 [31merror[39m: Error while fetching user details WHERE parameter "admin_id" has invalid "undefined" value
+00:04:19 [31merror[39m: Error while fetching user details WHERE parameter "admin_id" has invalid "undefined" value
+00:04:43 [31merror[39m: Error while fetching user details WHERE parameter "admin_id" has invalid "undefined" value
+00:04:45 [31merror[39m: Error while fetching user details WHERE parameter "admin_id" has invalid "undefined" value
+00:05:20 [32minfo[39m: [CONNECTED TO DATABASE]
+00:05:20 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+00:05:24 [31merror[39m: Error while fetching user details WHERE parameter "admin_id" has invalid "undefined" value
+00:07:22 [32minfo[39m: [CONNECTED TO DATABASE]
+00:07:22 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+03:17:50 [32minfo[39m: [CONNECTED TO DATABASE]
+03:17:50 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+03:19:35 [31merror[39m: Error while fetching user details Unknown column 'profile_pic_url' in 'field list'
+03:23:54 [32minfo[39m: [CONNECTED TO DATABASE]
+03:23:54 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+03:24:08 [32minfo[39m: [CONNECTED TO DATABASE]
+03:24:08 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+03:41:14 [31merror[39m: Error while updating the user profile pic TypeError: Cannot read properties of undefined (reading 'location')
+03:42:19 [32minfo[39m: [CONNECTED TO DATABASE]
+03:42:19 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+03:42:26 [31merror[39m: Error while updating the user profile pic TypeError: Cannot read properties of undefined (reading 'location')
+03:43:06 [32minfo[39m: [CONNECTED TO DATABASE]
+03:43:06 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+03:43:25 [32minfo[39m: [CONNECTED TO DATABASE]
+03:43:25 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+03:43:39 [32minfo[39m: [CONNECTED TO DATABASE]
+03:43:39 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+03:43:42 [31merror[39m: Error while updating the user profile pic TypeError: Cannot read properties of undefined (reading 'location')
+03:48:38 [32minfo[39m: [CONNECTED TO DATABASE]
+03:48:38 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+03:48:48 [31merror[39m: Error while updating the user profile pic TypeError: Cannot read properties of undefined (reading 'location')
+03:53:41 [32minfo[39m: [CONNECTED TO DATABASE]
+03:53:41 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+03:53:47 [31merror[39m: Error while updating the user profile pic TypeError: Cannot read properties of undefined (reading 'location')
+03:56:41 [32minfo[39m: [CONNECTED TO DATABASE]
+03:56:41 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+03:56:45 [31merror[39m: Error while updating the user profile pic TypeError: Cannot read properties of undefined (reading 'location')
+03:58:53 [32minfo[39m: [CONNECTED TO DATABASE]
+03:58:53 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+03:59:06 [31merror[39m: Error while updating the user profile pic TypeError: Cannot read properties of undefined (reading 'location')
+03:59:29 [32minfo[39m: [CONNECTED TO DATABASE]
+03:59:29 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+04:00:59 [31merror[39m: Error while updating the user profile pic TypeError: Cannot read properties of undefined (reading 'location')
+04:01:11 [31merror[39m: Error while updating the user profile pic TypeError: Cannot read properties of undefined (reading 'location')
+04:03:35 [32minfo[39m: [CONNECTED TO DATABASE]
+04:03:35 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+04:03:46 [31merror[39m: Error while updating the user profile pic TypeError: Cannot read properties of undefined (reading 'location')
+04:10:50 [32minfo[39m: [CONNECTED TO DATABASE]
+04:10:50 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+11:50:18 [32minfo[39m: Fetched cart successfully
+11:50:19 [32minfo[39m: Fetched cart successfully
+11:51:22 [32minfo[39m: Fetched cart successfully
+11:52:33 [32minfo[39m: Fetched cart successfully
+11:52:34 [32minfo[39m: Fetched cart successfully
+11:52:40 [32minfo[39m: Fetched cart successfully
+11:52:41 [32minfo[39m: Fetched cart successfully
+11:52:51 [32minfo[39m: [CONNECTED TO DATABASE]
+11:52:51 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+11:52:56 [32minfo[39m: Fetched cart successfully
+11:52:57 [32minfo[39m: Fetched cart successfully
+11:54:23 [32minfo[39m: Fetched cart successfully
+11:55:06 [32minfo[39m: Fetched cart successfully
+11:55:35 [32minfo[39m: Fetched cart successfully
+11:58:19 [32minfo[39m: Fetched cart successfully
+11:58:34 [32minfo[39m: Fetched cart successfully
+12:00:10 [32minfo[39m: Fetched cart successfully
+12:02:10 [32minfo[39m: Fetched cart successfully
+12:02:35 [32minfo[39m: Fetched cart successfully
+12:05:16 [32minfo[39m: Fetched cart successfully
+12:05:59 [32minfo[39m: Fetched cart successfully
+12:20:13 [32minfo[39m: Product created in db [object SequelizeInstance:Product]
+12:22:27 [32minfo[39m: Product created in db [object SequelizeInstance:Product]
+12:55:18 [32minfo[39m: Cart created 
+12:55:19 [32minfo[39m: Cart created 
+12:55:20 [32minfo[39m: Fetched cart successfully
+13:10:05 [32minfo[39m: Fetched cart successfully
+13:10:30 [32minfo[39m: Fetched cart successfully
+13:10:32 [32minfo[39m: Fetched cart successfully
+13:12:42 [32minfo[39m: [CONNECTED TO DATABASE]
+13:12:42 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+13:13:54 [32minfo[39m: [CONNECTED TO DATABASE]
+13:13:54 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+13:14:41 [32minfo[39m: Setup intent created [object Object]
+13:14:41 [32minfo[39m: Customer created in stripe with Id cus_OeYm12BGYyqoz9
+13:15:14 [32minfo[39m: [CONNECTED TO DATABASE]
+13:15:14 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+13:15:43 [32minfo[39m: [CONNECTED TO DATABASE]
+13:15:43 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+13:17:36 [32minfo[39m: [CONNECTED TO DATABASE]
+13:17:36 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+13:17:45 [32minfo[39m: The total value of this cart is 1800
+13:20:10 [32minfo[39m: Fetched cart successfully
+13:23:04 [32minfo[39m: The total value of this cart is 1800
+13:24:04 [32minfo[39m: The total value of this cart is 1800
+13:28:37 [32minfo[39m: Cart exists 
+13:32:39 [32minfo[39m: Fetched cart successfully
+13:45:26 [31merror[39m: Error while fetching user details Cannot delete or update a parent row: a foreign key constraint fails (`ecommerce`.`addresses`, CONSTRAINT `addresses_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON UPDATE CASCADE)
+13:47:59 [32minfo[39m: [CONNECTED TO DATABASE]
+13:47:59 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+13:48:04 [31merror[39m: Error while fetching user details Cannot delete or update a parent row: a foreign key constraint fails (`ecommerce`.`addresses`, CONSTRAINT `addresses_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON UPDATE CASCADE)
+13:56:05 [32minfo[39m: [CONNECTED TO DATABASE]
+13:56:05 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+13:56:10 [32minfo[39m: Order deleted 3
+13:56:10 [32minfo[39m: Cart deleted 2
+13:56:10 [32minfo[39m: Reviews deleted 0
+13:56:10 [32minfo[39m: Notification deleted 0
+13:56:10 [32minfo[39m: Wishlist deleted 0
+13:56:10 [32minfo[39m: Address deleted 1
+13:56:10 [32minfo[39m: User deleted 1
+13:56:10 [31merror[39m: Error while fetching user details user is not defined
+13:58:45 [32minfo[39m: 1 number of products successfully deleted
+14:01:05 [32minfo[39m: Product created in db [object SequelizeInstance:Product]
+14:16:43 [32minfo[39m: [CONNECTED TO DATABASE]
+14:16:43 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
