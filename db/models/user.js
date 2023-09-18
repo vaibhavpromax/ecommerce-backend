@@ -48,6 +48,10 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.DATE,
         allowNull: true,
       },
+      number_of_orders: {
+        type: Sequelize.INTEGER,
+        defaultValue: 0,
+      },
       username: {
         allowNull: false,
         type: Sequelize.STRING,

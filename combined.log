@@ -865,3 +865,11 @@
 14:01:05 [32minfo[39m: Product created in db [object SequelizeInstance:Product]
 14:16:43 [32minfo[39m: [CONNECTED TO DATABASE]
 14:16:43 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:30:20 [32minfo[39m: [CONNECTED TO DATABASE]
+15:30:20 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+18:24:30 [32minfo[39m: [CONNECTED TO DATABASE]
+18:24:30 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+18:37:41 [32minfo[39m: Order fetched successfully null
+18:38:13 [32minfo[39m: Order fetched successfully null
+18:38:20 [32minfo[39m: Order fetched successfully null
+18:38:22 [32minfo[39m: Order fetched successfully null

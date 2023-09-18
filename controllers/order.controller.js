@@ -50,7 +50,6 @@ const get_orders_of_user = async (req, res) => {
 
 const getOrderDetailsForAdmin = async (req, res) => {
   const { id } = req.params;
-  let user, product, order, address, review;
   try {
     const order = await Order.findOne({
       where: {
@@ -74,6 +73,11 @@ const getOrderDetailsForAdmin = async (req, res) => {
         },
       ],
     });
+    
+
+   
+
+
     logger.info(`Order fetched successfully ${order}`);
     return successResponse(res, "Order fetched", order);
   } catch (err) {
@@ -115,8 +119,15 @@ const getOrderDetailsForProfile = async (req, res) => {
 
 const update_order = async (req, res) => {
   const { order_id } = req.params;
-  const { product_id, quantity, address_id, total_price, is_order_completed } =
-    req.body;
+  const {
+    product_id,
+    quantity,
+    address_id,
+    total_price,
+    shipped_date,
+    processing_date,
+    shipping_price,
+  } = req.body;
   try {
     const order = await Order.update(
       {
@@ -125,6 +136,9 @@ const update_order = async (req, res) => {
         address_id,
         total_price,
         is_order_completed,
+        shipped_date,
+        processing_date,
+        shipping_price,
       },
       {
         where: {

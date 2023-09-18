@@ -8,7 +8,7 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 const Cart = db.Cart;
 const Order = db.Order;
-const OrderItem = db.OrderItem;
+const User = db.User;
 const Product = db.Product;
 
 // this function is called when payment confirm webhook is called

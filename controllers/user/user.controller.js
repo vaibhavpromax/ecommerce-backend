@@ -13,6 +13,7 @@ const Cart = db.Cart;
 const Review = db.Review;
 const Notification = db.Notification;
 const Wishlist = db.Wishlist;
+const Product = db.Product;
 
 const getCompleteUserDetails = async (req, res) => {
   const { user_id } = req.params;
@@ -29,6 +30,9 @@ const getCompleteUserDetails = async (req, res) => {
           model: Order,
           include: {
             model: OrderItem,
+            include: {
+              model: Product,
+            },
           },
         },
       ],

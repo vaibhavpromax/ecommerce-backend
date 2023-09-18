@@ -9,6 +9,6 @@ const router = express.Router();
 
 // reviews
 router.post("/add-review", authMiddleware, add_review);
-router.post("/get-review/:id", getProductReview);
+router.get("/get-review/:id", getProductReview);
 
 module.exports = router;

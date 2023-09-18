@@ -30,6 +30,7 @@ const {
   get_all_orders,
   getOrderDetailsForAdmin,
   get_orders_of_user,
+  update_order,
 } = require("../../controllers/order.controller");
 const { delete_review } = require("../../controllers/review.controller");
 
@@ -49,6 +50,7 @@ router.get("/get-all-orders", get_all_orders);
 router.get("/get-order-details/:id", getOrderDetailsForAdmin);
 router.get("/get-customer-orders/:id", get_orders_of_user);
 router.delete("/delete-review/:review_id", delete_review);
+router.patch("/update-order/:order_id", update_order);
 
 router.post("/login", login_admin);
 router.post("/register", register_admin);

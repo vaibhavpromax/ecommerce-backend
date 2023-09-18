@@ -31,7 +31,7 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.UUID,
       },
       description: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
       },
       rating: {
         type: Sequelize.STRING,

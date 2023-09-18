@@ -18,6 +18,5 @@ const router = express.Router();
 // router.post("/create-order", authMiddleware, make_order);
 
 router.get("/get-orders", authMiddleware, getOrderDetailsForProfile);
-router.patch("/update-order/:order_id", authMiddleware, update_order);
 
 module.exports = router;
