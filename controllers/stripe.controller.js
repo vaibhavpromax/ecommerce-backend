@@ -52,6 +52,11 @@ const confirmOrder = async (intent_id) => {
 
     logger.info(`Cart deleted ${destroyCart}`);
 
+    await User.increment(
+      { number_of_orders: 1 },
+      { where: { user_id: user_id } }
+    );
+
     product_arr?.map(async (product) => {
       await Product.increment(
         {
