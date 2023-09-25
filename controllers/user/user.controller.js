@@ -14,6 +14,8 @@ const Review = db.Review;
 const Notification = db.Notification;
 const Wishlist = db.Wishlist;
 const Product = db.Product;
+const Image = db.Image;
+
 
 const getCompleteUserDetails = async (req, res) => {
   const { user_id } = req.params;
@@ -32,7 +34,10 @@ const getCompleteUserDetails = async (req, res) => {
             model: OrderItem,
             include: {
               model: Product,
-            },
+ include: {
+                model:Image
+              }   
+         },
           },
         },
       ],
