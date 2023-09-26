@@ -873,3 +873,58 @@
 18:38:13 [32minfo[39m: Order fetched successfully null
 18:38:20 [32minfo[39m: Order fetched successfully null
 18:38:22 [32minfo[39m: Order fetched successfully null
+20:30:28 [32minfo[39m: Order fetched successfully null
+16:46:44 [32minfo[39m: [CONNECTED TO DATABASE]
+16:46:44 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+12:33:44 [32minfo[39m: [CONNECTED TO DATABASE]
+12:33:44 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+15:04:06 [32minfo[39m: [CONNECTED TO DATABASE]
+15:04:06 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+02:51:57 [32minfo[39m: [CONNECTED TO DATABASE]
+02:51:57 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+13:14:46 [32minfo[39m: [CONNECTED TO DATABASE]
+13:14:46 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+13:32:16 [32minfo[39m: [CONNECTED TO DATABASE]
+13:32:16 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+13:37:42 [32minfo[39m: Fetched cart successfully
+13:39:08 [32minfo[39m: Order fetched successfully 
+13:41:34 [32minfo[39m: Order fetched successfully 
+13:41:38 [32minfo[39m: Notifications fetched 
+13:41:42 [32minfo[39m: Order fetched successfully 
+13:50:57 [32minfo[39m: Fetched cart successfully
+13:51:04 [32minfo[39m: Fetched cart successfully
+14:19:13 [32minfo[39m: Fetched cart successfully
+15:05:41 [32minfo[39m: Fetched cart successfully
+15:07:27 [32minfo[39m: Fetched cart successfully
+15:07:46 [32minfo[39m: Fetched cart successfully
+15:08:18 [32minfo[39m: Fetched cart successfully
+15:11:30 [32minfo[39m: Fetched cart successfully
+15:57:28 [32minfo[39m: Fetched cart successfully
+15:58:34 [32minfo[39m: Fetched cart successfully
+15:58:57 [32minfo[39m: Fetched cart successfully
+15:59:57 [32minfo[39m: Fetched cart successfully
+16:01:03 [32minfo[39m: Fetched cart successfully
+16:44:18 [32minfo[39m: [CONNECTED TO DATABASE]
+16:44:18 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+17:15:41 [32minfo[39m: [CONNECTED TO DATABASE]
+17:15:41 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+17:51:45 [32minfo[39m: [CONNECTED TO DATABASE]
+17:51:45 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+17:56:57 [32minfo[39m: Product created in db [object SequelizeInstance:Product]
+20:37:29 [32minfo[39m: [CONNECTED TO DATABASE]
+20:37:29 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+22:04:00 [32minfo[39m: [CONNECTED TO DATABASE]
+22:04:00 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+22:18:55 [31merror[39m: Error deleting image MultipleValidationErrors: There were 4 validation errors:
+* MissingRequiredParameter: Missing required key 'Bucket' in params
+* MissingRequiredParameter: Missing required key 'Key' in params
+* UnexpectedParameter: Unexpected key 'bucket' found in params
+* UnexpectedParameter: Unexpected key 'key' found in params
+22:19:36 [32minfo[39m: [CONNECTED TO DATABASE]
+22:19:36 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+22:20:17 [32minfo[39m: [CONNECTED TO DATABASE]
+22:20:17 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+22:21:03 [32minfo[39m: [CONNECTED TO DATABASE]
+22:21:03 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]
+22:23:50 [32minfo[39m: [CONNECTED TO DATABASE]
+22:23:50 [32minfo[39m: [BACKEND-MICROSERVICE (http) LISTENING ON PORT:8000 ENV:undefined]

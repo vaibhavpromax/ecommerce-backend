@@ -90,3 +90,8 @@
 13:45:26 [31merror[39m: Error while fetching user details Cannot delete or update a parent row: a foreign key constraint fails (`ecommerce`.`addresses`, CONSTRAINT `addresses_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON UPDATE CASCADE)
 13:48:04 [31merror[39m: Error while fetching user details Cannot delete or update a parent row: a foreign key constraint fails (`ecommerce`.`addresses`, CONSTRAINT `addresses_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON UPDATE CASCADE)
 13:56:10 [31merror[39m: Error while fetching user details user is not defined
+22:18:55 [31merror[39m: Error deleting image MultipleValidationErrors: There were 4 validation errors:
+* MissingRequiredParameter: Missing required key 'Bucket' in params
+* MissingRequiredParameter: Missing required key 'Key' in params
+* UnexpectedParameter: Unexpected key 'bucket' found in params
+* UnexpectedParameter: Unexpected key 'key' found in params

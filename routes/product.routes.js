@@ -9,7 +9,6 @@ const {
 } = require("../controllers/product.controller");
 const { authMiddleware } = require("../controllers/user/auth.controller");
 const upload = require("../services/amazon/uploadImage");
-const uploadImage = require("../services/amazon/uploadImage");
 const router = express.Router();
 
 router.post("/get-products", getProductsFromId);

@@ -76,9 +76,7 @@ const register = async (req, res) => {
                   profile_pic_url: parsedUser.profile_pic_url,
                 };
 
-                const token = jwt.sign(tokenPayload, "secret", {
-                  expiresIn: "72h",
-                });
+                const token = jwt.sign(tokenPayload, "secret");
 
                 if (referral_code != null) {
                   // update the referral table with the person who is referred
@@ -264,9 +262,7 @@ const verifyOTP = async (req, res) => {
 
     if (user === null) return notFoundResponse(res, "User not found");
 
-    const accessToken = jwt.sign(user.dataValues, "secret", {
-      expiresIn: "72h",
-    });
+    const accessToken = jwt.sign(user.dataValues, "secret");
 
     delete user.password;
     delete user.created_at;

@@ -1,4 +1,5 @@
 const db = require("../../db/models");
+const { deleteImageFromAWS } = require("../../services/amazon/uploadImage");
 const logger = require("../../utils/logger");
 const {
   serverErrorResponse,
@@ -13,6 +14,7 @@ const Cart = db.Cart;
 const Review = db.Review;
 const Notification = db.Notification;
 const Wishlist = db.Wishlist;
+const Image = db.Image;
 const Product = db.Product;
 
 const getCompleteUserDetails = async (req, res) => {
@@ -32,6 +34,9 @@ const getCompleteUserDetails = async (req, res) => {
             model: OrderItem,
             include: {
               model: Product,
+              include: {
+                model: Image,
+              },
             },
           },
         },
@@ -140,10 +145,36 @@ const uploadUserImage = async (req, res) => {
     return serverErrorResponse(res, "Error while updating user profile pic");
   }
 };
+
 const uploadImageController = async (req, res) => {
   try {
     console.log(req.file);
     return successResponse(res, "Image uploaded", req.file.location);
+  } catch (error) {
+    logger.error(`Error while updating the image table ${error}`);
+    return serverErrorResponse(res, "Error while uploading image");
+  }
+};
+
+const deleteImageController = async (req, res) => {
+  const { id } = req.params;
+
+  const msg = deleteImageFromAWS(id);
+  if (msg == "done") {
+    return successResponse(res, "Image deleted successfully", success);
+  }
+  return serverErrorResponse(res, "Error while deleting image");
+};
+
+const editImageController = async (req, res) => {
+  const url = req.file.location;
+  const { id } = req.params;
+  try {
+    const msg = deleteImageFromAWS(id);
+    if (msg == "done") {
+      return successResponse(res, "Image uploaded", url);
+    }
+    return serverErrorResponse(res, "Error while deleting image");
   } catch (error) {
     logger.error(`Error while updating the image table ${error}`);
     return serverErrorResponse(res, "Error while uploading image");
@@ -192,5 +223,7 @@ module.exports = {
   uploadUserImage,
   getCustomers,
   deleteUsers,
+  deleteImageController,
   uploadImageController,
+  editImageController,
 };

@@ -40,9 +40,7 @@ const login_admin = (req, res) => {
             };
 
             // password match
-            const token = jwt.sign({ admin: tokenPayload }, "secret", {
-              expiresIn: "72h",
-            });
+            const token = jwt.sign({ admin: tokenPayload }, "secret");
             return successResponse(res, "Admin logged in successfully", {
               token: token,
               admin: tokenPayload,
@@ -91,9 +89,7 @@ const register_admin = async (req, res) => {
                   admin_id: parsedAdmin.admin_id,
                 };
 
-                const token = jwt.sign({ admin: tokenPayload }, "secret", {
-                  expiresIn: "72h",
-                });
+                const token = jwt.sign({ admin: tokenPayload }, "secret");
 
                 return successResponse(res, "Admin created successfully", {
                   token: token,

@@ -14,7 +14,7 @@ const {
   changeAdminPassword,
 } = require("../../controllers/admin/adminauth.controller");
 
-const uploadImage = require("../../services/amazon/uploadImage");
+const { uploadImage } = require("../../services/amazon/uploadImage");
 const {
   createProduct,
   getProductsForAdmin,
@@ -25,6 +25,8 @@ const {
   getCustomers,
   uploadImageController,
   deleteUsers,
+  deleteImageController,
+  editImageController,
 } = require("../../controllers/user/user.controller");
 const {
   get_all_orders,
@@ -44,6 +46,8 @@ router.post("/notification/create", createNotification);
 router.post("/add-image", uploadImage.single("image"), uploadImageController);
 router.post("/add-product", createProduct);
 router.post("/delete-product", deleteProducts);
+router.delete("/delete-image/:id", deleteImageController);
+router.post("/edit-image/:id", uploadImage.single("image"), editImageController);
 router.get("/get-products", getProductsForAdmin);
 
 router.get("/get-all-orders", get_all_orders);

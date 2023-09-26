@@ -20,7 +20,7 @@ const {
   uploadImageController,
 } = require("../controllers/user/user.controller");
 const { getNotifications } = require("../controllers/notification.controller");
-const uploadImage = require("../services/amazon/uploadImage");
+const { uploadImage } = require("../services/amazon/uploadImage");
 const router = express.Router();
 
 router.post("/login", login);

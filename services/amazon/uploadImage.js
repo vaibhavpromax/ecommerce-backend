@@ -2,6 +2,7 @@ require("dotenv").config();
 const multer = require("multer");
 const AWS = require("aws-sdk");
 const multerS3 = require("multer-s3");
+const logger = require("../../utils/logger");
 
 // Configure AWS SDK
 AWS.config.update({
@@ -26,6 +27,23 @@ const uploadImage = multer({
     },
   }),
 });
+
+const deleteImageFromAWS = async (key) => {
+  const params = {
+    Bucket: "ecommerce-images",
+    Key: key,
+  };
+
+  s3.deleteObject(params, (err, data) => {
+    if (err) {
+      logger.error(`Error deleting image ${err}`);
+      return err;
+    } else {
+      console.log("Image deleted successfully:", data);
+      return "done";
+    }
+  });
+};
 
 // const uploadImage = (req, res) => {
 //   // 'image' is the name of the file input field in the form
@@ -52,4 +70,4 @@ const uploadImage = multer({
 //   // },
 // });
 
-module.exports = uploadImage;
+module.exports = { uploadImage, deleteImageFromAWS };
