@@ -6,6 +6,7 @@ const {
   forgetPassword,
   verifyOTP,
   changePassword,
+  googleAuth,
 } = require("../controllers/user/auth.controller");
 const {
   addAddress,
@@ -27,6 +28,7 @@ router.post("/login", login);
 router.post("/register", register);
 router.post("/forget-password", forgetPassword);
 router.post("/verify-otp", verifyOTP);
+router.post("/google-auth", googleAuth);
 router.post("/change-password", authMiddleware, changePassword);
 router.post("/add-address", authMiddleware, addAddress);
 router.get("/get-address", authMiddleware, getAddressOfUser);

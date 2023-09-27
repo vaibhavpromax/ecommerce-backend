@@ -73,10 +73,6 @@ const getOrderDetailsForAdmin = async (req, res) => {
         },
       ],
     });
-    
-
-   
-
 
     logger.info(`Order fetched successfully ${order}`);
     return successResponse(res, "Order fetched", order);
@@ -127,17 +123,33 @@ const update_order = async (req, res) => {
     shipped_date,
     processing_date,
     shipping_price,
+    delivered_date,
   } = req.body;
   try {
+    let currentStatus = null;
+    if (shipped_date) {
+      currentStatus = "SHIPPED";
+    }
+
+    if (processing_date) {
+      currentStatus = "PROCESSING";
+    }
+
+    if (delivered_date) {
+      currentStatus = "DELIVERED";
+    }
+
     const order = await Order.update(
       {
         product_id,
         quantity,
         address_id,
         total_price,
-shipped_date,
+        shipped_date,
         processing_date,
         shipping_price,
+        delivered_date,
+        order_status: currentStatus ?? "PLACED",
       },
       {
         where: {
@@ -145,6 +157,7 @@ shipped_date,
         },
       }
     );
+
     return successResponse(res, "order updated successfully", order);
   } catch (err) {
     logger.error(`Error while updating order ${err}`);

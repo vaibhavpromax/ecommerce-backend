@@ -19,6 +19,7 @@ const {
   createProduct,
   getProductsForAdmin,
   deleteProducts,
+  updateProduct,
 } = require("../../controllers/product.controller");
 const {
   getCompleteUserDetails,
@@ -27,6 +28,7 @@ const {
   deleteUsers,
   deleteImageController,
   editImageController,
+  attachImageWithProduct,
 } = require("../../controllers/user/user.controller");
 const {
   get_all_orders,
@@ -46,8 +48,19 @@ router.post("/notification/create", createNotification);
 router.post("/add-image", uploadImage.single("image"), uploadImageController);
 router.post("/add-product", createProduct);
 router.post("/delete-product", deleteProducts);
-router.delete("/delete-image/:id", deleteImageController);
-router.post("/edit-image/:id", uploadImage.single("image"), editImageController);
+router.patch("/update-product/:product_id", updateProduct);
+router.post("/delete-image/:id", deleteImageController);
+router.post(
+  "/edit-image/:id",
+  uploadImage.single("image"),
+  editImageController
+);
+router.post(
+  "/attach-image",
+  uploadImage.single("image"),
+  attachImageWithProduct
+);
+
 router.get("/get-products", getProductsForAdmin);
 
 router.get("/get-all-orders", get_all_orders);

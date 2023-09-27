@@ -37,7 +37,13 @@ module.exports = (sequelize, Sequelize) => {
       },
       password: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: function () {
+          return this.isGoogleAuthUser;
+        },
+      },
+      isGoogleAuthUser: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false,
       },
       user_id: {
         type: Sequelize.UUID,
@@ -51,14 +57,6 @@ module.exports = (sequelize, Sequelize) => {
       number_of_orders: {
         type: Sequelize.INTEGER,
         defaultValue: 0,
-      },
-      username: {
-        allowNull: false,
-        type: Sequelize.STRING,
-      },
-      phone_no: {
-        allowNull: false,
-        type: Sequelize.STRING,
       },
       stripe_customer_id: {
         allowNull: true,

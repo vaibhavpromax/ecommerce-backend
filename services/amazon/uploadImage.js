@@ -26,6 +26,7 @@ const uploadImage = multer({
       cb(null, Date.now().toString());
     },
   }),
+  limits: { fileSize: 1024 * 1024 * 5 },
 });
 
 const deleteImageFromAWS = async (key) => {
@@ -43,6 +44,7 @@ const deleteImageFromAWS = async (key) => {
       return "done";
     }
   });
+  return "done";
 };
 
 // const uploadImage = (req, res) => {

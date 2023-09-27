@@ -1,3 +1,4 @@
+require("dotenv").config();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const db = require("../../db/models");
@@ -14,6 +15,8 @@ const htmlTemplates = require("../../utils/htmlTemplates");
 const logger = require("../../utils/logger");
 const generateRedisKeyNames = require("../../utils/rediskeynames");
 const amazonService = require("../../services/amazon");
+const { OAuth2Client } = require("google-auth-library");
+const client = new OAuth2Client(process.env.CLIENT_ID);
 
 //modles
 const Referral = db.Referral;
@@ -29,7 +32,6 @@ const register = async (req, res) => {
     // phone_no,
     first_name,
     last_name,
-    // username,
     // gender,
     referral_code,
   } = req.body;
@@ -62,7 +64,6 @@ const register = async (req, res) => {
               first_name: first_name,
               last_name: last_name,
               phone_no: "3479287408",
-              username: "testuser",
               password: passwordHash,
               referral_id: redisValue,
             })
@@ -170,9 +171,7 @@ const login = (req, res, next) => {
             };
 
             // password match
-            const token = jwt.sign(tokenPayload, "secret", {
-              expiresIn: "72h",
-            });
+            const token = jwt.sign(tokenPayload, "secret");
             return successResponse(res, "User logged in successfully", {
               token: token,
               user: tokenPayload,
@@ -347,6 +346,77 @@ const authMiddleware = async (req, res, next) => {
   }
 };
 
+const googleAuth = async (req, res) => {
+  const { token } = req.body;
+  console.log(token);
+
+  client.verifyIdToken(
+    {
+      idToken: token,
+      audience: process.env.CLIENT_ID,
+    },
+    async (err, ticket) => {
+      if (err) {
+        console.log(err);
+        serverErrorResponse(res, "Error while verifying by google");
+      }
+      console.log(ticket);
+      const { name, email, picture } = ticket.getPayload();
+      logger.info(`User verified from google ${(name, email)}`);
+
+      const user = await User.findOne({
+        where: {
+          email: email,
+        },
+      });
+
+      // if no user in table create new user
+      if (!user) {
+        const first_name = name.split(" ")[0] ?? " ";
+        const last_name = name.split(" ")[1] ?? " ";
+        const newUser = await User.create({
+          email: email,
+          first_name: first_name,
+          last_name: last_name,
+          isGoogleAuthUser: true,
+          picture: picture,
+        });
+        const parsedUser = JSON.parse(JSON.stringify(newUser));
+        console.log(picture);
+        const tokenPayload = {
+          first_name: parsedUser.first_name,
+          last_name: parsedUser.last_name,
+          user_name: parsedUser.user_name,
+          user_id: parsedUser.user_id,
+          profile_pic_url: picture,
+        };
+
+        const token = jwt.sign(tokenPayload, "secret");
+        return successResponse(res, "User registered", {
+          token: token,
+          user: tokenPayload,
+        });
+      }
+
+      const parsedUser = JSON.parse(JSON.stringify(user));
+      const tokenPayload = {
+        first_name: parsedUser.first_name,
+        last_name: parsedUser.last_name,
+        user_name: parsedUser.user_name,
+        user_id: parsedUser.user_id,
+        profile_pic_url: picture,
+      };
+
+      // password match
+      const token = jwt.sign(tokenPayload, "secret");
+      return successResponse(res, "User logged in successfully", {
+        token: token,
+        user: tokenPayload,
+      });
+    }
+  );
+};
+
 module.exports = {
   register,
   authMiddleware,
@@ -354,4 +424,5 @@ module.exports = {
   changePassword,
   forgetPassword,
   verifyOTP,
+  googleAuth,
 };
