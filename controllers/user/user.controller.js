@@ -158,10 +158,17 @@ const uploadImageController = async (req, res) => {
 
 const deleteImageController = async (req, res) => {
   const { id } = req.params;
-
-  const msg = deleteImageFromAWS(id);
+  const { image_id } = req.body;
+  const msg = await deleteImageFromAWS(id);
   if (msg == "done") {
-    return successResponse(res, "Image deleted successfully", success);
+    try {
+      const deleteImage = await Image.destroy({ where: { image_id } });
+      logger.info(`Image deleted from table ${deleteImage}`);
+    } catch (error) {
+      console.log(error);
+      return serverErrorResponse(res, "Error while deleting image");
+    }
+    return successResponse(res, "Image deleted successfully", "done");
   }
   return serverErrorResponse(res, "Error while deleting image");
 };
@@ -169,15 +176,41 @@ const deleteImageController = async (req, res) => {
 const editImageController = async (req, res) => {
   const url = req.file.location;
   const { id } = req.params;
+  const { image_id } = req.body;
   try {
-    const msg = deleteImageFromAWS(id);
+    const msg = await deleteImageFromAWS(id);
     if (msg == "done") {
-      return successResponse(res, "Image uploaded", url);
+      const updatedImage = await Image.update(
+        { image_url: url },
+        {
+          where: { image_id },
+        }
+      );
+      logger.info(`Image table updated ${updatedImage}`);
+      return successResponse(res, "Image uploaded");
     }
     return serverErrorResponse(res, "Error while deleting image");
   } catch (error) {
     logger.error(`Error while updating the image table ${error}`);
     return serverErrorResponse(res, "Error while uploading image");
+  }
+};
+
+const attachImageWithProduct = async (req, res) => {
+  const url = req.file.location;
+  const { product_id, is_primary = false } = req.body;
+  try {
+    const img = await Image.create({
+      product_id: product_id,
+      image_url: url,
+      user_id: null,
+      is_primary: is_primary,
+    });
+    logger.info(`Image attached  ${img}`);
+    return successResponse(res, "Image attached", img);
+  } catch (error) {
+    logger.error(`Error while attaching image to product ${error}`);
+    return serverErrorResponse(res, "Error while attaching image to product");
   }
 };
 
@@ -226,4 +259,5 @@ module.exports = {
   deleteImageController,
   uploadImageController,
   editImageController,
+  attachImageWithProduct,
 };

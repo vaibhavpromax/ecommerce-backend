@@ -43,6 +43,7 @@ const deleteImageFromAWS = async (key) => {
       return "done";
     }
   });
+  return "done";
 };
 
 // const uploadImage = (req, res) => {

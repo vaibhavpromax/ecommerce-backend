@@ -36,6 +36,12 @@ const deleteProducts = async (req, res) => {
         product_id: id_arr,
       },
     });
+    const deleteImages = await Image.destroy({
+      where: {
+        product_id: id_arr,
+      },
+    });
+    logger.info(`Images deleted ${deleteImages}`);
     logger.info(`${deletedProducts} number of products successfully deleted`);
     return successResponse(res, "Number of products deleted", deleteProducts);
   } catch (error) {
@@ -174,7 +180,7 @@ const createProduct = async (req, res) => {
     }
 
     const [stripePrice, stripePriceError] = await addPriceToStripe(
-      "usd",
+      "eur",
       selling_price,
       product.product_id
     );
@@ -200,15 +206,41 @@ const createProduct = async (req, res) => {
 
 const updateProduct = async (req, res) => {
   const { product_id } = req.params;
-  const { name, description, price, category, inventory_quantity } = req.body;
+  const {
+    name,
+    description,
+    inventory_quantity,
+    product_origin,
+    beans_type,
+    product_type,
+    product_height,
+    product_weight,
+    product_width,
+    product_length,
+    cost_price,
+    selling_price,
+    is_discount_percentage,
+    is_discount_present,
+    discount_value,
+  } = req.body;
   try {
     const product = await Product.update(
       {
         name,
         description,
-        price,
-        category,
         inventory_quantity,
+        product_origin,
+        beans_type,
+        product_type,
+        product_height,
+        product_weight,
+        product_width,
+        product_length,
+        cost_price,
+        selling_price,
+        is_discount_percentage,
+        is_discount_present,
+        discount_value,
       },
       {
         where: {
@@ -216,17 +248,17 @@ const updateProduct = async (req, res) => {
         },
       }
     );
-
+    const parsedProduct = JSON.parse(JSON.stringify(product));
     // if the price is updated
-    if (price) {
-      const [updatePriceStripe, updateStripePriceError] =
-        await updateStripePrice(product.stripe_price_id, price);
-      if (updateStripePriceError)
-        logger.error(
-          `Error while updating the price of a product in stripe ${updateStripePriceError}`
-        );
-      return serverErrorResponse(res, "Error while updating the product info");
-    }
+    // if (selling_price) {
+    //   const [updatePriceStripe, updateStripePriceError] =
+    //     await updateStripePrice(parsedProduct.stripe_price_id, selling_price);
+    //   if (updateStripePriceError)
+    //     logger.error(
+    //       `Error while updating the price of a product in stripe ${updateStripePriceError}`
+    //     );
+    //   return serverErrorResponse(res, "Error while updating the product info");
+    // }
 
     return successResponse(res, "product updated successfully", product);
   } catch (err) {
