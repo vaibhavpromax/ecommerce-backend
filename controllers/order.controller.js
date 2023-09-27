@@ -144,22 +144,22 @@ const update_order = async (req, res) => {
       }
     );
 
-    if(shipped_date) {
-      order?.order_status = "SHIPPED";
+    if (shipped_date) {
+      order.order_status = "SHIPPED";
       await order.save();
     }
 
     if (processing_date) {
-      order?.order_status = "PROCESSING";
-      await order.save();
-}
-
-    if (delivered_date) {
-      order?.order_status = 'DELIVERED';
+      order.order_status = "PROCESSING";
       await order.save();
     }
-    
-      return successResponse(res, "order updated successfully", order);
+
+    if (delivered_date) {
+      order.order_status = "DELIVERED";
+      await order.save();
+    }
+
+    return successResponse(res, "order updated successfully", order);
   } catch (err) {
     logger.error(`Error while updating order ${err}`);
     return serverErrorResponse(res, "Error while updating order");
