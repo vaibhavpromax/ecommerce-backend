@@ -126,6 +126,19 @@ const update_order = async (req, res) => {
     delivered_date,
   } = req.body;
   try {
+    let currentStatus = null;
+    if (shipped_date) {
+      currentStatus = "SHIPPED";
+    }
+
+    if (processing_date) {
+      currentStatus = "PROCESSING";
+    }
+
+    if (delivered_date) {
+      currentStatus = "DELIVERED";
+    }
+
     const order = await Order.update(
       {
         product_id,
@@ -136,6 +149,7 @@ const update_order = async (req, res) => {
         processing_date,
         shipping_price,
         delivered_date,
+        order_status: currentStatus ?? "PLACED",
       },
       {
         where: {
@@ -143,21 +157,6 @@ const update_order = async (req, res) => {
         },
       }
     );
-
-    if (shipped_date) {
-      order.order_status = "SHIPPED";
-      await order.save();
-    }
-
-    if (processing_date) {
-      order.order_status = "PROCESSING";
-      await order.save();
-    }
-
-    if (delivered_date) {
-      order.order_status = "DELIVERED";
-      await order.save();
-    }
 
     return successResponse(res, "order updated successfully", order);
   } catch (err) {
