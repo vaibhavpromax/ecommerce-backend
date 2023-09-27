@@ -13,6 +13,5 @@ const router = express.Router();
 
 router.post("/get-products", getProductsFromId);
 router.get("/get-product/:product_id", getSingleProduct);
-router.patch("/update-product/:product_id", updateProduct);
 
 module.exports = router;

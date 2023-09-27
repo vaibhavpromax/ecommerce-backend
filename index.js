@@ -8,7 +8,7 @@ const port = process.env.PORT || 8080;
 const { NODE_ENV } = process.env;
 
 sequelize
-//   .sync({ force: true })
+  // .sync({ force: true })
   .sync()
   .then(() => {
     logger.info("[CONNECTED TO DATABASE]");
