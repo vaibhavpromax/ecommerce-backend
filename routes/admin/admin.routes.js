@@ -29,6 +29,7 @@ const {
   deleteImageController,
   editImageController,
   attachImageWithProduct,
+  updateUser,
 } = require("../../controllers/user/user.controller");
 const {
   get_all_orders,
@@ -37,6 +38,9 @@ const {
   update_order,
 } = require("../../controllers/order.controller");
 const { delete_review } = require("../../controllers/review.controller");
+const {
+  updateAddressForOrder,
+} = require("../../controllers/user/address.controller");
 
 const router = express.Router();
 
@@ -49,6 +53,8 @@ router.post("/add-image", uploadImage.single("image"), uploadImageController);
 router.post("/add-product", createProduct);
 router.post("/delete-product", deleteProducts);
 router.patch("/update-product/:product_id", updateProduct);
+router.patch("/update-address/:id", updateAddressForOrder);
+router.patch("/update-user/:id", updateUser);
 router.post("/delete-image/:id", deleteImageController);
 router.post(
   "/edit-image/:id",

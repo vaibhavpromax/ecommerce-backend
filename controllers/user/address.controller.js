@@ -57,6 +57,42 @@ const addAddress = async (req, res) => {
     serverErrorResponse(res, err.message);
   }
 };
+
+const updateAddressForOrder = async (req, res) => {
+  const { id } = req.params;
+  const {
+    street_no,
+    street_name,
+    postal_code,
+    city,
+    country,
+    name_on_address,
+    address_phone_no,
+  } = req.body;
+  try {
+    const createdObject = await Address.update(
+      {
+        street_no: street_no,
+        street_name: street_name,
+        postal_code: postal_code,
+        city: city,
+        country: country,
+        address_phone_no,
+        name_on_address,
+      },
+      {
+        where: {
+          address_id: id,
+        },
+      }
+    );
+    successResponse(res, "Address updated successfully", createdObject);
+  } catch (err) {
+    logger.error(`Error while updating address ${err.message}`);
+    serverErrorResponse(res, err.message);
+  }
+};
+
 const updateAddress = async (req, res) => {
   const { user_id } = req.user;
   const {
@@ -126,4 +162,10 @@ const deleteAddress = async (req, res) => {
   }
 };
 
-module.exports = { getAddressOfUser, addAddress, updateAddress, deleteAddress };
+module.exports = {
+  getAddressOfUser,
+  addAddress,
+  updateAddress,
+  deleteAddress,
+  updateAddressForOrder,
+};

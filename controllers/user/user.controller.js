@@ -250,6 +250,31 @@ const getCustomers = async (req, res) => {
   }
 };
 
+const updateUser = async (req, res) => {
+  const { id } = req.params;
+  const { first_name, last_name, email } = req.body;
+
+  try {
+    const udpatedObj = await User.update(
+      {
+        first_name,
+        last_name,
+        email,
+      },
+      {
+        where: {
+          user_id: id,
+        },
+      }
+    );
+
+    return successResponse(res, "user updated successfully", udpatedObj);
+  } catch (error) {
+    logger.error(`Errror while updating the user ${error}`);
+    return serverErrorResponse(res, "Error while updating user");
+  }
+};
+
 module.exports = {
   getCompleteUserDetails,
   getUserDetails,
@@ -260,4 +285,5 @@ module.exports = {
   uploadImageController,
   editImageController,
   attachImageWithProduct,
+  updateUser,
 };
