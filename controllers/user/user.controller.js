@@ -61,7 +61,6 @@ const getUserDetails = async (req, res) => {
       name: user?.first_name + user?.last_name,
       email: user?.email,
       username: user?.username,
-      phone_no: user?.phone_no,
       profile_pic_url: user?.profile_pic_url,
     });
   } catch (err) {
@@ -226,7 +225,6 @@ const getCustomers = async (req, res) => {
         "email",
         "user_id",
         "last_ordered",
-        "phone_no",
         "createdAt",
       ],
     });
