@@ -7,7 +7,7 @@ module.exports = (sequelize, Sequelize) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate({  Image, Review, Cart, Wishlist, OrderItem }) {
+    static associate({ Image, Review, Cart, Wishlist, OrderItem }) {
       this.hasMany(Review, { foreignKey: "product_id" });
       this.hasMany(Image, { foreignKey: "product_id" });
       this.hasMany(Cart, { foreignKey: "product_id" });
@@ -103,6 +103,10 @@ module.exports = (sequelize, Sequelize) => {
       quantity_purchased: {
         type: Sequelize.INTEGER,
         defaultValue: 0,
+      },
+      shipping_price: {
+        type: Sequelize.STRING,
+        defaultValue: "0", 
       },
       createdAt: {
         allowNull: false,

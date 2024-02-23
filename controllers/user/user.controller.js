@@ -273,6 +273,37 @@ const updateUser = async (req, res) => {
   }
 };
 
+const toggleCustomerBlockStatus = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const user = await User.findOne({ where: { user_id: id } });
+    user.is_blocked = !user.is_blocked;
+    await user.save();
+    logger.info(`User blocked with id ${user_id} change: ${user.is_blocked}`);
+    return successResponse(res, "User blocked successfully", user);
+  } catch (error) {
+    return serverErrorResponse(res, "Error while blocking this user");
+  }
+};
+
+const checkBlockStatus = async (req, res) => {
+  const { user_id } = req.user;
+
+  try {
+    const user = await User.findOne({
+      where: { user_id },
+      attributes: ["is_blocked"],
+    });
+
+    logger.info(`fetched status of customer ${user_id}`);
+    return successResponse(res, "Fetched the status of customer", user);
+  } catch (error) {
+    logger.error(`Error while fetching the blocked status ${error}`);
+    return serverErrorResponse(res, "Error while fetching the blocked status");
+  }
+};
+
 module.exports = {
   getCompleteUserDetails,
   getUserDetails,
@@ -284,4 +315,6 @@ module.exports = {
   editImageController,
   attachImageWithProduct,
   updateUser,
+  toggleCustomerBlockStatus,
+  checkBlockStatus,
 };

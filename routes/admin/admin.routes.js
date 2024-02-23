@@ -30,6 +30,7 @@ const {
   editImageController,
   attachImageWithProduct,
   updateUser,
+  toggleCustomerBlockStatus,
 } = require("../../controllers/user/user.controller");
 const {
   get_all_orders,
@@ -48,6 +49,8 @@ router.get("/get_emails", get_emails);
 router.get("/get-complete-user-info/:user_id", getCompleteUserDetails);
 router.get("/get-customers", getCustomers);
 router.post("/delete-customers", deleteUsers);
+router.patch("/block-customer/:id", toggleCustomerBlockStatus);
+
 router.post("/notification/create", createNotification);
 router.post("/add-image", uploadImage.single("image"), uploadImageController);
 router.post("/add-product", createProduct);

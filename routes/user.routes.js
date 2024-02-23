@@ -19,6 +19,7 @@ const {
   getUserDetails,
   uploadUserImage,
   uploadImageController,
+  checkBlockStatus,
 } = require("../controllers/user/user.controller");
 const { getNotifications } = require("../controllers/notification.controller");
 const { uploadImage } = require("../services/amazon/uploadImage");
@@ -42,6 +43,7 @@ router.post(
   uploadImage.single("image"),
   uploadUserImage
 );
+router.get("get-blocked-status", authMiddleware, checkBlockStatus);
 
 router.post(
   "/upload-image",
